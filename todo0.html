@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바닐라 투두리스트 2</title>
+    <link rel="stylesheet" href="css/todo2.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+    <main id="todolist0">
+        <h1>list</h1>
+        <ul class="itemlistbox">
+            <li>
+                <span class="label">아이템 레이블</span>
+                <div class="actions">
+                    <button>
+                        <i class="material-icons">check_box_outline_blank</i>
+                        <i class="material-icons">check_box</i>
+                    </button>
+                    <button class="btn-picto">
+                        <i class="material-icons">delete</i>
+                    </button>
+                </div>
+            </li>
+            <li class="done">
+                <span class="label">아이템 레이블</span>
+                <div class="actions">
+                    <button>
+                        <i class="material-icons">check_box_outline_blank</i>
+                        <i class="material-icons">check_box</i>
+                    </button>
+                    <button class="btn-picto">
+                        <i class="material-icons">delete</i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+
+        <div class="toggle-wrapper">
+            <label for="">
+                <span class="toggleButoon-label">아이템 순서 바꾸기</span>
+                <span class="togglebutton-box"></span>
+            </label>
+            <input type="checkbox">
+        </div>
+
+        <form action="" class="formbox">
+            <label for="">리스트 추가</label>
+            <input type="text">
+            <button type="submit" class="addbutton">아이템 추가</button>
+        </form>
+    </main>
+
+
+
+
+    <style>
+        #todolist0 {
+            background: #deb887;
+            padding: 20px;
+        }
+        .itemlistbox {
+            padding-left: 0;
+            background: #e9cba5
+        }
+        .itemlistbox li {
+            display: flex;
+            align-items: center;
+            padding: 20px 16px;
+            background: rgba(255,255,255,0.1);
+        }
+        .itemlistbox li.done .label {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+        .actions {
+            margin-left: auto;
+        }
+        .formbox label {
+            display: block;
+        }
+        .formbox input {
+            height: 40px;
+            border: none;
+        }
+        .addbutton {
+            height: 42px;
+            background: #a39bd2;
+            border: 1px solid #fff;
+            color: #fff;        
+        }
+        button {
+            background: transparent;
+            border: none;
+        }
+        .toggle-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        .togglebutton-box,.togglebutton-box.active {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 20px;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            transition: all 0.4s;
+        }
+        .togglebutton-box:before {
+            display: block;
+            clear: both;
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 16px;
+            height: 16px;
+            background: #fff;        
+            border-radius: 50%;
+            opacity: 0.4;
+        }
+        .togglebutton-box.active:before {
+            display: block;
+            clear: both;
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 2px;
+            width: 16px;
+            height: 16px;
+            background: #fff;        
+            border-radius: 50%;
+        }
+    </style>
+
+
+    <script>
+        // 1. 아이템을 입력한 후 추가버튼을 누르면 ul.itemlistbox에 li가 생성되고, 그 안에 아이템이 들어간다
+
+
+        // 2. 체크박스 클릭 시 li에 done클래스가 들어온다 // 체크박스의 아이콘 
+    </script>
+</body>
+</html>
