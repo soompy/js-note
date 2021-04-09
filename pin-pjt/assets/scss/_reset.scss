@@ -139,6 +139,7 @@ input { /* 1 */overflow: visible;}
  */
 button,
 select { /* 1 */text-transform: none;}
+button:focus {outline: none;}
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.
@@ -265,3 +266,4 @@ template {display: none;}
  */
 [hidden] {display: none;}
 
+figure {margin: 0;}

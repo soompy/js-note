@@ -193,6 +193,10 @@ select {
   text-transform: none;
 }
 
+button:focus {
+  outline: none;
+}
+
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
@@ -349,6 +353,10 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+figure {
+  margin: 0;
 }
 
 /* Base */
@@ -783,7 +791,6 @@ template {
   width: 190px;
   height: 130px;
   background-size: cover;
-  background: url("//image.smartscore.kr/purplepin/view_hover.png") no-repeat center center;
 }
 
 .view-photo-box:hover {
@@ -990,13 +997,96 @@ template {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   #header .inner {
     width: 100%;
     padding: 0 4vw;
   }
+  .tab-content-box {
+    padding: 0 4vw !important;
+  }
+  .tab-content-box .tab li {
+    padding: 13px 0;
+    font-size: 20px;
+  }
+  .tab-content-box .tab li:after {
+    height: 1px;
+  }
+  .tab-content-box .tab li:hover, .tab-content-box .tab li:focus, .tab-content-box .tab li.active {
+    color: #fff;
+  }
+  .tab-content-box .tab li:hover:after, .tab-content-box .tab li:focus:after, .tab-content-box .tab li.active:after {
+    height: 5px;
+  }
   .drop-down-wrap .drop-down-box {
     margin-left: 10px;
+  }
+  .title {
+    font-size: 20px;
+    letter-spacing: -4.5px;
+    font-weight: bold;
+  }
+  .sub-title {
+    font-size: 18px;
+    letter-spacing: -3px;
+    font-weight: bold;
+  }
+  .headline {
+    font-size: 15px;
+    letter-spacing: -1.5px;
+    font-weight: 500;
+  }
+  .sub-headline {
+    font-size: 16px;
+    letter-spacing: -0.48px;
+    font-weight: 500;
+  }
+  .big-text {
+    font-size: 14px;
+    letter-spacing: -1.3px;
+    font-weight: normal;
+  }
+  .middle-text {
+    font-size: 13px;
+    letter-spacing: -0.6px;
+    font-weight: normal;
+  }
+  .small-text {
+    font-size: 12px;
+    letter-spacing: -0.26px;
+    font-weight: normal;
+  }
+  .eng.title {
+    font-size: 20px;
+    letter-spacing: -1.8px;
+    font-weight: bold;
+  }
+  .eng.sub-title {
+    font-size: 18px;
+    letter-spacing: -1.2px;
+    font-weight: bold;
+  }
+  .eng.headline {
+    font-size: 15px;
+    letter-spacing: -0.9px;
+    font-weight: 500;
+  }
+  .eng.sub-headline {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .eng.big-text {
+    font-size: 14px;
+    letter-spacing: -0.52px;
+    font-weight: normal;
+  }
+  .eng.middle-text {
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .eng.small-text {
+    font-size: 12px;
+    font-weight: normal;
   }
   .round-button {
     position: relative;
@@ -1064,6 +1154,7 @@ template {
   left: 0;
   top: 0;
   width: 100%;
+  height: 100%;
 }
 
 .home-parallex-content.active {
@@ -1119,6 +1210,23 @@ template {
   top: 32vh;
   left: 44vw;
   width: 576px;
+}
+
+.content-box.studio .facility {
+  margin-top: 20px;
+}
+
+.content-box.studio .facility .slide_wrap {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.content-box.studio .facility .slide_wrap .slide_box {
+  width: 300%;
+}
+
+.content-box.studio .facility .slide_wrap .slide_box .slide_list {
+  height: 130px;
 }
 
 .content-box.united {
@@ -1229,6 +1337,104 @@ template {
   margin-top: 10px;
 }
 
+.slide_wrap {
+  overflow: hidden;
+  position: relative;
+  margin-top: 103px;
+}
+
+.slide_wrap .slide_img {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  width: -ms-max-content;
+  overflow: hidden;
+}
+
+.slide_wrap .slide_img .slide {
+  float: left;
+  width: 190px;
+  height: 130px;
+  margin-right: 6px;
+}
+
+.slide_wrap .slide_img .slide a img {
+  width: 100%;
+  height: 100%;
+}
+
+.slide_wrap .three-parts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+
+.slide_wrap .three-parts .three-parts-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 130px;
+  margin-right: 6px;
+}
+
+.slide_wrap .three-parts .three-parts-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slide_wrap .three-parts .three-parts-item a figure {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide_wrap .three-parts .three-parts-item a figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.slide_wrap .three-parts .three-parts-item a figure .view-photo-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.slide_wrap .three-parts .three-parts-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.slide_wrap .slide_btn a {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.slide_wrap .slide_btn a.prev {
+  left: 0;
+}
+
+.slide_wrap .slide_btn a.next {
+  right: 0;
+}
+
+.slide_wrap.big {
+  margin-top: 30px;
+}
+
+.slide_wrap.big .slide_img .slide {
+  width: 800px;
+  height: 547px;
+  margin-right: 0;
+}
+
 .tab-content-box {
   padding: 0 80px;
   margin-top: 123px;
@@ -1320,38 +1526,97 @@ template {
   height: 100%;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .content-box.purplepin .text-box {
     left: 17%;
     top: 210px;
     font-size: 2em;
   }
-  .content-box.brandStory {
-    padding: 0 4vw;
+  .content-box .bar {
+    width: 30px;
+    height: 3px;
+    margin: 0 auto 14px;
   }
   .content-box.brandStory .inner {
     width: 100%;
   }
   .content-box.brandStory .inner .shopImg {
-    left: 0;
+    left: 50%;
     top: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     width: 100%;
     height: auto;
   }
   .content-box.brandStory .inner .text-box {
+    width: 100%;
+    left: 50%;
+    bottom: 6vh;
     text-align: center;
-    font-size: 16px;
-  }
-  .content-box.brandStory .inner .text-box .title {
-    font-size: 16px;
-  }
-  .content-box.brandStory .inner .text-box .title .bar {
-    height: 4px;
-    margin: auto;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .content-box.brandStory .inner .text-box .big-text {
-    font-size: 13px;
     line-height: 26px;
+  }
+  .content-box.studio {
+    background-position: 24% 0;
+  }
+  .content-box.studio .inner {
+    left: 0;
+    width: 100%;
+  }
+  .content-box.studio .inner .text-box {
+    text-align: center;
+  }
+  .content-box.united .inner {
+    width: 100%;
+  }
+  .content-box.united .inner .text-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content-box.united .inner .text-box .eng.title {
+    text-align: center;
+    margin: auto;
+  }
+  .content-box.united .inner .text-box .big-text {
+    text-align: center;
+    margin: auto;
+  }
+  .content-box.united .inner .shop {
+    margin-top: 20px;
+  }
+  .content-box.united .inner .shop .slide_wrap {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .content-box.united .inner .shop .slide_wrap .slide_box {
+    width: 300%;
+  }
+  .content-box.united .inner .shop .slide_wrap .slide_box .c {
+    width: 800px;
+  }
+  .content-box.united .inner .shop .slide_wrap .slide01 {
+    background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1086_1885_4444.jpg");
+  }
+  .content-box.united .inner .shop .slide_wrap .slide02 {
+    background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1076_1871_5354.jpg");
+  }
+  .content-box.united .inner .shop .slide_wrap .slide03 {
+    background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1032_1788_3710.jpg");
+  }
+  .content-box.partners .inner {
+    width: 100%;
+    margin: auto;
+  }
+  .content-box.partners .inner .partnership {
+    margin-top: 20px;
+  }
+  .content-box.partners .inner .partnership .slide_wrap {
+    padding-bottom: 50px;
   }
 }
 
