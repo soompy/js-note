@@ -1,0 +1,382 @@
+.inner-wrap {
+    width: 1200px;
+    margin: auto;
+}
+/* 타이틀 */
+.title {
+  font-weight: bold;
+  color: #333333;
+  &.main-title {
+    font-size: 44px;
+    letter-spacing: -1.32px;
+  }
+  &.sub-mid-title {
+    font-size: 30px;
+    width: 100%;
+    letter-spacing: -0.9px;
+  }
+  &.sub-title {
+    font-size: 24px;
+    letter-spacing: -0.72px;
+  }
+}
+
+.text-box-1 {
+  font-size: 30px;
+  letter-spacing: -0.9px;
+  color: #666666;
+}
+
+.text-box-2 {
+  font-size: 24px;
+  letter-spacing: -0.72px;
+  color: #5a5a5a;
+}
+
+.text-field {
+  font-size: 18px;
+  letter-spacing: -0.54px;
+  color: #999999;
+  border: none;  
+}
+
+.text-box-min {
+  font-size: 20px;
+  letter-spacing: -0.6px;
+  color: #555555;
+}
+
+
+.eng {
+    &.main-title {
+        font-size: 70px;
+        letter-spacing: -2.1px;
+    }
+    &.sub-mid-title {
+        font-size: 45px;
+        letter-spacing: -1.35px;
+    }
+    &.sub-title {
+        font-size: 35px;
+        letter-spacing: -1.05px;
+    }
+    &.text {
+        font-size: 24px;
+        letter-spacing: -0.72px;
+        color: #666666;
+    }
+}
+
+
+/* 텍스트필드 */
+.form-field-line {
+  position: relative;
+  height: 70px;
+  padding: 0 24px;
+  font-size: 0;
+  border-radius: 10px;
+  input.field-text {
+    width: 100%;
+    height: inherit;
+    font-size: 24px;
+    border: none;
+    padding: 0;
+    color: #666666 !important;
+    &::placeholder {
+      color: $color-very-light-grey !important;
+    }
+  }
+  &.unfilled {
+    border: 1px solid $color-very-light-grey;
+    input {
+      color: $color-midium-grey;
+      &::placeholder {
+        color: $color-very-light-grey;
+      }
+    }
+  }  
+  &.error {
+    border: 1px solid $color-red;
+    input {
+      &:valid {color: $color-red !important;}
+    }
+  }
+
+  &.field-line {
+    color: $color-grey;
+    background-color: transparent;
+    border: 1px solid #333333;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+/* 셀렉트 박스 */
+.mail-form {
+    display: flex;
+    align-items: center;
+    .at {
+        padding: 0 15px;
+    }
+    .field-text {
+        &::placeholder {color: $color-grey;}
+    }
+    .form-field-raise {
+        position: relative;
+        border: $color-very-light-grey;  
+        font-size: 24px;
+        &.select-box {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            background: $color-white;
+            border: 1px solid $color-very-light-grey;
+            padding: 0 24px;    
+            border-radius: 10px;
+            &.active {
+                input.field-text {
+                height: inherit;
+                text-align: left;
+                padding: 0;
+                color: $color-grey;
+                &:valid {
+                    color: #999999;
+                }
+                }
+                .field-select-cont{
+                    max-height: 200px;
+                    position: absolute;
+                    top:70px;
+                    border-radius: 10px;
+                    left:-1px;
+                    width: calc(100% + 2px);
+                    // max-height: $cont-h * 8;
+                    background-color: $color-white;
+                    overflow-y: auto;
+                    border: 1px solid $color-very-light-grey;
+                    z-index: 10;
+                    .cont-item{                
+                        padding: 24px 0 25px 24px;                
+                        cursor: pointer;
+                        &:hover,&.active{
+                            // color: $color-medium-grey;
+                        }
+                    }                        
+                }        
+            }
+        }  
+    }
+}
+
+
+
+
+
+
+
+
+/* 버튼 */
+.btn {
+    font-size: 18px;
+    letter-spacing: -0.54px;
+    text-align: center;
+    background: #ff4f42;
+    color: #ffffff;
+}
+.radius10-btn {
+    padding: 21px 24px;
+    border-radius: 10px;
+}
+
+.full-btn {
+    width: 100%;
+    padding: 22px 0;
+}
+
+.round-button {    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url('//image.smartscore.kr/wrich/icon/nextbtn.png');
+    cursor: pointer;
+    &:hover {
+        background-image: url('//image.smartscore.kr/wrich/icon/nextbtn-on.png');
+    }
+}
+
+.flicking-button {
+    display: flex;
+    align-items: center;
+    a {
+        display: block;
+        width: 60px;
+        height: 60px;        
+        &.left {
+            background-image: url('//image.smartscore.kr/wrich/icon/flicking-left.png');
+        }
+        &.right {
+            background-image: url('//image.smartscore.kr/wrich/icon/flicking-light.png');
+        }
+    }    
+}
+
+.close-button {
+    width: 60px;
+    height: 60px;
+    background-image: url('//image.smartscore.kr/wrich/icon/ic-close.png');
+}
+
+/* 체크박스 */
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: $color-black;
+    font-weight: bold;
+}
+input[type="checkbox"] {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    margin-right: 13px;
+    vertical-align: middle;
+    background-image: url('//image.smartscore.kr/wrich/icon/ic-select.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &:checked {
+        background-image: url('//image.smartscore.kr/wrich/icon/ic-select-on.png');
+    }
+}
+
+/* 탭 */
+.tab {
+    display: flex;   
+    height: 80px; 
+}
+.tab-list {
+    position: relative;
+    display: inline-flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.72px;
+    text-align: center;
+    color: #666666;
+    margin-left: -1px;
+    border: solid 1px #dddddd;
+    background: #ffffff;
+}
+.tab-list.active {
+    color: #ffffff;
+    background: #ff4f42;
+}
+.tab-list:first-child {
+    margin-left: 0;
+}
+
+
+/* 헤더 */
+#header {    
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    .inner {
+        display: flex;
+        align-items: center;
+        padding: 20px 50px;
+        h1 {
+            width: 170px;
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .nav { 
+            width: calc(100% - 288px); 
+            margin: auto;                
+            .gnb {
+                display: flex;
+                align-items: center;
+                width: 475px;
+                margin: auto;            
+                justify-content: space-between;
+                li{
+                    margin-right: 45px;
+                    &:last-child {
+                        margin-right: 0;
+                    }  
+                    a{
+                        color: $color-white;     
+                    }                
+                }
+            }
+        }
+        .radius10-btn {
+            margin-left: auto;
+        }
+    }
+}
+
+.visual {
+    position: relative;
+    .list {
+        height: 1080px;
+        .inner-wrap {
+            position: relative;
+             .home-text-box {
+                position: absolute;
+                left: 0;
+                top: 470px;
+                .home-slide-pager {
+                    display: flex;
+                    align-items: center;
+                    span {
+                        font-weight: 300;
+                        font-size: 35px;
+                        margin-right: 9px;
+                        &.active {
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .svg-text-box{
+                    z-index: 1;
+                    color: $color-white;
+                    .svg-text{
+                        height: 60px;
+                        text{animation: stroke 3.8s linear forwards;}
+                    }
+                    .fs-52{animation:1.2s linear opacity; animation-fill-mode: forwards;}
+                }         
+                .home-title-caption{
+                    .fs-52{animation:1.2s linear opacity; animation-fill-mode: forwards;}
+                    .fs-18{animation: 0.5s linear 0.5s opacity; animation-fill-mode: forwards;}
+                    .button-ani-rectangle{animation: 0.5s linear 1.2s opacity; animation-fill-mode: forwards;}
+                    .button-icon-text{animation: 0.7s linear 1.2s opacity; animation-fill-mode: forwards;}
+                }
+            }
+        }
+    }
+   
+
+
+     &.home {
+         .list {
+             color: $color-white;
+             background-repeat: no-repeat;
+             background-position: center center;
+             background-size: cover;
+             &:nth-child(1) {
+                 background-image: url('//image.smartscore.kr/wrich/mainbanner-01.jpg');
+             }
+         }
+     } 
+}
