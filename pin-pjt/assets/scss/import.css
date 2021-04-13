@@ -649,36 +649,6 @@ figure {
           align-items: center;
 }
 
-.slick-arrow {
-  width: 44px;
-  height: 44px;
-  background-size: 95% !important;
-}
-
-.slick-arrow.slide_btn_prev {
-  background: url("//image.smartscore.kr/purplepin/btn_view_left.png") no-repeat center center;
-}
-
-.slick-arrow.slide_btn_prev:hover {
-  background: url("//image.smartscore.kr/purplepin/btn_view_left_hover.png") no-repeat center center;
-}
-
-.slick-arrow.slide_btn_prev:focus {
-  background: url("//image.smartscore.kr/purplepin/btn_view_left_focus.png") no-repeat center center;
-}
-
-.slick-arrow.slide_btn_next {
-  background: url("//image.smartscore.kr/purplepin/btn_view_right.png") no-repeat center center;
-}
-
-.slick-arrow.slide_btn_next:hover {
-  background: url("//image.smartscore.kr/purplepin/btn_view_right_hover.png") no-repeat center center;
-}
-
-.slick-arrow.slide_btn_next:focus {
-  background: url("//image.smartscore.kr/purplepin/btn_view_right_focus.png") no-repeat center center;
-}
-
 .round-button {
   position: relative;
   border-radius: 50%;
@@ -925,6 +895,10 @@ figure {
   border: 1px solid #343434;
   padding: 4px 10px;
   margin-left: 24px;
+}
+
+.slick-slide img {
+  width: 100%;
 }
 
 .modal-wrap {
@@ -1450,11 +1424,39 @@ figure {
 .section.studio .facility .slide_wrap {
   width: 100%;
   height: 130px;
-  padding-bottom: 10px;
 }
 
-.section.studio .facility .slide_wrap .slide_box .slide_list {
+.section.studio .facility .slide_wrap .slick-slide {
+  width: 190px;
+  margin-right: 6px;
+}
+
+.section.studio .facility .slide_wrap .bnr {
   height: 130px;
+}
+
+.section.studio .facility .slide_wrap .bnr.bnr_01 {
+  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1139_2024_5116.jpg");
+}
+
+.section.studio .facility .slide_wrap .bnr.bnr_02 {
+  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1089_1904_3038.jpg");
+}
+
+.section.studio .facility .slide_wrap .bnr.bnr_03 {
+  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1096_1914_4859.jpg");
+}
+
+.section.studio .facility .slide_wrap .bnr.bnr_04 {
+  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1075_1862_1216.jpg");
+}
+
+.section.studio .facility .slide_wrap .bnr.bnr_05 {
+  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1139_2024_5116.jpg");
+}
+
+.section.studio .facility .slide_wrap .bnr.bnr_06 {
+  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1091_1900_1750.jpg");
 }
 
 .section.studio .bg {
@@ -1484,24 +1486,32 @@ figure {
   padding-bottom: 20px;
 }
 
-.section.united .shop .slide_wrap .slide_box .slide_list {
-  height: 547px;
+.section.united .shop .slide_wrap .bnr {
+  height: 130px;
 }
 
-.section.united .shop .slide_wrap .slide_box .slide_list .slide_content {
-  width: 100%;
-}
-
-.section.united .shop .slide_wrap .slide01 {
+.section.united .shop .slide_wrap .bnr.bnr_01 {
   background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1086_1885_4444.jpg");
 }
 
-.section.united .shop .slide_wrap .slide02 {
+.section.united .shop .slide_wrap .bnr.bnr_02 {
   background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1076_1871_5354.jpg");
 }
 
-.section.united .shop .slide_wrap .slide03 {
+.section.united .shop .slide_wrap .bnr.bnr_03 {
   background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1032_1788_3710.jpg");
+}
+
+.section.united .shop .slide_wrap .bnr.bnr_04 {
+  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1075_1862_1216.jpg");
+}
+
+.section.united .shop .slide_wrap .bnr.bnr_05 {
+  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1139_2024_5116.jpg");
+}
+
+.section.united .shop .slide_wrap .bnr.bnr_06 {
+  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1091_1900_1750.jpg");
 }
 
 .section.united .addr-box {
@@ -1586,159 +1596,6 @@ figure {
   margin-top: 10px;
 }
 
-.slide_wrap {
-  overflow: hidden;
-  position: relative;
-  margin-top: 103px;
-  width: 100%;
-  height: 600px;
-}
-
-.slide_wrap .slide_box {
-  overflow-x: hidden;
-  width: 300%;
-  height: 100%;
-}
-
-.slide_wrap .slide_box .slide_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.slide_wrap .slide_box .slide_list .slide_content {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.slide_wrap .slide_btn_box > button {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.slide_wrap .slide_btn_box .slide_btn_prev {
-  left: -1px;
-}
-
-.slide_wrap .slide_btn_box .slide_btn_next {
-  right: -1px;
-}
-
-.slide_wrap .slide_pagination {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.slide_wrap .slide_pagination .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 3px;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 50%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.slide_wrap .slide_pagination .dot.dot_active {
-  background: #707070;
-}
-
-.slide_wrap .slide_pagination .dot a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.slide_wrap .three-parts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
-}
-
-.slide_wrap .three-parts .three-parts-item {
-  width: 190px;
-  height: 130px;
-  margin-right: 6px;
-}
-
-.slide_wrap .three-parts .three-parts-item a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.slide_wrap .three-parts .three-parts-item a figure {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.slide_wrap .three-parts .three-parts-item a figure .view-photo-box {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.slide_wrap .three-parts .three-parts-item:nth-of-type(1) figure {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1086_1885_4444.jpg");
-}
-
-.slide_wrap .three-parts .three-parts-item:nth-of-type(2) figure {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1076_1871_5354.jpg");
-}
-
-.slide_wrap .three-parts .three-parts-item:nth-of-type(3) figure {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1073_1856_3332.jpg");
-}
-
-.slide_wrap .slide_btn a {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.slide_wrap .slide_btn a.prev {
-  left: 0;
-}
-
-.slide_wrap .slide_btn a.next {
-  right: 0;
-}
-
-.slide_wrap.big {
-  margin-top: 30px;
-}
-
-.slide_wrap.big .slide_img .slide {
-  width: 800px;
-  height: 547px;
-  margin-right: 0;
-}
-
 .tab-content-box {
   padding: 0 80px;
   margin-top: 123px;
@@ -1814,22 +1671,6 @@ figure {
     margin-top: 20px !important;
     height: 130px;
   }
-  .section.studio .inner .facility .slide-wrap .slide_box .slide_list {
-    height: 130px;
-  }
-  .section.studio .inner .facility .three-parts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify !important;
-        -ms-flex-pack: justify !important;
-            justify-content: space-between !important;
-  }
-  .section.studio .inner .facility .three-parts .three-parts-item {
-    width: 100vw;
-    height: 130px;
-    margin-right: 0;
-  }
   .section.united .inner {
     width: 100%;
   }
@@ -1869,54 +1710,6 @@ figure {
   .slide_wrap {
     margin-top: 20px;
     height: auto;
-    /*    
-    .slide_btn_box {
-      > button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-      }
-      .slide_btn_prev {
-        left: -1px;
-      }
-      .slide_btn_next {
-        right: -1px;
-      }
-    }
-    .slide_pagination {
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      transform: translateX(-50%);
-      .dot {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin: 0 3px;
-        overflow: hidden;
-        background: $color-white;
-        border-radius: 50%;
-        transition: 0.3s;
-        &.dot_active {
-          background: #707070;
-        }
-        a {
-          display: block;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-*/
-  }
-  .slide_wrap .three-parts .three-parts-item {
-    width: 100vw;
-    height: 330px;
-    margin-right: 0;
   }
 }
 /*# sourceMappingURL=import.css.map */
