@@ -1,46 +1,15 @@
-/*!
- * gmk - 패널등록
- */
-
 /*  Configuration */
 @import './variable';
-// @import './svg';
-// import './mixins';
 
 /* Vendors */
 @import './reset';
 
 /* Base */
-// @import './base';
-// @import './font';
-// @import './typography';
-// @import './icon';
 @import './colors';
 
-/* components */
-// @import './button';
-// import './label';
-// import './calendar';
-// import './list';
-// import './tooltip';
-// import './checkbox';
-// import './table';
-// @import './textfields';
-
 /* Layout */
-// import './header'; 
-// import './footer';
-// import './modal';
+@import './layouts';
 
 /* Page */
-// @import './common';
-@import './layouts';
 @import './main';
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-/* Themes */
-// @import './wrichPc';
-// @import './wrichMob';
-
-
-
