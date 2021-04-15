@@ -9,7 +9,7 @@
     <meta name="description" content="퍼플핀 홈페이지입니다.">
     <meta name="keywords" content="퍼플핀">
     <meta name="author" content="스마트스코어">
-    <link rel="stylesheet" href="../pin-pjt/assets/scss/import.css">
+    <link rel="stylesheet" href="./assets/scss/import.css">
     <link rel="stylesheet" type="text/css" href="https://rawgit.com/almeida-matheus/fullPageScrollPureJS/master/app/assets/stylesheet/full-page-scroll.css" />
     <link rel="stylesheet" type="text/css" href="./slick/slick.css">
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
@@ -20,10 +20,13 @@
 <body>
     <header id="header">
         <div class="inner">
-            <h1 class="logo"><a href=""><img src="//image.smartscore.kr/purplepin/ic_logo_header.png" alt="purplepin"></a>
+            <h1 class="logo"><a href="">
+                <img src="//image.smartscore.kr/purplepin/ic_logo_header.png" alt="purplepin" class="mainlogo">
+                <img src="//image.smartscore.kr/purplepin/m_logo.png" alt="purplepin" class="mobilelogo">
+            </a>
             </h1>
             <div class="drop-down-wrap">
-                <div class="drop-down-box">
+                <div class="drop-down-box" onmouseover="this.className='drop-down-box show';" onmouseout="this.className='drop-down-box';">
                     <button class="round-button big mail"></button>
                     <div class="drop-down">
                         <div class="drop-down-content">
@@ -33,7 +36,7 @@
                     </div>
                 </div>
     
-                <div class="drop-down-box">
+                <div class="drop-down-box" onmouseover="this.className='drop-down-box show';" onmouseout="this.className='drop-down-box';">
                     <button class="round-button big phone"></button>
                     <div class="drop-down">
                         <div class="drop-down-content">
@@ -55,44 +58,55 @@
             </div>
         </div>
 
-        <div class="section brandStory">
-
-            <img src="//image.smartscore.kr/purplepin/img_object_01.png" alt="오브젝트1" class="obj1" style="position: absolute;left: 20%; top: 20%;width: 10%;">
-            <img src="//image.smartscore.kr/purplepin/img_object_02.png" alt="오브젝트2" class="obj2" style="position: absolute;left: 20%; top: 20%;width: 10%;">            
+        <div class="section brandStory">            
             <div class="inner">
-                <div class="shopImg">
-                    <img src="//image.smartscore.kr/purplepin/img_object_03.png" alt="오브젝트3" class="obj3" style="position: absolute;left: 80%;bottom: 0;width: 30%;">
-                    <img src="//image.smartscore.kr/purplepin/img_brand_01.png" alt="브랜드스토리" style="position: absolute;width: 100%;">
+                <img src="//image.smartscore.kr/purplepin/img_object_01.png" alt="오브젝트1" class="obj1">
+                <img src="//image.smartscore.kr/purplepin/img_object_02.png" alt="오브젝트2" class="obj2">
+                <div class="text-wrap">
+                    <div class="text-box">
+                        <h2 class="title eng fc-white">
+                            <div class="bar"></div>BRAND STORY
+                        </h2>
+                        <p class="big-text mt-25 fc-white">
+                            골프 용품 구매부터 클럽 피팅까지<br>
+                            국내 최대 프리미엄 골프샵, PURPLEPIN<br><br>
+                    
+                            퍼플핀은 국내·외 탑 브랜드 입점은 물론, 최첨단 스윙 분석<br>
+                            시스템을 갖추고 있습니다. 또한, 다년간의 경험과<br>
+                            노하우로 숙련된 전문 피터를 배치하여 골퍼들이<br>
+                            최고의 라운드를 즐길 수 있도록 최상의 서비스를 제공합니다.<br><br>
+                    
+                            퍼플핀은 이른 새벽 첫 티타임으로 향하는 골퍼처럼<br>
+                            골프에 대한 순수한 열정과 설레임을 담아 탄생한<br>
+                            국내 최대의 프리미엄 골프샵입니다.
+                        </p>      
+                        <div class="m-big-text fc-white">
+                            골프용품 부터 피팅까지 
+                            국내 최대 프리미엄 골프샵, PURPLEPIN!! <br><br>
+                            
+                            국내외 탑 골프 브랜드와 최첨단 스윙 분석
+                            시스템을 갖추고 다년간의 경험과
+                            노하우로 숙련된 피터 장인들을 배치하여
+                            골퍼들이 최고의 라운드를 즐길수 있도록
+                            노력하고 있습니다.<br><br>
+                            
+                            퍼플핀은 이른 새벽 첫 티타임으로 향하는
+                            골퍼 처럼 골프에 대한 열정과
+                            설레임을 담아 탄생한
+                            국내 최대의 프리미엄 골프샾입니다.
+                        </div>                                      
+                    </div>
+                    <div class="shopImg">
+                        <img src="//image.smartscore.kr/purplepin/img_object_03.png" alt="오브젝트3" class="obj3">
+                        <img src="//image.smartscore.kr/purplepin/img_brand_01.png" alt="브랜드스토리" style="position: relative;width: 100%;">
+                    </div>
                 </div>
-                
-                <div class="text-box">
-                    <h2 class="title eng fc-white">
-                        <div class="bar"></div>BRAND STORY
-                    </h2>
-                    <p class="big-text mt-25 fc-white">
-                        골프 용품 구매부터 클럽 피팅까지<br>
-                        국내 최대 프리미엄 골프샵, PURPLEPIN<br><br>
-            
-                        퍼플핀은 국내·외 탑 브랜드 입점은 물론, 최첨단 스윙 분석<br>
-                        시스템을 갖추고 있습니다. 또한, 다년간의 경험과<br>
-                        노하우로 숙련된 전문 피터를 배치하여 골퍼들이<br>
-                        최고의 라운드를 즐길 수 있도록 최상의 서비스를 제공합니다.<br><br>
-            
-                        퍼플핀은 이른 새벽 첫 티타임으로 향하는 골퍼처럼<br>
-                        골프에 대한 순수한 열정과 설레임을 담아 탄생한<br>
-                        국내 최대의 프리미엄 골프샵입니다.
-                    </p>
-                </div>           
+                          
             </div>        
         </div>
 
-        <div class="section studio">
-            <div class="bg">
-                <div class="diagonal diagonal1"></div>
-                <div class="diagonal diagonal2"></div>
-                <div class="diagonal diagonal3"></div>
-                <div class="diagonal diagonal4"></div>
-            </div>
+        <div class="section studio">            
+            <img src="//image.smartscore.kr/purplepin/img_object_line_04.png" alt="라인4" class="line4">
             <div class="inner">                
                 <div class="text-box">
                     <h2 class="title eng fc-white">
@@ -103,11 +117,25 @@
                         나에게 최적화된 클럽 피팅을 경험해 보세요.<br>
                         40여개의 피팅 브랜드와 최신식 설비로 만족감을 높입니다.
                     </p>
+                    <div class="bg">
+                        <img src="//image.smartscore.kr/purplepin/img_object_line_01.png" alt="라인1" class="line1">
+                        <img src="//image.smartscore.kr/purplepin/img_object_line_02.png" alt="라인2" class="line2">
+                        <img src="//image.smartscore.kr/purplepin/img_object_line_03.png" alt="라인3" class="line3">                        
+                    </div>
                 </div>
             
                 <div class="facility">
                     <section class="triple slider slide_wrap">
                         <div class="bnr bnr_01"></div>                        
+                        <div class="bnr bnr_02"></div>
+                        <div class="bnr bnr_03"></div>
+                        <div class="bnr bnr_04"></div>
+                        <div class="bnr bnr_05"></div>
+                        <div class="bnr bnr_06"></div>
+                    </section>
+
+                    <section class="m_triple slider slide_wrap">
+                        <div class="bnr bnr_01"></div>
                         <div class="bnr bnr_02"></div>
                         <div class="bnr bnr_03"></div>
                         <div class="bnr bnr_04"></div>
@@ -132,29 +160,87 @@
                     </p>
                 </div>
             
-                <div class="tab-content-box">
-                    <ul class="tab">
-                        <li class="active">서울 송파점</li>
-                        <li>분당 금곡점</li>
-                    </ul>
-            
-                    <div class="shop">
-                        <section class="tabbnr slider slide_wrap">
-                            <div class="bnr bnr_01"></div>
-                            <div class="bnr bnr_02"></div>
-                            <div class="bnr bnr_03"></div>
-                            <div class="bnr bnr_04"></div>
-                            <div class="bnr bnr_05"></div>
-                            <div class="bnr bnr_06"></div>
-                        </section>
+                <div class="tab-content-box">                   
+                    <div class="tab">
+                        <button class="tablinks" onclick="openStore(event, 'songpa')" id="defaultOpen">송파점</button>
+                        <button class="tablinks" onclick="openStore(event, 'geumgok')">금곡점</button>
                     </div>
-            
-                    <div class="addr-box">
-                        <div class="fc-white fs-20">
-                            <p>서울시 송파구 동남로 149</p>
-                            <p>T. 02. 407. 7281</p>
+                    
+                    <div id="songpa" class="tabcontent">
+                        <div class="shop">
+                            <section class="tabbnr slider slide_wrap">
+                                <div class="bnr bnr_01"></div>
+                                <div class="bnr bnr_02"></div>
+                                <div class="bnr bnr_03"></div>
+                                <div class="bnr bnr_04"></div>
+                                <div class="bnr bnr_05"></div>
+                                <div class="bnr bnr_06"></div>
+                            </section>
                         </div>
-                        <button class="square-button small ml-at">약도</button>
+                        <div class="addr-box">
+                            <div class="fc-white fs-20">
+                                <p>서울시 송파구 동남로 149</p>
+                                <p>T. 02. 407. 7281</p>
+                            </div>
+                            <button class="square-button small ml-at" onclick="songpa()">약도</button>
+                        </div>
+                    </div>
+                    
+                    <div id="geumgok" class="tabcontent">
+                        <div class="shop">
+                            <section class="tabbnr slider slide_wrap">
+                                <div class="bnr bnr_01"></div>
+                                <div class="bnr bnr_02"></div>
+                                <div class="bnr bnr_03"></div>
+                                <div class="bnr bnr_04"></div>
+                                <div class="bnr bnr_05"></div>
+                                <div class="bnr bnr_06"></div>
+                            </section>
+                        </div>
+                        <div class="addr-box">
+                            <div class="fc-white fs-20">
+                                <p>경기도 성남시 분당구 대왕판교로 154</p>
+                                <p>T. 031-717-7281</p>
+                            </div>
+                            <button class="square-button small ml-at" onclick="geumgok()">약도</button>
+                        </div>
+                    </div>                                                                                                          
+                </div>
+            </div>
+            <div class="modal-wrap" id="songpaPopup">
+                <div class="map-wrap">
+                    <div class="modal-box">
+                        <div class="map">
+                            <div class="bottom-infoBox">
+                                <p class="headline">송파점</p>
+                                <div class="addr-box">
+                                    <div class="fc-black fs-20">
+                                        <p>서울시 송파구 동남로 149</p>
+                                        <p>T. 02 3216 6549</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="square-button square" onclick="closed()"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-wrap" id="geumgokPopup">
+                <div class="map-wrap">
+                    <div class="modal-box">
+                        <div class="map">
+                            <div class="bottom-infoBox">
+                                <p class="headline">금곡점</p>
+                                <div class="addr-box">
+                                    <div class="fc-black fs-20">
+                                        <p>경기도 성남시 분당구 대왕판교로 154</p>
+                                        <p>T. 031-717-7281</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="square-button square" onclick="closed()"></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,52 +256,321 @@
                         퍼플핀은 승리를 향한 끊임없는 도전이라는 고객가치를 위해 <br>
                         세계 최고의 브랜드들과 함께합니다.
                     </p>
+                    <p class="m-big-text fc-white">
+                        퍼플핀은 세계 최고의 브랜드들과 함께합니다.
+                    </p>
                 </div>
             
                 <div class="partnership">
-                    <section class="partnerslogo slider slide_wrap">
-                        <div class="bnr bnr_01"></div>
-                        <div class="bnr bnr_02"></div>
+                    <section class="partnerslogo slider slide_wrap">                        
+                        <div class="bnr">
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_taylormade.png" alt="taylormade">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_bridgestone.png" alt="bridgestone">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_srixon.png" alt="srixon">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_callaway.png" alt="callaway">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_majesty.png" alt="majesty">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_ping.png" alt="ping">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_xxio.png" alt="xxio">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_honma.png" alt="honma">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_ecco.png" alt="ecco">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_cleveland.png" alt="cleveland">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_akira.png" alt="akira">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_yamaha.png" alt="yamaha">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_saintnine.png" alt="saintnine">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_voicecaddie.png" alt="voicecaddie">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_yonex.png" alt="yonex">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_mizuno.png" alt="mizuno">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_betrion.png" alt="betrion">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_husky.png" alt="husky">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_overdoz.png" alt="overdoz">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_baroncalcite.png" alt="baroncalcite">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_golfbuddy.png" alt="golfbuddy">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_onoff.png" alt="onoff">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_prgr.png" alt="prgr">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_koviss.png" alt="koviss">
+                            </article>                         
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_oakley.png" alt="oakley">
+                            </article>
+                        </div>
+                        <div class="bnr">
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_kasco.png" alt="kasco">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_daphnes.png" alt="daphnes">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_ogio.png" alt="ogio">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_wstyle.png" alt="wstyle">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_onco.png" alt="onco">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_lite.png" alt="lite">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_henrystuart.png" alt="henrystuart">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_softspikes.png" alt="softspikes">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_winwinstyle.png" alt="winwinstyle">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_db.png" alt="druh">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_pridegolftee.png" alt="pridegolftee">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_rudy.png" alt="rudy">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_fourteen.png" alt="fourteen">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_pridesports.png" alt="pridesports">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_bettinardi.png" alt="bettinardi">
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="m_partnerslogo slider slide_wrap">
+                        <div class="bnr">
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_taylormade.png" alt="taylormade">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_bridgestone.png" alt="bridgestone">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_srixon.png" alt="srixon">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_callaway.png" alt="callaway">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_majesty.png" alt="majesty">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_ping.png" alt="ping">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_xxio.png" alt="xxio">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_honma.png" alt="honma">
+                            </article>                            
+                        </div>
+                        <div class="bnr">
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_ecco.png" alt="ecco">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_cleveland.png" alt="cleveland">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_akira.png" alt="akira">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_yamaha.png" alt="yamaha">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_saintnine.png" alt="saintnine">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_voicecaddie.png" alt="voicecaddie">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_yonex.png" alt="yonex">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_mizuno.png" alt="mizuno">
+                            </article>                            
+                        </div>
+                        <div class="bnr">
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_betrion.png" alt="betrion">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_husky.png" alt="husky">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_overdoz.png" alt="overdoz">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_baroncalcite.png" alt="baroncalcite">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_golfbuddy.png" alt="golfbuddy">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_onoff.png" alt="onoff">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_prgr.png" alt="prgr">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_koviss.png" alt="koviss">
+                            </article>
+                        </div>
+                        <div class="bnr">
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_oakley.png" alt="oakley">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_kasco.png" alt="kasco">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_daphnes.png" alt="daphnes">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_ogio.png" alt="ogio">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_wstyle.png" alt="wstyle">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_onco.png" alt="onco">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_lite.png" alt="lite">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_henrystuart.png" alt="henrystuart">
+                            </article>
+                        </div>                    
+                        <div class="bnr">                            
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_softspikes.png" alt="softspikes">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_winwinstyle.png" alt="winwinstyle">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_db.png" alt="druh">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_pridegolftee.png" alt="pridegolftee">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_rudy.png" alt="rudy">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_fourteen.png" alt="fourteen">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_pridesports.png" alt="pridesports">
+                            </article>
+                            <article>
+                                <img src="//image.smartscore.kr/purplepin/ic_logo_bettinardi.png" alt="bettinardi">
+                            </article>
+                        </div>
                     </section>
                 </div>
             </div>
-        </div>
 
+            <footer id="footer">
+                <div class="inner">
+                    <h1 class="logo"><a href="index.html"><img src="//image.smartscore.kr/purplepin/ic_logo_footer.png" alt=""></a>
+                    </h1>
+                    <span class="divider"></span>
+                    <div class="center-info">
+                        <p class="headline eng">CS Center 1599 - 7878</p>
+                        <p class="middle-text">09:00 ~18:00 (주말/공휴일 휴무)</p>
+                    </div>
+                    <div class="footer-info">
+                        <div class="divider"></div>
+                        <div>
+                            <dl class="pp-info">
+                                <dt>상호명: </dt>
+                                <dd>㈜퍼플핀</dd>
+                                <dt>대표: </dt>
+                                <dd>정성훈</dd>
+                                <dt>개인정보보호책임자: </dt>
+                                <dd>장민</dd>
+                                <dt>사업자등록번호: </dt>
+                                <dd>110111-5534337</dd>
+                                <dt>통신판매업신고번호: </dt>
+                                <dd>서울강남 – 01540</dd>
+                                <dt>주소: </dt>
+                                <dd>서울시 강남구 테헤란로 98길 8 코스모대치타워 8층</dd>
+                            </dl>
 
-        <footer id="footer">
-            <div class="inner">
-                <h1 class="logo"><a href="index.html"><img src="//image.smartscore.kr/purplepin/ic_logo_footer.png" alt=""></a></h1>
-                <span class="divider"></span>
-                <div class="center-info">
-                    <p class="headline eng">CS Center 1599 - 7878</p>
-                    <p class="middle-text">09:00 ~18:00 (주말/공휴일 휴무)</p>
-                </div>
-                <div class="footer-info">
-                    <div class="divider"></div>
-                    <div>
-                        <dl>
-                            <dt>상호명: </dt>
-                            <dd>㈜퍼플핀</dd>
-                            <dt>대표: </dt>
-                            <dd>정성훈</dd>
-                            <dt>개인정보보호책임자: </dt>
-                            <dd>장민</dd>
-                            <dt>사업자등록번호: </dt>
-                            <dd>110111-5534337</dd>
-                            <dt>통신판매업신고번호: </dt>
-                            <dd>서울강남 – 01540</dd>
-                            <dt>주소: </dt>
-                            <dd>서울시 강남구 테헤란로 98길 8 코스모대치타워 8층</dd>
-                        </dl>
-                        <p>Copyright © 2020 Purplepin All rights reserved.</p>
+                            <div class="m-pp-info">
+                                <span>상호명: ㈜퍼플핀</span>
+                                <span>대표: 정성훈</span>
+                                <span>개인정보보호책임자: 장민</span>
+                                <span>사업자등록번호: 110111-5534337</span>
+                                <span>통신판매업신고번호: 서울강남 – 01540</span>
+                                <span>주소: 서울시 강남구 테헤란로 98길 8 코스모대치타워 8층</span>
+                            </div>
+                            <p>Copyright © 2020 Purplepin All rights reserved.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>            
+        </div>
+       
     </div>
 
     
-    <!-- <script src="../../assets/js/banner.js"></script> -->
+    <script src="./assets/js/tabs.js"></script>
+    <script src="./assets/js/contact.js"></script>
     <script src="https://rawgit.com/almeida-matheus/fullPageScrollPureJS/master/app/assets/javascript/full-page-scroll.js"></script>
     <script type="text/javascript">
         new fullScroll({
@@ -237,6 +592,14 @@
                 autoplay: true,
                 autoplaySpeed: 1400,
             });
+            $(".m_triple").slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 1400,
+            });
             $(".tabbnr").slick({
                 dots: true,
                 infinite: true,
@@ -255,7 +618,15 @@
                 autoplay: true,
                 autoplaySpeed: 1400,
             });
-            
+            $(".m_partnerslogo").slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 1400,
+            });            
         });
     </script>
 </body>
