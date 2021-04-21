@@ -1,3 +1,5 @@
+body {font-family: 'Noto Sans CJK KR';}
+
 .home-parallex-wrap {
   position: relative;
   width: 100%;
@@ -7,18 +9,6 @@
   z-index: 0;
 }
 
-.home-parallex-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  &.active {
-    display: block;
-  }
-}
-
 .text-box {
   min-width: 200px;
 }
@@ -26,89 +16,94 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-size: cover !important;
   &.purplepin {
-    background: url("//image.smartscore.kr/purplepin/img_01.jpg") no-repeat
+    background: url("https://image.smartscore.kr/purplepin/img_01.jpg") no-repeat
       center center;
-    animation: fadeIn 2s ease-in-out;
     .text-box {
-      position: absolute;      
+      position: absolute;
       right: 200px;
       bottom: 160px;
-      animation: slideUp 3s ease-in-out;
     }
   }
 
   &.brandStory {
-    background: url("//image.smartscore.kr/purplepin/img_02.png") no-repeat center center;
+    min-height: 1209px;
+    padding-bottom: 20px;
+    background: url("https://image.smartscore.kr/purplepin/img_02.png") no-repeat center center;
     .inner {
-      position: relative;
+      position: absolute;
+      left: 50%;
+      margin-left: -480px;
+      width: 100%;
+      height: 100%;
       max-width: 960px;
       height: 100%;
-      margin: auto;
       .obj1 {
         position: absolute;
-        left: 0; 
-        top: 20%;
-        width: 10%;
+        left: 0;
+        top: 322px;
+        width: 110px;
         margin-left: -20%;
-        animation: slideUp2 1s ease-in-out;
       }
       .obj2 {
         position: absolute;
-        left: 80%; 
-        top: 0;
-        width: 16%;
-        margin-top: -30px;
-        animation: slideUp2 2s ease-in-out;
+        left: 70%;
+        top: -5%;
+        width: 18%;
       }
-    }    
+    }
     .text-wrap {
       display: flex;
       align-items: flex-start;
       position: absolute;
-      bottom: 14%;
-      .text-box {   
-        position: relative;   
+      top: 440px;
+      .text-box {
+        position: relative;
         z-index: 5;
-        width: 100%;
+        width: 600px;
         .eng.title {
           margin-bottom: 25px;
-        }   
-        .m-big-text {display: none;}     
+        }
+        .m-big-text {display: none;}
       }
       .shopImg {
         position: relative;
         width: 700px;
         height: 800px;
-        margin-top: -23%; 
-        margin-left: -20%;    
+        margin-top: -220px;
+        margin-left: -20%;
+        .brand-image {
+          position: relative;
+          width: 580px;
+        }
         .obj3 {
           position: absolute;
-          left: 70%;
-          top: 50%;
+          left: 415px;
+          top: 500px;
           width: 220px;
-          height: 220px;       
-        }  
-        animation: slideUp2 2s ease-in-out;         
+          height: 220px;
+        }
       }
     }
+
+    .m_text-wrap {display: none;}
   }
 
   &.studio {
-    background: url("//image.smartscore.kr/purplepin/img_03.jpg") no-repeat
-      center center;
+    min-height: 1200px;
+    background: url("https://image.smartscore.kr/purplepin/img_03.jpg") no-repeat center center;
     .line4 {
       position: absolute;
       right: 0;
-      top: 0;      
+      top: 0;
     }
     .inner {
       position: absolute;
       top: 32vh;
       left: 44vw;
-      width: 576px;   
+      width: 576px;
       .text-box {
         position: relative;
         .bg {
@@ -117,7 +112,8 @@
             left: 0;
             top: 0;
             margin-top: -40%;
-            margin-left: -20%;            
+            margin-left: -20%;
+            animation: width-ani 2s ease;
           }
           .line2 {
             position: absolute;
@@ -131,22 +127,30 @@
             left: 50%;
             top: 0;
             margin-top: -20%;
-          }          
+          }
         }
-      }   
+      }
     }
     .facility {
-      margin-top: 20px;
+      margin-top: 103px;
       .m_triple {display: none;}
       .slide_wrap {
         width: 100%;
         height: 130px;
         .slick-slide {
-          width: 190px;
-          margin-right: 6px;
+          > div {
+            margin-right: 6px;
+          }
+          &:nth-child(3n) {
+            > div {
+              margin-right: 0;
+            }
+          }
         }
         .bnr {
+          position: relative;
           height: 130px;
+          cursor: pointer;
           &.bnr_01 {
             background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1139_2024_5116.jpg");
           }
@@ -165,53 +169,183 @@
           &.bnr_06 {
             background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1091_1900_1750.jpg");
           }
+          &:before {
+            display: none;
+            clear: both;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: url("https://image.smartscore.kr/purplepin/view_hover.png") no-repeat center center;
+            background-size: cover;
+          }
+          &:hover {
+            &:before {
+              display: block;
+            }
+          }
         }
       }
-    }   
+    }
   }
   &.united {
-    background: url("//image.smartscore.kr/purplepin/img_04.jpg") no-repeat
+    min-height: 1310px;
+    background: url("https://image.smartscore.kr/purplepin/img_04.jpg") no-repeat
       center center;
     .inner {
       max-width: 960px;
+      height: 100%;
       margin: auto;
       padding: 12vh 0 0;
       .text-box {
         display: flex;
-      }
+      }      
     }
     .tabcontent {
-      height: 547px;    
+      height: 547px;
       .shop {
-        height: 100%;      
+        height: 100%;
         .slide_wrap {
           margin-top: 30px;
           padding-bottom: 20px;
           .bnr {
-            height: 547px;  
-            &.bnr_01 {
-              background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1086_1885_4444.jpg");
-            }
-            &.bnr_02 {
-              background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1076_1871_5354.jpg");
-            }
-            &.bnr_03 {
-              background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1032_1788_3710.jpg");
-            }
-            &.bnr_04 {
-              background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1075_1862_1216.jpg");
-            }
-            &.bnr_05 {
-              background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1139_2024_5116.jpg");
-            }
-            &.bnr_06 {
-              background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1091_1900_1750.jpg");
-            }
+            height: 547px;
           }
         }
         .slick-dots {top: 517px;}
-      }   
-    }    
+        &.songpaStore {
+          .slide_wrap {
+            .bnr {
+              &.bnr_01 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_01.jpg");
+              }
+              &.bnr_02 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_02.jpg");
+              }
+              &.bnr_03 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_03.jpg");
+              }
+              &.bnr_04 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_04.jpg");
+              }
+              &.bnr_05 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_05.jpg");
+              }
+              // &.bnr_06 {
+              //   background-image: url("https://image.smartscore.kr/purplepin/songpa_06.jpg");
+              // }
+              &.bnr_07 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_07.jpg");
+              }
+              &.bnr_08 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_08.jpg");
+              }
+              &.bnr_09 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_09.jpg");
+              }
+              &.bnr_10 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_10.jpg");
+              }
+              &.bnr_11 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_11.jpg");
+              }
+              &.bnr_12 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_12.jpg");
+              }
+              &.bnr_13 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_13.jpg");
+              }
+              &.bnr_14 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_14.jpg");
+              }
+              &.bnr_15 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_16.jpg");
+              }
+              &.bnr_16 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_16.jpg");
+              }
+              &.bnr_17 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_17.jpg");
+              }
+              &.bnr_18 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_18.jpg");
+              }
+              &.bnr_19 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_19.jpg");
+              }
+              &.bnr_20 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_20.jpg");
+              }
+              &.bnr_21 {
+                background-image: url("https://image.smartscore.kr/purplepin/songpa_21.jpg");
+              }
+            }
+          }
+        }
+        &.geumgokStore {
+          .slide_wrap {
+            .bnr {
+              &.bnr_01 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_01.jpg");
+              }
+              &.bnr_02 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_02.jpg");
+              }
+              &.bnr_03 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_03.jpg");
+              }
+              &.bnr_04 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_04.jpg");
+              }
+              &.bnr_05 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_05.jpg");
+              }
+              &.bnr_06 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_06.jpg");
+              }
+              &.bnr_07 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_07.jpg");
+              }
+              &.bnr_08 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_08.jpg");
+              }
+              &.bnr_09 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_09.jpg");
+              }
+              &.bnr_10 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_10.jpg");
+              }
+              &.bnr_11 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_11.jpg");
+              }
+              &.bnr_12 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_12.jpg");
+              }
+              &.bnr_13 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_13.jpg");
+              }
+              &.bnr_14 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_14.jpg");
+              }
+              &.bnr_15 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_15.jpg");
+              }
+              &.bnr_16 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_16.jpg");
+              }
+              &.bnr_17 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_17.jpg");
+              }
+              &.bnr_18 {
+                background-image: url("https://image.smartscore.kr/purplepin/bundang_18.jpg");
+              }
+            }
+          }
+        }
+      }
+    }
     .addr-box {
       display: flex;
       align-items: center;
@@ -220,7 +354,8 @@
     }
   }
   &.partners {
-    background: url("//image.smartscore.kr/purplepin/img_05.png") no-repeat
+    min-height: 1200px;
+    background: url("https://image.smartscore.kr/purplepin/img_05.png") no-repeat
       center center;
     .inner {
       width: 842px;
@@ -237,16 +372,16 @@
       .partnership {
         margin-top: 100px;
         .slide_wrap {
-          padding-bottom: 50px;     
-          max-height: 570px;          
+          padding-bottom: 50px;
+          max-height: 570px;
           .bnr {
             display: flex !important;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            max-height: 570px;   
+            max-height: 570px;
             article {
-              width: 20%;              
+              width: 20%;
               img {
                 width: 100%;
               }
@@ -254,15 +389,18 @@
                 padding: 14px 0;
               }
             }
-          }               
+          }
         }
         .slick-arrow {
           display: none !important;
         }
       }
+      .partnerslogo {
+        min-height: 570px;    
+      }
       .m_partnerslogo {
         display: none;
-      }       
+      }
     }
   }
 
@@ -273,8 +411,8 @@
     margin-bottom: 15px;
   }
   .big-text {
-    margin-top: 25px;    
-    letter-spacing: -1.95px;    
+    margin-top: 25px;
+    letter-spacing: -1.95px;
   }
 }
 
@@ -299,6 +437,9 @@
     display: none !important;
   }
   .section {
+    &.brandStory {
+      width: 100%;
+    }
     &.studio {
       .inner {
         left: 50%;
@@ -312,9 +453,11 @@
 }
 
 @media screen and (max-width: 720px) {
-  .section {
-    &.purplepin {      
-      .text-box {
+  .section {        
+    padding-bottom: 30px;
+    &.purplepin {    
+      background-image: url("https://image.smartscore.kr/purplepin/img_01_mobile.jpg");
+        .text-box {
         left: 17%;
         top: 100px;
         font-size: 2em;
@@ -324,59 +467,61 @@
       }
     }
 
-    .bar {
-      width: 30px;
-      height: 3px;
-      margin: 0 auto 14px;
-    }
-
     &.brandStory {
       position: relative;
+      background-image: url("https://image.smartscore.kr/purplepin/img_02_mobile.jpg");
       .inner {
         width: 100%;
+        left: 0;
+        margin-left: 0;
         .obj1 {
           left: 80%;
           top: 60%;
-          width: 16%;         
+          width: 16%;
         }
-        .text-wrap {
-          flex-direction: column-reverse;
-          align-items: center;
+        .obj2 {
+          position: absolute;
+          left: 86%;
+          top: -1%;
+          width: 16%;
+        }
+        .text-wrap {display: none;}
+        .m_text-wrap {
+          display: block;
           padding: 0 4vw;
-          top: 0;
           .text-box {
-            width: 100%;
-            left: 50%;
-            bottom: 0;
+            position: absolute;
+            left: 0;
+            bottom: 5%;
+            padding: 0 4vw;
             text-align: center;
-            transform: translateX(-50%);  
             .big-text {display: none;}
             .m-big-text {
-              display: block;              
+              display: block;
               word-break: keep-all;
-            }          
+              margin-top: 25px;
+            }
           }
           .shopImg {
-            left: 50%;
-            top: 20%;
-            transform: translateX(-50%);
+            position: relative;
             width: 100%;
+            margin-top: 14%;
             height: auto;
-            margin-top: 0;
-            margin-left: 0;
+            margin-left: 5%;
             .obj3 {
+              position: absolute;
               width: 180px;
               height: 180px;
               left: -30%;
               top: 60%;
             }
-          }          
-        }        
-      }      
+          }
+        }
+      }
     }
 
-
     &.studio {
+      background-image: url("https://image.smartscore.kr/purplepin/img_mobile_03.jpg");
       background-position: 24% 0;
       .line4 {display: none;}
       .inner {
@@ -397,6 +542,7 @@
     }
 
     &.united {
+      background-image: url("https://image.smartscore.kr/purplepin/img_04_mobile.jpg");
       .inner {
         width: 100%;
         .text-box {
@@ -408,103 +554,108 @@
           .big-text {
             text-align: center;
             margin: auto;
+            margin-top: 25px;
           }
         }
-          
+
         .tab-content-box {
           margin-top: 20px;
           .tabcontent {
-            height: 347px;    
+            height: 347px;
             .shop {
-              height: 100%;      
-              .slide_wrap {              
+              height: 100%;
+              .slide_wrap {
                 .bnr {
-                  height: 347px;                  
+                  height: 347px;
                 }
               }
               .slick-dots {top: 300px;}
-            }             
+            }
           }
-        }      
+        }
         .addr-box {
           margin-top: 10px;
-          font-size: 14px;
+          font-size: 18px;
         }
       }
     }
 
     &.partners {
+      background-image: url("https://image.smartscore.kr/purplepin/img_05_mobile.jpg");
       .inner {
         width: 100%;
         margin: auto;
         .partnership {
-          margin-top: 20px;             
+          margin-top: 20px;
         }
       }
     }
+  
+
+  .bar {
+    width: 30px;
+    height: 3px;
+    margin: 0 auto 14px;
   }
 
   .slide_wrap {
     margin-top: 20px;
     height: auto;
   }
+  }
 }
 
 @media screen and (max-width: 440px) {
   .section {
-
     &.brandStory {
+      min-height: 860px;
       .inner {
         .text-wrap {
-          .text-box {
-            .big-text {display: none;}
-            .m-big-text {display: block;}
-          }
+          top: 0;
+          padding-bottom: 20px;
         }
         .obj1 {top: 70%;}
-        .shopImg {top: 60% !important;}
-      }      
+      }
     }
 
     &.studio {
+      min-height: 960px;
       .inner {
-        top: 16%;
-      }
-      .text-box {
-        .big-text {
-          font-size: 16px;
-          line-height: 30px;
-        }
+        top: 36%;
       }
       .facility {
         .triple {display: none;}
         .m_triple {
           display: block;
-          .slick-slide {
-            margin-right: 0;
+          margin-top: 46px;
+           .slick-slide {
+            > div {
+              margin-right: 0;
+            }
           }
-        }  
+        }
         .slide_wrap {
-          height: 247px;        
+          height: 247px;
           .bnr {
-            height: 247px;          
+            height: 247px;
           }
         }
       }
     }
 
     &.united {
+      min-height: 784px;
       .inner {
         .tab-content-box {
           .tabcontent {
-            height: 247px;    
+            height: 247px;
             .shop {
-              height: 100%;      
+              height: 100%;
               .slide_wrap {
                 margin-top: 30px;
                 padding-bottom: 20px;
                 .bnr {
-                  height: 247px;  
+                  height: 247px;
                   &.bnr_01 {
                     background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1086_1885_4444.jpg");
                   }
@@ -526,13 +677,17 @@
                 }
               }
               .slick-dots {top: 517px;}
-            }   
-          }   
+            }
+          }
         }
-      }        
+        .big-text {
+          margin-top: 25px !important;
+        }
+      }
     }
 
     &.partners {
+      min-height: 500px;
       .inner {
         .text-box {
           .big-text {display: none;}
@@ -542,27 +697,46 @@
             padding: 0 4vw;
           }
         }
-        .partnership {        
+        .partnership {
           .slide_wrap {
             padding-bottom: 0;
-            .bnr {            
+            .bnr {
               article {
-                width: 48% !important;              
+                width: 48% !important;
                 img {
                   width: 100%;
-                }    
+                }
                 &:nth-child(even) {
                   padding: 0 !important;
-                }          
+                }
               }
-            }   
-            &.partnerslogo {display: none;}            
-            &.m_partnerslogo {display: block;}      
-          }          
+            }
+            &.partnerslogo {display: none;}
+            &.m_partnerslogo {
+              display: block;
+              padding: 0 20px;
+              margin: 60px 0 30px;
+              .slick-dots {margin-left: -20px;}
+            }
+          }
         }
-      }             
+      }
     }
   }
+  .arrow-box {display: none;}
 }
 
 
+@media screen and (max-width: 320px) {
+  .section {    
+    &.brandStory {
+      min-height: 1000px;
+    }
+    &.united {
+      min-height: 760px;
+    }
+    &.studio {
+      min-height: 1100px;
+    }
+  }
+}

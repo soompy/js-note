@@ -8,12 +8,12 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  height: 100%;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
@@ -32,6 +32,7 @@ dl, ul, ol, menu, li {
  */
 body {
   margin: 0;
+  height: 100%;
 }
 
 /**
@@ -448,6 +449,34 @@ figure {
   background-color: transparent;
 }
 
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/NotoSansKR-Light.woff2") format("woff2"), url("../fonts/NotoSansKR-Light.woff") format("woff"), url("../fonts/NotoSansKR-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/NotoSansKR-Medium.woff2") format("woff2"), url("../fonts/NotoSansKR-Medium.woff") format("woff"), url("../fonts/NotoSansKR-Medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.otf") format("truetype");
+}
+
 /* Layout */
 .dp-f {
   display: -webkit-box;
@@ -480,9 +509,8 @@ figure {
   top: 0;
   width: 100%;
   height: 124px;
-  opacity: 0.7;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), to(rgba(84, 84, 84, 0)));
-  background-image: linear-gradient(to bottom, #000000, rgba(84, 84, 84, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333333), to(rgba(84, 84, 84, 0)));
+  background-image: linear-gradient(to bottom, #333333, rgba(84, 84, 84, 0));
   z-index: 10;
 }
 
@@ -494,7 +522,6 @@ figure {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 1800px;
   padding: 0 40px;
   margin: auto;
 }
@@ -515,7 +542,41 @@ figure {
   margin-left: auto;
 }
 
+#header .inner .drop-down-wrap .call {
+  display: none;
+}
+
 #header .mobilelogo {
+  display: none;
+}
+
+#main {
+  position: relative;
+  height: 100%;
+}
+
+.arrow-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  right: 4%;
+  bottom: 47px;
+}
+
+.arrow-box .down {
+  margin-top: 10px;
+}
+
+.arrow-box.first-page .up {
+  display: none;
+}
+
+.arrow-box.last-page .down {
   display: none;
 }
 
@@ -524,7 +585,6 @@ figure {
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
-  font-family: "Noto Sans KR", sans-serif;
 }
 
 .inner-wrap {
@@ -596,7 +656,7 @@ figure {
 }
 
 .m-big-text {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 30px;
   word-break: keep-all;
 }
@@ -678,51 +738,51 @@ figure {
 }
 
 .round-button.mail {
-  background: url("//image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center;
+  background: url("https://image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center;
 }
 
 .round-button.mail:hover {
-  background: url("//image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center rgba(255, 255, 255, 0.05);
+  background: url("https://image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center rgba(255, 255, 255, 0.05);
 }
 
 .round-button.mail:focus {
-  background: url("//image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center rgba(255, 255, 255, 0.15);
+  background: url("https://image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center rgba(255, 255, 255, 0.15);
 }
 
 .round-button.phone {
-  background: url("//image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center;
+  background: url("https://image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center;
 }
 
 .round-button.phone:hover {
-  background: url("//image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center rgba(255, 255, 255, 0.05);
+  background: url("https://image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center rgba(255, 255, 255, 0.05);
 }
 
 .round-button.phone:focus {
-  background: url("//image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center rgba(255, 255, 255, 0.15);
+  background: url("https://image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center rgba(255, 255, 255, 0.15);
 }
 
 .round-button.up {
-  background: url("//image.smartscore.kr/purplepin/btn_top.png") no-repeat center center;
+  background: url("https://image.smartscore.kr/purplepin/btn_top.png") no-repeat center center;
 }
 
 .round-button.up:hover {
-  background: url("//image.smartscore.kr/purplepin/btn_top.png") no-repeat center center rgba(255, 255, 255, 0.05);
+  background: url("https://image.smartscore.kr/purplepin/btn_top.png") no-repeat center center rgba(255, 255, 255, 0.05);
 }
 
 .round-button.up:focus {
-  background: url("//image.smartscore.kr/purplepin/btn_top.png") no-repeat center center rgba(255, 255, 255, 0.15);
+  background: url("https://image.smartscore.kr/purplepin/btn_top.png") no-repeat center center rgba(255, 255, 255, 0.15);
 }
 
 .round-button.down {
-  background: url("//image.smartscore.kr/purplepin/btn_down.png") no-repeat center center;
+  background: url("https://image.smartscore.kr/purplepin/btn_down.png") no-repeat center center;
 }
 
 .round-button.down:hover {
-  background: url("//image.smartscore.kr/purplepin/btn_down.png") no-repeat center center rgba(255, 255, 255, 0.05);
+  background: url("https://image.smartscore.kr/purplepin/btn_down.png") no-repeat center center rgba(255, 255, 255, 0.05);
 }
 
 .round-button.down:focus {
-  background: url("//image.smartscore.kr/purplepin/btn_down.png") no-repeat center center rgba(255, 255, 255, 0.15);
+  background: url("https://image.smartscore.kr/purplepin/btn_down.png") no-repeat center center rgba(255, 255, 255, 0.15);
 }
 
 .square-button {
@@ -745,17 +805,17 @@ figure {
 .square-button.square {
   width: 40px;
   height: 40px;
-  background: url("//image.smartscore.kr/purplepin/btn_close.png") no-repeat center center;
+  background: url("https://image.smartscore.kr/purplepin/btn_close.png") no-repeat center center;
   background-size: 95% !important;
   border: none;
 }
 
 .square-button.square:hover {
-  background: url("//image.smartscore.kr/purplepin/btn_close_hover.png");
+  background: url("https://image.smartscore.kr/purplepin/btn_close_hover.png");
 }
 
 .square-button.square:focus {
-  background: url("//image.smartscore.kr/purplepin/btn_close_focus.png");
+  background: url("https://image.smartscore.kr/purplepin/btn_close_focus.png");
 }
 
 .square-button:hover {
@@ -770,14 +830,27 @@ figure {
   width: 190px;
   height: 130px;
   background-size: cover;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
-.view-photo-box:hover {
-  background: url("//image.smartscore.kr/purplepin/view_hover.png") no-repeat center center;
+.view-photo-box:hover:after {
+  display: block;
+  clear: both;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-size: 50%;
+  background: url("https://image.smartscore.kr/purplepin/view_hover.png") no-repeat center center;
 }
 
-.view-photo-box:focus {
-  background: url("//image.smartscore.kr/purplepin/view_focus.png") no-repeat center center;
+.view-photo-box:focus:after {
+  display: block;
+  clear: both;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url("https://image.smartscore.kr/purplepin/view_focus.png") no-repeat center center;
 }
 
 /* Style the tab */
@@ -816,11 +889,15 @@ figure {
   background-image: linear-gradient(to right, #9f06e4 0%, #3900fc 100%);
 }
 
-.tab button:hover, .tab button:focus, .tab button.active {
+.tab button:hover {
   color: #fff;
 }
 
-.tab button:hover:after, .tab button:focus:after, .tab button.active:after {
+.tab button:focus, .tab button.active {
+  color: #fff;
+}
+
+.tab button:focus:after, .tab button.active:after {
   height: 12px;
 }
 
@@ -935,7 +1012,7 @@ figure {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 15;
@@ -999,7 +1076,12 @@ figure {
   visibility: visible;
 }
 
+.map-wrap {
+  overflow: hidden;
+}
+
 .map-wrap .map {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1008,28 +1090,40 @@ figure {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 692px;
-  background-image: url("https://t1.daumcdn.net/cfile/tistory/9968D2465E832E5A34");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+}
+
+.map-wrap .map iframe {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .map-wrap .map .bottom-infoBox {
-  margin-top: auto;
-  padding: 12px 40px 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(49%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 49%, rgba(255, 255, 255, 0.5));
 }
 
+.map-wrap .map .bottom-infoBox .inner {
+  padding: 40px;
+}
+
 .map-wrap .map .bottom-infoBox .headline {
+  display: inline-block;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.map-wrap .map .bottom-infoBox .addr-box {
+  display: block;
+  margin-top: 0;
 }
 
 #footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
   padding: 50px 0;
   background: #1e1e1e;
@@ -1050,7 +1144,7 @@ figure {
 }
 
 #footer .inner .logo {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 #footer .inner .logo a {
@@ -1081,6 +1175,11 @@ figure {
   line-height: 60px;
 }
 
+#footer .inner .center-info .headline.eng {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
 #footer .inner .footer-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1099,7 +1198,7 @@ figure {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  line-height: 22px;
+  line-height: 20px;
 }
 
 #footer .inner .footer-info .pp-info dd {
@@ -1108,71 +1207,11 @@ figure {
 }
 
 #footer .inner .footer-info p {
-  margin-top: 10px;
+  margin-top: 9px;
 }
 
 #footer .inner .footer-info .m-pp-info {
   display: none;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes slideUp {
-  from {
-    opacity: 0;
-    bottom: 120px;
-  }
-  to {
-    opacity: 1;
-    bottom: 160px;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    bottom: 120px;
-  }
-  to {
-    opacity: 1;
-    bottom: 160px;
-  }
-}
-
-@-webkit-keyframes slideUp2 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    margin-top: -5%;
-  }
-}
-
-@keyframes slideUp2 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    margin-top: -5%;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1310,40 +1349,40 @@ figure {
     height: 40px;
   }
   .round-button.mail {
-    background: url("//image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center;
+    background: url("https://image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center;
   }
   .round-button.mail:hover {
-    background: url("//image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center rgba(255, 255, 255, 0.05);
+    background: url("https://image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center rgba(255, 255, 255, 0.05);
   }
   .round-button.mail:focus {
-    background: url("//image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center rgba(255, 255, 255, 0.15);
+    background: url("https://image.smartscore.kr/purplepin/btn_drop_mail.png") no-repeat center center rgba(255, 255, 255, 0.15);
   }
   .round-button.phone {
-    background: url("//image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center;
+    background: url("https://image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center;
   }
   .round-button.phone:hover {
-    background: url("//image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center rgba(255, 255, 255, 0.05);
+    background: url("https://image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center rgba(255, 255, 255, 0.05);
   }
   .round-button.phone:focus {
-    background: url("//image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center rgba(255, 255, 255, 0.15);
+    background: url("https://image.smartscore.kr/purplepin/btn_drop_phone.png") no-repeat center center rgba(255, 255, 255, 0.15);
   }
   .round-button.up {
-    background: url("//image.smartscore.kr/purplepin/btn_top.png") no-repeat center center;
+    background: url("https://image.smartscore.kr/purplepin/btn_top.png") no-repeat center center;
   }
   .round-button.up:hover {
-    background: url("//image.smartscore.kr/purplepin/btn_top.png") no-repeat center center rgba(255, 255, 255, 0.05);
+    background: url("https://image.smartscore.kr/purplepin/btn_top.png") no-repeat center center rgba(255, 255, 255, 0.05);
   }
   .round-button.up:focus {
-    background: url("//image.smartscore.kr/purplepin/btn_top.png") no-repeat center center rgba(255, 255, 255, 0.15);
+    background: url("https://image.smartscore.kr/purplepin/btn_top.png") no-repeat center center rgba(255, 255, 255, 0.15);
   }
   .round-button.down {
-    background: url("//image.smartscore.kr/purplepin/btn_down.png") no-repeat center center;
+    background: url("https://image.smartscore.kr/purplepin/btn_down.png") no-repeat center center;
   }
   .round-button.down:hover {
-    background: url("//image.smartscore.kr/purplepin/btn_down.png") no-repeat center center rgba(255, 255, 255, 0.05);
+    background: url("https://image.smartscore.kr/purplepin/btn_down.png") no-repeat center center rgba(255, 255, 255, 0.05);
   }
   .round-button.down:focus {
-    background: url("//image.smartscore.kr/purplepin/btn_down.png") no-repeat center center rgba(255, 255, 255, 0.15);
+    background: url("https://image.smartscore.kr/purplepin/btn_down.png") no-repeat center center rgba(255, 255, 255, 0.15);
   }
   .square-button {
     height: 32px;
@@ -1358,6 +1397,9 @@ figure {
 }
 
 @media screen and (max-width: 720px) and (max-width: 440px) {
+  #footer .inner {
+    padding: 0 4vw;
+  }
   #footer .inner .footer-info .pp-info {
     display: none;
   }
@@ -1391,8 +1433,11 @@ figure {
     top: -45px;
     right: -25px;
   }
+  .drop-down-wrap .drop-down-box .drop-down .call {
+    display: block !important;
+  }
   .title {
-    font-size: 20px;
+    font-size: 40px;
     letter-spacing: -4.5px;
     font-weight: bold;
   }
@@ -1412,7 +1457,7 @@ figure {
     font-weight: 500;
   }
   .big-text {
-    font-size: 16px;
+    font-size: 24px;
     letter-spacing: -1.3px;
     font-weight: normal;
     line-height: 30px;
@@ -1428,12 +1473,12 @@ figure {
     font-weight: normal;
   }
   .eng.title {
-    font-size: 20px;
+    font-size: 40px;
     letter-spacing: -1.8px;
     font-weight: bold;
   }
   .eng.sub-title {
-    font-size: 18px;
+    font-size: 24px;
     letter-spacing: -1.2px;
     font-weight: bold;
   }
@@ -1468,7 +1513,16 @@ figure {
     height: 100vh;
   }
   .map-wrap .map .bottom-infoBox {
-    padding: 12px 4vw 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .map-wrap .map .bottom-infoBox .inner {
+    max-width: 100% !important;
+    width: 100%;
+    padding: 4vw;
   }
   .map-wrap .map .bottom-infoBox .headline {
     font-size: 20px;
@@ -1476,6 +1530,10 @@ figure {
 }
 
 /* Page */
+body {
+  font-family: 'Noto Sans CJK KR';
+}
+
 .home-parallex-wrap {
   position: relative;
   width: 100%;
@@ -1483,19 +1541,6 @@ figure {
   top: 0;
   left: 0;
   z-index: 0;
-}
-
-.home-parallex-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.home-parallex-content.active {
-  display: block;
 }
 
 .text-box {
@@ -1506,53 +1551,49 @@ figure {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-size: cover !important;
 }
 
 .section.purplepin {
-  background: url("//image.smartscore.kr/purplepin/img_01.jpg") no-repeat center center;
-  -webkit-animation: fadeIn 2s ease-in-out;
-          animation: fadeIn 2s ease-in-out;
+  background: url("https://image.smartscore.kr/purplepin/img_01.jpg") no-repeat center center;
 }
 
 .section.purplepin .text-box {
   position: absolute;
   right: 200px;
   bottom: 160px;
-  -webkit-animation: slideUp 3s ease-in-out;
-          animation: slideUp 3s ease-in-out;
 }
 
 .section.brandStory {
-  background: url("//image.smartscore.kr/purplepin/img_02.png") no-repeat center center;
+  min-height: 1209px;
+  padding-bottom: 20px;
+  background: url("https://image.smartscore.kr/purplepin/img_02.png") no-repeat center center;
 }
 
 .section.brandStory .inner {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  margin-left: -480px;
+  width: 100%;
+  height: 100%;
   max-width: 960px;
   height: 100%;
-  margin: auto;
 }
 
 .section.brandStory .inner .obj1 {
   position: absolute;
   left: 0;
-  top: 20%;
-  width: 10%;
+  top: 322px;
+  width: 110px;
   margin-left: -20%;
-  -webkit-animation: slideUp2 1s ease-in-out;
-          animation: slideUp2 1s ease-in-out;
 }
 
 .section.brandStory .inner .obj2 {
   position: absolute;
-  left: 80%;
-  top: 0;
-  width: 16%;
-  margin-top: -30px;
-  -webkit-animation: slideUp2 2s ease-in-out;
-          animation: slideUp2 2s ease-in-out;
+  left: 70%;
+  top: -5%;
+  width: 18%;
 }
 
 .section.brandStory .text-wrap {
@@ -1563,13 +1604,13 @@ figure {
       -ms-flex-align: start;
           align-items: flex-start;
   position: absolute;
-  bottom: 14%;
+  top: 440px;
 }
 
 .section.brandStory .text-wrap .text-box {
   position: relative;
   z-index: 5;
-  width: 100%;
+  width: 600px;
 }
 
 .section.brandStory .text-wrap .text-box .eng.title {
@@ -1584,22 +1625,30 @@ figure {
   position: relative;
   width: 700px;
   height: 800px;
-  margin-top: -23%;
+  margin-top: -220px;
   margin-left: -20%;
-  -webkit-animation: slideUp2 2s ease-in-out;
-          animation: slideUp2 2s ease-in-out;
+}
+
+.section.brandStory .text-wrap .shopImg .brand-image {
+  position: relative;
+  width: 580px;
 }
 
 .section.brandStory .text-wrap .shopImg .obj3 {
   position: absolute;
-  left: 70%;
-  top: 50%;
+  left: 415px;
+  top: 500px;
   width: 220px;
   height: 220px;
 }
 
+.section.brandStory .m_text-wrap {
+  display: none;
+}
+
 .section.studio {
-  background: url("//image.smartscore.kr/purplepin/img_03.jpg") no-repeat center center;
+  min-height: 1200px;
+  background: url("https://image.smartscore.kr/purplepin/img_03.jpg") no-repeat center center;
 }
 
 .section.studio .line4 {
@@ -1625,6 +1674,8 @@ figure {
   top: 0;
   margin-top: -40%;
   margin-left: -20%;
+  -webkit-animation: width-ani 2s ease;
+          animation: width-ani 2s ease;
 }
 
 .section.studio .inner .text-box .bg .line2 {
@@ -1643,7 +1694,7 @@ figure {
 }
 
 .section.studio .facility {
-  margin-top: 20px;
+  margin-top: 103px;
 }
 
 .section.studio .facility .m_triple {
@@ -1655,13 +1706,18 @@ figure {
   height: 130px;
 }
 
-.section.studio .facility .slide_wrap .slick-slide {
-  width: 190px;
+.section.studio .facility .slide_wrap .slick-slide > div {
   margin-right: 6px;
 }
 
+.section.studio .facility .slide_wrap .slick-slide:nth-child(3n) > div {
+  margin-right: 0;
+}
+
 .section.studio .facility .slide_wrap .bnr {
+  position: relative;
   height: 130px;
+  cursor: pointer;
 }
 
 .section.studio .facility .slide_wrap .bnr.bnr_01 {
@@ -1688,12 +1744,31 @@ figure {
   background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1091_1900_1750.jpg");
 }
 
+.section.studio .facility .slide_wrap .bnr:before {
+  display: none;
+  clear: both;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://image.smartscore.kr/purplepin/view_hover.png") no-repeat center center;
+  background-size: cover;
+}
+
+.section.studio .facility .slide_wrap .bnr:hover:before {
+  display: block;
+}
+
 .section.united {
-  background: url("//image.smartscore.kr/purplepin/img_04.jpg") no-repeat center center;
+  min-height: 1310px;
+  background: url("https://image.smartscore.kr/purplepin/img_04.jpg") no-repeat center center;
 }
 
 .section.united .inner {
   max-width: 960px;
+  height: 100%;
   margin: auto;
   padding: 12vh 0 0;
 }
@@ -1721,32 +1796,160 @@ figure {
   height: 547px;
 }
 
-.section.united .tabcontent .shop .slide_wrap .bnr.bnr_01 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1086_1885_4444.jpg");
-}
-
-.section.united .tabcontent .shop .slide_wrap .bnr.bnr_02 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1076_1871_5354.jpg");
-}
-
-.section.united .tabcontent .shop .slide_wrap .bnr.bnr_03 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1032_1788_3710.jpg");
-}
-
-.section.united .tabcontent .shop .slide_wrap .bnr.bnr_04 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1075_1862_1216.jpg");
-}
-
-.section.united .tabcontent .shop .slide_wrap .bnr.bnr_05 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1139_2024_5116.jpg");
-}
-
-.section.united .tabcontent .shop .slide_wrap .bnr.bnr_06 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1091_1900_1750.jpg");
-}
-
 .section.united .tabcontent .shop .slick-dots {
   top: 517px;
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_01 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_01.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_02 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_02.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_03 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_03.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_04 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_04.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_05 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_05.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_07 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_07.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_08 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_08.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_09 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_09.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_10 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_10.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_11 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_11.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_12 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_12.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_13 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_13.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_14 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_14.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_15 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_16.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_16 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_16.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_17 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_17.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_18 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_18.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_19 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_19.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_20 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_20.jpg");
+}
+
+.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_21 {
+  background-image: url("https://image.smartscore.kr/purplepin/songpa_21.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_01 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_01.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_02 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_02.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_03 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_03.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_04 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_04.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_05 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_05.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_06 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_06.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_07 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_07.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_08 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_08.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_09 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_09.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_10 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_10.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_11 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_11.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_12 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_12.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_13 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_13.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_14 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_14.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_15 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_15.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_16 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_16.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_17 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_17.jpg");
+}
+
+.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_18 {
+  background-image: url("https://image.smartscore.kr/purplepin/bundang_18.jpg");
 }
 
 .section.united .addr-box {
@@ -1761,7 +1964,8 @@ figure {
 }
 
 .section.partners {
-  background: url("//image.smartscore.kr/purplepin/img_05.png") no-repeat center center;
+  min-height: 1200px;
+  background: url("https://image.smartscore.kr/purplepin/img_05.png") no-repeat center center;
 }
 
 .section.partners .inner {
@@ -1824,6 +2028,10 @@ figure {
   display: none !important;
 }
 
+.section.partners .inner .partnerslogo {
+  min-height: 570px;
+}
+
 .section.partners .inner .m_partnerslogo {
   display: none;
 }
@@ -1861,6 +2069,9 @@ figure {
   .controllers {
     display: none !important;
   }
+  .section.brandStory {
+    width: 100%;
+  }
   .section.studio .inner {
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -1872,6 +2083,12 @@ figure {
 }
 
 @media screen and (max-width: 720px) {
+  .section {
+    padding-bottom: 30px;
+  }
+  .section.purplepin {
+    background-image: url("https://image.smartscore.kr/purplepin/img_01_mobile.jpg");
+  }
   .section.purplepin .text-box {
     left: 17%;
     top: 100px;
@@ -1880,65 +2097,64 @@ figure {
   .section.purplepin .text-box .bar {
     margin: 0 0 14px;
   }
-  .section .bar {
-    width: 30px;
-    height: 3px;
-    margin: 0 auto 14px;
-  }
   .section.brandStory {
     position: relative;
+    background-image: url("https://image.smartscore.kr/purplepin/img_02_mobile.jpg");
   }
   .section.brandStory .inner {
     width: 100%;
+    left: 0;
+    margin-left: 0;
   }
   .section.brandStory .inner .obj1 {
     left: 80%;
     top: 60%;
     width: 16%;
   }
+  .section.brandStory .inner .obj2 {
+    position: absolute;
+    left: 86%;
+    top: -1%;
+    width: 16%;
+  }
   .section.brandStory .inner .text-wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0 4vw;
-    top: 0;
-  }
-  .section.brandStory .inner .text-wrap .text-box {
-    width: 100%;
-    left: 50%;
-    bottom: 0;
-    text-align: center;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .section.brandStory .inner .text-wrap .text-box .big-text {
     display: none;
   }
-  .section.brandStory .inner .text-wrap .text-box .m-big-text {
+  .section.brandStory .inner .m_text-wrap {
+    display: block;
+    padding: 0 4vw;
+  }
+  .section.brandStory .inner .m_text-wrap .text-box {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    padding: 0 4vw;
+    text-align: center;
+  }
+  .section.brandStory .inner .m_text-wrap .text-box .big-text {
+    display: none;
+  }
+  .section.brandStory .inner .m_text-wrap .text-box .m-big-text {
     display: block;
     word-break: keep-all;
+    margin-top: 25px;
   }
-  .section.brandStory .inner .text-wrap .shopImg {
-    left: 50%;
-    top: 20%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+  .section.brandStory .inner .m_text-wrap .shopImg {
+    position: relative;
     width: 100%;
+    margin-top: 14%;
     height: auto;
-    margin-top: 0;
-    margin-left: 0;
+    margin-left: 5%;
   }
-  .section.brandStory .inner .text-wrap .shopImg .obj3 {
+  .section.brandStory .inner .m_text-wrap .shopImg .obj3 {
+    position: absolute;
     width: 180px;
     height: 180px;
     left: -30%;
     top: 60%;
   }
   .section.studio {
+    background-image: url("https://image.smartscore.kr/purplepin/img_mobile_03.jpg");
     background-position: 24% 0;
   }
   .section.studio .line4 {
@@ -1961,6 +2177,9 @@ figure {
     margin-top: 20px !important;
     height: 130px;
   }
+  .section.united {
+    background-image: url("https://image.smartscore.kr/purplepin/img_04_mobile.jpg");
+  }
   .section.united .inner {
     width: 100%;
   }
@@ -1977,6 +2196,7 @@ figure {
   .section.united .inner .text-box .big-text {
     text-align: center;
     margin: auto;
+    margin-top: 25px;
   }
   .section.united .inner .tab-content-box {
     margin-top: 20px;
@@ -1995,7 +2215,10 @@ figure {
   }
   .section.united .inner .addr-box {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
+  }
+  .section.partners {
+    background-image: url("https://image.smartscore.kr/purplepin/img_05_mobile.jpg");
   }
   .section.partners .inner {
     width: 100%;
@@ -2004,39 +2227,42 @@ figure {
   .section.partners .inner .partnership {
     margin-top: 20px;
   }
-  .slide_wrap {
+  .section .bar {
+    width: 30px;
+    height: 3px;
+    margin: 0 auto 14px;
+  }
+  .section .slide_wrap {
     margin-top: 20px;
     height: auto;
   }
 }
 
 @media screen and (max-width: 440px) {
-  .section.brandStory .inner .text-wrap .text-box .big-text {
-    display: none;
+  .section.brandStory {
+    min-height: 860px;
   }
-  .section.brandStory .inner .text-wrap .text-box .m-big-text {
-    display: block;
+  .section.brandStory .inner .text-wrap {
+    top: 0;
+    padding-bottom: 20px;
   }
   .section.brandStory .inner .obj1 {
     top: 70%;
   }
-  .section.brandStory .inner .shopImg {
-    top: 60% !important;
+  .section.studio {
+    min-height: 960px;
   }
   .section.studio .inner {
-    top: 16%;
-  }
-  .section.studio .text-box .big-text {
-    font-size: 16px;
-    line-height: 30px;
+    top: 36%;
   }
   .section.studio .facility .triple {
     display: none;
   }
   .section.studio .facility .m_triple {
     display: block;
+    margin-top: 46px;
   }
-  .section.studio .facility .m_triple .slick-slide {
+  .section.studio .facility .m_triple .slick-slide > div {
     margin-right: 0;
   }
   .section.studio .facility .slide_wrap {
@@ -2044,6 +2270,9 @@ figure {
   }
   .section.studio .facility .slide_wrap .bnr {
     height: 247px;
+  }
+  .section.united {
+    min-height: 784px;
   }
   .section.united .inner .tab-content-box .tabcontent {
     height: 247px;
@@ -2079,6 +2308,12 @@ figure {
   .section.united .inner .tab-content-box .tabcontent .shop .slick-dots {
     top: 517px;
   }
+  .section.united .inner .big-text {
+    margin-top: 25px !important;
+  }
+  .section.partners {
+    min-height: 500px;
+  }
   .section.partners .inner .text-box .big-text {
     display: none;
   }
@@ -2104,6 +2339,26 @@ figure {
   }
   .section.partners .inner .partnership .slide_wrap.m_partnerslogo {
     display: block;
+    padding: 0 20px;
+    margin: 60px 0 30px;
+  }
+  .section.partners .inner .partnership .slide_wrap.m_partnerslogo .slick-dots {
+    margin-left: -20px;
+  }
+  .arrow-box {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section.brandStory {
+    min-height: 1000px;
+  }
+  .section.united {
+    min-height: 760px;
+  }
+  .section.studio {
+    min-height: 1100px;
   }
 }
 /*# sourceMappingURL=import.css.map */
