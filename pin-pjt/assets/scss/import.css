@@ -564,7 +564,7 @@ figure {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
-  right: 4%;
+  right: 40px;
   bottom: 47px;
 }
 
@@ -792,6 +792,7 @@ figure {
   color: #fff;
   border: 1px solid #fff;
   background: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 
 .square-button.big {
@@ -1636,10 +1637,10 @@ body {
 
 .section.brandStory .text-wrap .shopImg .obj3 {
   position: absolute;
-  left: 415px;
-  top: 500px;
-  width: 220px;
-  height: 220px;
+  left: 400px;
+  top: 484px;
+  width: 257px;
+  height: 257px;
 }
 
 .section.brandStory .m_text-wrap {
@@ -1653,8 +1654,22 @@ body {
 
 .section.studio .line4 {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 80px;
+  top: -10px;
+}
+
+.section.studio .bg {
+  position: absolute;
+  left: 50%;
+  top: 108px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.section.studio .bg .line1 {
+  position: absolute;
+  left: 146px;
+  top: 88px;
 }
 
 .section.studio .inner {
@@ -1666,31 +1681,6 @@ body {
 
 .section.studio .inner .text-box {
   position: relative;
-}
-
-.section.studio .inner .text-box .bg .line1 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-top: -40%;
-  margin-left: -20%;
-  -webkit-animation: width-ani 2s ease;
-          animation: width-ani 2s ease;
-}
-
-.section.studio .inner .text-box .bg .line2 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-top: -56%;
-  margin-left: -42%;
-}
-
-.section.studio .inner .text-box .bg .line3 {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  margin-top: -20%;
 }
 
 .section.studio .facility {
@@ -1721,27 +1711,39 @@ body {
 }
 
 .section.studio .facility .slide_wrap .bnr.bnr_01 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1139_2024_5116.jpg");
+  background-image: url("https://image.smartscore.kr/purplepin/fitting_01.jpg");
 }
 
 .section.studio .facility .slide_wrap .bnr.bnr_02 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1089_1904_3038.jpg");
+  background-image: url("https://image.smartscore.kr/purplepin/fitting_02.jpg");
 }
 
 .section.studio .facility .slide_wrap .bnr.bnr_03 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1096_1914_4859.jpg");
+  background-image: url("https://image.smartscore.kr/purplepin/fitting_03.jpg");
 }
 
 .section.studio .facility .slide_wrap .bnr.bnr_04 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202103/1075_1862_1216.jpg");
+  background-image: url("https://image.smartscore.kr/purplepin/fitting_04.jpg");
 }
 
 .section.studio .facility .slide_wrap .bnr.bnr_05 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1139_2024_5116.jpg");
+  background-image: url("https://image.smartscore.kr/purplepin/fitting_05.jpg");
 }
 
 .section.studio .facility .slide_wrap .bnr.bnr_06 {
-  background-image: url("https://cdn.golfmagazinekorea.com/news/photo/202104/1091_1900_1750.jpg");
+  background-image: url("https://image.smartscore.kr/purplepin/fitting_06.jpg");
+}
+
+.section.studio .facility .slide_wrap .bnr.bnr_07 {
+  background-image: url("https://image.smartscore.kr/purplepin/fitting_07.jpg");
+}
+
+.section.studio .facility .slide_wrap .bnr.bnr_08 {
+  background-image: url("https://image.smartscore.kr/purplepin/fitting_08.jpg");
+}
+
+.section.studio .facility .slide_wrap .bnr.bnr_09 {
+  background-image: url("https://image.smartscore.kr/purplepin/fitting_09.jpg");
 }
 
 .section.studio .facility .slide_wrap .bnr:before {
@@ -1840,14 +1842,6 @@ body {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_11.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_12 {
-  background-image: url("https://image.smartscore.kr/purplepin/songpa_12.jpg");
-}
-
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_13 {
-  background-image: url("https://image.smartscore.kr/purplepin/songpa_13.jpg");
-}
-
 .section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_14 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_14.jpg");
 }
@@ -1904,20 +1898,8 @@ body {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_06.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_07 {
-  background-image: url("https://image.smartscore.kr/purplepin/bundang_07.jpg");
-}
-
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_08 {
-  background-image: url("https://image.smartscore.kr/purplepin/bundang_08.jpg");
-}
-
 .section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_09 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_09.jpg");
-}
-
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_10 {
-  background-image: url("https://image.smartscore.kr/purplepin/bundang_10.jpg");
 }
 
 .section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_11 {
@@ -2109,13 +2091,14 @@ body {
   .section.brandStory .inner .obj1 {
     left: 80%;
     top: 60%;
-    width: 16%;
+    width: 136px;
   }
   .section.brandStory .inner .obj2 {
     position: absolute;
     left: 86%;
     top: -1%;
-    width: 16%;
+    width: 169px;
+    height: 169px;
   }
   .section.brandStory .inner .text-wrap {
     display: none;
@@ -2248,6 +2231,13 @@ body {
   }
   .section.brandStory .inner .obj1 {
     top: 70%;
+    width: 80px;
+  }
+  .section.brandStory .inner .obj2 {
+    left: 76%;
+    top: -20px;
+    width: 134px;
+    height: 134px;
   }
   .section.studio {
     min-height: 960px;
