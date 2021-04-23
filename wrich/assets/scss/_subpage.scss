@@ -1,0 +1,74 @@
+.inner {
+  
+}
+
+.text-box {
+  width: 100%;
+}
+
+// about
+.platform {
+  background-image: url('https://image.smartscore.kr/wrich/about/about-banner.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 20px;
+  height: 1020px;
+  .inner {
+    flex-direction: column;    
+    p {
+      color: $color-white;
+      &.main-title {
+        line-height: 1.36;
+        margin-top: 253px;
+      }
+    }
+  }
+}
+
+.flicking-box {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  .flicking-button {
+    margin-left: auto;
+    a {
+      margin-left: 30px;
+    }
+  }
+}
+
+.history-flicking {
+  .flicking-wrap {
+    display: flex;
+    overflow-x: auto;
+    .flicking-item {
+      padding-top: 60px;
+      border-top: 4px solid #e6e6e6;
+      padding-right: 120px;
+      &.active {
+        border-top: 4px solid $color-grey;
+      }
+    }
+  }
+}
+
+.information-tooltip {
+  position: relative;
+  .information-box { 
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 513px;
+    background: $color-white;
+    padding: 40px;    
+    // box-shadow: ;
+    border-radius: 14px;
+  }
+}
+
+.map {
+  iframe {
+    width: 100%;
+  }
+}

@@ -9,9 +9,8 @@
         <meta name="description" content="위드리치 홈페이지입니다.">
         <meta name="keywords" content="위드리치, 보험, 투자">
         <meta name="author" content="스마트스코어">
-        <link rel="stylesheet" href="../../assets/scss/import.css">  
-        <link rel="stylesheet" href="../../assets/scss/scrollTrigger.css">  
-        <link rel="stylesheet" href="../../assets/scss/triggerStyle.css">  
+        <link rel="stylesheet" href="../../assets/scss/import.css">
+        <link rel="stylesheet" href="./assets/scss/animate.css">
         <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>        
     </head>
 
@@ -43,11 +42,19 @@
                         </div>
                 
                         <div class="svg-text-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 430">
-                                <text transform="translate(56.22 214.89)" stroke="#fff" stroke-width="0">
-                                    <tspan x="27" y="0">고객 맞춤형 서비스</tspan>
-                                    <tspan x="0" y="80">인슈어테크 플랫폼</tspan>
-                                    <tspan x="10" y="40">위드리치</tspan>
+                            <svg viewBox="0 0 540 60" class="svg-text hp-60">
+                                <text x="0" y="50%" dy=".35em" text-anchor="" class="fs-52 bold">
+                                    고객 맞춤형 서비스
+                                </text>
+                            </svg>
+                            <svg viewBox="0 0 540 60" class="svg-text hp-60">
+                                <text x="0" y="50%" dy=".35em" text-anchor="" class="fs-52 bold">
+                                    인슈어테크 플랫폼
+                                </text>
+                            </svg>
+                            <svg viewBox="0 0 540 60" class="svg-text hp-60">
+                                <text x="0" y="50%" dy=".35em" text-anchor="" class="fs-52 bold">
+                                    위드리치
                                 </text>
                             </svg>
                         </div>                        
@@ -65,7 +72,7 @@
                         </div>
             
                         <div class="svg-text-box">
-                            <!-- <svg viewBox="0 0 540 60" class="svg-text hp-60">
+                            <svg viewBox="0 0 540 60" class="svg-text hp-60">
                                 <text x="0" y="50%" dy=".35em" text-anchor="" class="fs-52 bold">
                                     고객 맞춤형 서비스
                                 </text>
@@ -79,15 +86,8 @@
                                 <text x="0" y="50%" dy=".35em" text-anchor="" class="fs-52 bold">
                                     위드리치
                                 </text>
-                            </svg> -->
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 430">
-                                <text transform="translate(56.22 214.89)" stroke="#fff" stroke-width="0">
-                                    <tspan x="27" y="0">한글 Line</tspan>
-                                    <tspan x="0" y="80">Animation</tspan>
-                                </text>
                             </svg>
-                        </div>                        
+                        </div>
                     </div>
                     <a href="#" class="slick-down"><img src="//image.smartscore.kr/wrich/icon/main-arrowdown.png" alt=""></a>
                 </div>                
@@ -96,7 +96,7 @@
 
 
         <div class="content">
-            <section class="common-area main-section1 left" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            <section class="common-area main-section1 left">                
                 <div class="inner">
                     <div class="blank"></div>
                     <div class="content-text-box right">
@@ -111,7 +111,7 @@
                     </div>
                 </div>                               
             </section>
-            <section class="common-area main-section2 right" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            <section class="common-area main-section2 right">
                 <div class="inner">                    
                     <div class="content-text-box right">
                         <p class="title sub-mid-title">영업리더로 <br>성장기회를 <br>만들어보세요!</p>
@@ -124,7 +124,7 @@
                     <div class="blank"></div>
                 </div>
             </section>
-            <section class="common-area service" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            <section class="common-area service">
                 <div class="inner">
                     <p class="title sub-mid-title">자주묻는 질문</p>
                     <div class="link-box">
@@ -134,7 +134,7 @@
                     </div>
                 </div>                
             </section>
-            <section class="common-area service" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+            <section class="common-area service">
                 <div class="inner">
                     <p class="title sub-mid-title">고객센터</p>
                     <div class="link-box">
@@ -144,8 +144,8 @@
                     </div>
                 </div>
             </section>
-            <section class="common-area service" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-                <div class="inner bdb-n">
+            <section class="common-area service">
+                <div class="inner">
                     <p class="title sub-mid-title">앱 다운로드</p>
                     <div class="link-box">                        
                         <button onclick="window.open('https://apps.apple.com/kr/app/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%EC%BD%94%EC%96%B4/id969887573')" type="button">앱스토어<img src="" alt=""></button>
@@ -185,22 +185,10 @@
             </div>
         </footer>
 
-        <script src="./assets/js/ScrollTrigger.js"></script>
+        <script src="./assets/js/wow.js"></script>
         <script>
-        window.counter = function() {
-            // this refers to the html element with the data-scroll-showCallback tag
-            var span = this.querySelector('span');
-            var current = parseInt(span.textContent);
-
-            span.textContent = current + 1;
-        };
-
-        document.addEventListener('DOMContentLoaded', function(){
-        var trigger = new ScrollTrigger({
-            addHeight: true
-        });
-        });
-        </script>        
+            new WOW().init();
+        </script>
     </body>
 
 
