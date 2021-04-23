@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./assets/scss/triggerStyle.css">
     <link rel="stylesheet" type="text/css" href="./slick/slick.css">
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
-    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>    
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
 </head>
 
 
@@ -150,13 +150,38 @@
         </div>
 
         <div class="section studio">
-            <img src="https://image.smartscore.kr/purplepin/img_object_line_04.png" alt="라인4" class="line4 animate__animated animate__zoomInLeft" data-scroll="toggle(.fromBottomIn , .fromBottomOut)">
-            <div class="bg" data-scroll="toggle(.fromBottomIn , .fromBottomOut)">
-                <img src="https://image.smartscore.kr/purplepin/img_object_line_01.png" alt="라인1" class="line1 animate__animated animate__zoomInLeft">
-                <img src="https://image.smartscore.kr/purplepin/img_object_line_02.png" alt="라인2" class="line2 animate__animated animate__zoomInLeft">
-                <img src="https://image.smartscore.kr/purplepin/img_object_line_03.png" alt="라인3" class="line3 animate__animated animate__zoomInLeft">                
+            <div class="bg-line" data-scroll="toggle(.fromBottomIn , .fromBottomOut)">
+                <div class="line-reveal line-a">
+                    <div class="overlay"></div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="line-reveal line-b">
+                    <div class="overlay"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="line-reveal line-c">
+                    <div class="overlay"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="line-reveal line-d">
+                    <div class="overlay"></div>
+                    <div class="line"></div>
+                </div>
+
+<!--                [참고]https://codepen.io/zineeworld/pen/zNBreO-->
+<!--                https://m.blog.naver.com/PostView.nhn?blogId=minji_8989&logNo=221203912909&proxyReferer=https:%2F%2Fwww.google.com%2F-->
+<!--                https://codepen.io/njmcode/pen/wBpGxR-->
+<!--                https://css-tricks.com/gradient-borders-in-css/-->
+
+
+
+                <!-- <img src="https://image.smartscore.kr/purplepin/img_object_line_01.png" alt="라인1" class="line1">
+                            <img src="https://image.smartscore.kr/purplepin/img_object_line_02.png" alt="라인2" class="line2">
+                            <img src="https://image.smartscore.kr/purplepin/img_object_line_03.png" alt="라인3" class="line3">                 -->
+                <!-- animate__animated animate__zoomInLeft -->
             </div>
-            
+
             <div class="inner">
                 <div class="text-box" data-scroll="toggle(.fromBottomIn , .fromBottomOut)">
                     <h2 class="title eng fc-white">
@@ -214,7 +239,7 @@
                 <div class="tab-content-box" id="tabs" data-scroll="toggle(.fromBottomIn , .fromBottomOut)">
                     <div class="tab">
                         <button class="tablinks" onclick="openStore(event, 'songpa')" id="defaultOpen">송파점</button>
-                        <button class="tablinks" onclick="openStore(event, 'geumgok')">금곡점</button>                                                
+                        <button class="tablinks" onclick="openStore(event, 'geumgok')">금곡점</button>
                     </div>
 
                     <div id="songpa" class="tabcontent">
@@ -277,7 +302,7 @@
                             <button class="square-button small ml-at" onclick="geumgok()">약도</button>
                         </div>
                     </div>
-                </div>               
+                </div>
             </div>
             <div class="modal-wrap" id="songpaPopup">
                 <div class="map-wrap">
@@ -720,6 +745,6 @@
                 addHeight: true
             });
         });
-    </script>    
+    </script>
 </body>
 </html>

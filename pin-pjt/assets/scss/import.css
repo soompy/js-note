@@ -1652,24 +1652,118 @@ body {
   background: url("https://image.smartscore.kr/purplepin/img_03.jpg") no-repeat center center;
 }
 
-.section.studio .line4 {
+.section.studio .bg-line {
   position: absolute;
-  right: 80px;
-  top: -10px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 10;
 }
 
-.section.studio .bg {
+.section.studio .bg-line .line-reveal {
+  width: 120%;
+  height: 3px;
+  overflow: hidden;
   position: absolute;
-  left: 50%;
-  top: 108px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
-.section.studio .bg .line1 {
+.section.studio .bg-line .line-reveal .overlay {
+  background: transparent;
+  height: 10px;
   position: absolute;
-  left: 146px;
+  top: -5px;
+  width: 100%;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-animation: wipe 3s ease;
+          animation: wipe 3s ease;
+  -webkit-animation-iteration-count: inherit;
+          animation-iteration-count: inherit;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.section.studio .bg-line .line-reveal .line {
+  border: 3px line white;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-image: -webkit-gradient(linear, left top, right top, from(#9f06e4), to(#3900fc));
+  background-image: linear-gradient(to right, #9f06e4 0%, #3900fc 100%);
+}
+
+.section.studio .bg-line .line-a {
+  width: 184px;
+  left: 38%;
   top: 88px;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.section.studio .bg-line .line-a .line {
+  border-color: #ff9900;
+}
+
+.section.studio .bg-line .line-b {
+  width: 641px;
+  left: 30%;
+  top: 108px;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.section.studio .bg-line .line-b .overlay {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.section.studio .bg-line .line-b .line {
+  background: -webkit-gradient(linear, left top, right top, from(red), to(purple));
+  background: linear-gradient(to right, red, purple);
+}
+
+.section.studio .bg-line .line-c {
+  width: 138px;
+  left: 62%;
+  top: 315px;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.section.studio .bg-line .line-c .overlay {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.section.studio .bg-line .line-c .line {
+  border-color: #0099ff;
+}
+
+.section.studio .bg-line .line-d {
+  width: 367px;
+  left: 77%;
+  top: -20px;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.section.studio .bg-line .line-d .overlay {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.section.studio .bg-line .line-d .line {
+  border-color: #0099ff;
 }
 
 .section.studio .inner {
@@ -2148,9 +2242,6 @@ body {
   }
   .section.studio .inner .text-box {
     text-align: center;
-  }
-  .section.studio .inner .text-box .bg {
-    display: none;
   }
   .section.studio .inner .facility {
     padding: 0 4vw;

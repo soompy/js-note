@@ -94,20 +94,96 @@ body {font-family: 'Noto Sans CJK KR';}
   &.studio {
     min-height: 1200px;
     background: url("https://image.smartscore.kr/purplepin/img_03.jpg") no-repeat center center;
-    .line4 {
+    .bg-line {
       position: absolute;
-      right: 80px;
-      top: -10px;
-    }
-     .bg {
-      position: absolute;
-      left: 50%;
-      top: 108px;
-      transform: translateX(-50%);
-      .line1 {
-        position: absolute;
-        left: 146px;
-        top: 88px;        
+      left: 0;
+      top: 0;    
+      width: 100vw;  
+      height: 100%;
+      z-index: 10;
+      .line-reveal {
+          width: 120%;
+          height: 3px;
+          overflow:hidden;
+          position:absolute;
+
+          .overlay {
+            background: transparent;
+            height: 10px;
+            position: absolute;
+            top:-5px;
+            width: 100%;
+            transform-origin: 100% 0;
+            animation: wipe 3s ease;
+            animation-iteration-count: inherit;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); // cubic
+            //animation-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); // expo
+          }
+          
+          .line {
+            border: 3px line white;
+            backface-visibility:hidden;
+            background-image: linear-gradient(to right, #9f06e4 0%, #3900fc 100%);
+          }
+      }
+
+      .line-a {      
+        width: 184px;
+        left: 38%;  
+        top: 88px;
+        transform-origin: 0 0;
+        transform: rotate(-30deg);  
+        .line {
+          border-color: #ff9900;
+        }
+      }
+
+      .line-b {  
+        width: 641px;
+        left: 30%;  
+        top: 108px;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);  
+        .overlay {
+          animation-delay: .5s;
+        }
+
+        .line {
+           background: linear-gradient(to right, red, purple);
+        }
+      }
+
+      .line-c {
+        width: 138px;
+        left: 62%;
+        top: 315px;
+        transform-origin: 100% 0;
+        transform: rotate(-20deg);
+        
+        .overlay {
+          animation-delay: 1s;
+        }
+        
+        .line {
+          border-color: #0099ff;
+        }
+      }
+
+      .line-d {
+        width: 367px;
+        left: 77%;
+        top: -20px;
+        transform-origin: 100% 0;
+        transform: rotate(-45deg);
+        
+        .overlay {
+          animation-delay: 1s;
+        }
+        
+        .line {
+          border-color: #0099ff;
+        }
       }
     }
     .inner {
@@ -507,8 +583,7 @@ body {font-family: 'Noto Sans CJK KR';}
       .inner {
         width: 100%;
         .text-box {
-          text-align: center;
-          .bg {display: none;}
+          text-align: center;         
         }
         .facility {
           padding: 0 4vw;
