@@ -49,6 +49,8 @@ body {
         top: 322px;
         width: 110px;
         margin-left: -20%;
+        animation: floating 0.6s infinite alternate;
+        transition: all ease-in;
       }
       .obj2 {
         position: absolute;
@@ -103,7 +105,7 @@ body {
     background: url("https://image.smartscore.kr/purplepin/img_03.jpg")
       no-repeat center center;
     .bg-line {
-      position: absolute;
+      position: relative;
       left: 0;
       top: 0;
       width: 100vw;
@@ -129,41 +131,40 @@ body {
           animation: line 5s linear;
           animation-iteration-count: 1;
         }
-      }
+        &.line-a {
+          width: 184px;
+          left: 38%;
+          top: 181px;
+          transform-origin: 0 0;
+          transform: rotate(-30deg);
+        }
 
-      .line-a {
-        width: 184px;
-        left: 38%;
-        top: 88px;
-        transform-origin: 0 0;
-        transform: rotate(-30deg);
-      }
+        &.line-b {
+          width: 641px;
+          left: 30%;
+          top: 28px;
+          transform-origin: 100% 0;
+          transform: rotate(-30deg);
+          animation-delay: 0.5s;
+        }
 
-      .line-b {
-        width: 641px;
-        left: 30%;
-        top: 108px;
-        transform-origin: 0 0;
-        transform: rotate(-45deg);
-        animation-delay: 0.5s;
-      }
+        &.line-c {
+          width: 138px;
+          left: 62%;
+          top: 315px;
+          transform-origin: 100% 0;
+          transform: rotate(-20deg);
+          animation-delay: 1s;
+        }
 
-      .line-c {
-        width: 138px;
-        left: 62%;
-        top: 315px;
-        transform-origin: 100% 0;
-        transform: rotate(-20deg);
-        animation-delay: 1s;
-      }
-
-      .line-d {
-        width: 367px;
-        left: 77%;
-        top: -20px;
-        transform-origin: 100% 0;
-        transform: rotate(-45deg);
-        animation-delay: 1s;
+        &.line-d {
+          width: 367px;
+          left: 77%;
+          top: -20px;
+          transform-origin: 100% 0;
+          transform: rotate(-45deg);
+          animation-delay: 1s;
+        }
       }
     }
     .inner {

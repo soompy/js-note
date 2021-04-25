@@ -608,10 +608,15 @@
     left: 100%;
     background: transparent;
   }
+}
 
-  // 0% {
-  //   left: 0;
-  // }
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -10px);
+  }
 }
 
 @media screen and (max-width: 1200px) {

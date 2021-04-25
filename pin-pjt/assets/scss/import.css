@@ -1237,6 +1237,28 @@ figure {
   }
 }
 
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .modal-wrap {
     width: 100vw;
@@ -1614,6 +1636,10 @@ body {
   top: 322px;
   width: 110px;
   margin-left: -20%;
+  -webkit-animation: floating 0.6s infinite alternate;
+          animation: floating 0.6s infinite alternate;
+  -webkit-transition: all ease-in;
+  transition: all ease-in;
 }
 
 .section.brandStory .inner .obj2 {
@@ -1679,7 +1705,7 @@ body {
 }
 
 .section.studio .bg-line {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   width: 100vw;
@@ -1714,29 +1740,29 @@ body {
           animation-iteration-count: 1;
 }
 
-.section.studio .bg-line .line-a {
+.section.studio .bg-line .line-reveal.line-a {
   width: 184px;
   left: 38%;
-  top: 88px;
+  top: 181px;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);
 }
 
-.section.studio .bg-line .line-b {
+.section.studio .bg-line .line-reveal.line-b {
   width: 641px;
   left: 30%;
-  top: 108px;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  top: 28px;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-.section.studio .bg-line .line-c {
+.section.studio .bg-line .line-reveal.line-c {
   width: 138px;
   left: 62%;
   top: 315px;
@@ -1748,7 +1774,7 @@ body {
           animation-delay: 1s;
 }
 
-.section.studio .bg-line .line-d {
+.section.studio .bg-line .line-reveal.line-d {
   width: 367px;
   left: 77%;
   top: -20px;
