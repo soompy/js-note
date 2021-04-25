@@ -445,7 +445,7 @@ template {
 
 /* Layout */
 body {
-  font-family: 'Spoqa Han Sans Neo';
+  font-family: "Spoqa Han Sans Neo";
 }
 
 .inner-wrap {
@@ -629,6 +629,7 @@ body {
   position: relative;
   border: #dddddd;
   font-size: 24px;
+  cursor: pointer;
 }
 
 .mail-form .form-field-raise.select-box {
@@ -643,6 +644,7 @@ body {
   border: 1px solid #dddddd;
   padding: 0 24px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .mail-form .form-field-raise.select-box.active input.field-text {
@@ -677,6 +679,7 @@ body {
 .form-field-raise {
   position: relative;
   border: #dddddd;
+  cursor: pointer;
 }
 
 .form-field-raise.select-box {
@@ -690,6 +693,7 @@ body {
   text-align: left;
   padding: 0;
   background: transparent;
+  cursor: pointer;
 }
 
 .form-field-raise.active .field-select-cont {
@@ -962,21 +966,27 @@ input[type="checkbox"]:checked {
   margin-bottom: 90px;
 }
 
-.visual .list {
+.visual .parent {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
   height: 1080px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
-.visual .list .inner-wrap {
+.visual .parent .inner-wrap {
   position: relative;
 }
 
-.visual .list .inner-wrap .home-text-box {
+.visual .parent .inner-wrap .home-text-box {
   position: absolute;
   left: 0;
   top: 470px;
 }
 
-.visual .list .inner-wrap .home-text-box .home-slide-pager {
+.visual .parent .inner-wrap .home-text-box .home-slide-pager {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -985,45 +995,45 @@ input[type="checkbox"]:checked {
           align-items: center;
 }
 
-.visual .list .inner-wrap .home-text-box .home-slide-pager span {
+.visual .parent .inner-wrap .home-text-box .home-slide-pager span {
   font-weight: 300;
   font-size: 35px;
   margin-right: 9px;
 }
 
-.visual .list .inner-wrap .home-text-box .home-slide-pager span.active {
+.visual .parent .inner-wrap .home-text-box .home-slide-pager span.active {
   font-weight: bold;
 }
 
-.visual .list .inner-wrap .home-text-box .home-title-caption .fs-52 {
+.visual .parent .inner-wrap .home-text-box .home-title-caption .fs-52 {
   -webkit-animation: 1.2s linear opacity;
           animation: 1.2s linear opacity;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.visual .list .inner-wrap .home-text-box .home-title-caption .fs-18 {
+.visual .parent .inner-wrap .home-text-box .home-title-caption .fs-18 {
   -webkit-animation: 0.5s linear 0.5s opacity;
           animation: 0.5s linear 0.5s opacity;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.visual .list .inner-wrap .home-text-box .home-title-caption .button-ani-rectangle {
+.visual .parent .inner-wrap .home-text-box .home-title-caption .button-ani-rectangle {
   -webkit-animation: 0.5s linear 1.2s opacity;
           animation: 0.5s linear 1.2s opacity;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.visual .list .inner-wrap .home-text-box .home-title-caption .button-icon-text {
+.visual .parent .inner-wrap .home-text-box .home-title-caption .button-icon-text {
   -webkit-animation: 0.7s linear 1.2s opacity;
           animation: 0.7s linear 1.2s opacity;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.visual .list .inner-wrap .slick-down {
+.visual .parent .inner-wrap .slick-down {
   display: block;
   position: absolute;
   left: 0;
@@ -1031,30 +1041,49 @@ input[type="checkbox"]:checked {
   z-index: 10;
 }
 
-.visual .list .inner-wrap .slick-down img {
+.visual .parent .inner-wrap .slick-down img {
   width: 20px;
 }
 
-.visual.home .list {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.visual.home .list.white {
+.visual.home .parent.white {
   color: #fff;
 }
 
-.visual.home .list.black {
+.visual.home .parent.black {
   color: #000;
 }
 
-.visual.home .list:nth-child(1) {
-  background-image: url("//image.smartscore.kr/wrich/mainbanner-01.jpg");
+.visual.home .parent:nth-child(1) {
+  background-image: url("https://image.smartscore.kr/wrich/mainbanner-01.jpg");
 }
 
-.visual.home .list:nth-child(2) {
-  background-image: url("//image.smartscore.kr/wrich/mainbanner-02.jpg");
+.visual.home .parent:nth-child(2) {
+  background-image: url("https://image.smartscore.kr/wrich/mainbanner-02.jpg");
+}
+
+.visual .arrow-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  right: 40px;
+  bottom: 47px;
+}
+
+.visual .arrow-box .down {
+  margin-top: 10px;
+}
+
+.visual .arrow-box.first-page .up {
+  display: none;
+}
+
+.visual .arrow-box.last-page .down {
+  display: none;
 }
 
 .svg-text-box svg {
@@ -5319,7 +5348,7 @@ input[type="checkbox"]:checked {
   width: 100%;
 }
 
-.half-box > div:nth-child(2n+1) {
+.half-box > div:nth-child(2n + 1) {
   margin-right: 60px;
 }
 
