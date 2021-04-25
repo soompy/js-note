@@ -730,7 +730,11 @@ body {
   color: #fff;
 }
 
-.select-box .field-select-cont .cont-item:hover, .select-box .field-select-cont .cont-item.active {
+.select-box .field-select-cont .cont-item a {
+  color: #fff;
+}
+
+.select-box .field-select-cont .cont-item:hover a, .select-box .field-select-cont .cont-item.active a {
   color: #ff4f42;
 }
 
@@ -1047,17 +1051,11 @@ input[type="checkbox"]:checked {
 
 .visual.home .parent.white {
   color: #fff;
+  background-image: url("https://image.smartscore.kr/wrich/mainbanner-01.jpg");
 }
 
 .visual.home .parent.black {
   color: #000;
-}
-
-.visual.home .parent:nth-child(1) {
-  background-image: url("https://image.smartscore.kr/wrich/mainbanner-01.jpg");
-}
-
-.visual.home .parent:nth-child(2) {
   background-image: url("https://image.smartscore.kr/wrich/mainbanner-02.jpg");
 }
 

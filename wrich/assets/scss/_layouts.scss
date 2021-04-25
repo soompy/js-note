@@ -222,9 +222,14 @@ body {
       font-size: 20px;
       cursor: pointer;
       color: $color-white;
+      a {
+        color: $color-white;
+      }
       &:hover,
       &.active {
-        color: $color-primary;
+        a {
+          color: $color-primary;
+        }
       }
     }
     &.select-top {
@@ -470,14 +475,10 @@ input[type="checkbox"] {
     .parent {
       &.white {
         color: $color-white;
+        background-image: url("https://image.smartscore.kr/wrich/mainbanner-01.jpg");
       }
       &.black {
         color: $color-black;
-      }
-      &:nth-child(1) {
-        background-image: url("https://image.smartscore.kr/wrich/mainbanner-01.jpg");
-      }
-      &:nth-child(2) {
         background-image: url("https://image.smartscore.kr/wrich/mainbanner-02.jpg");
       }
     }
