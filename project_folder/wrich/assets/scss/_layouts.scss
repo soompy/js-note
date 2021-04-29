@@ -109,8 +109,8 @@ body {
       &:valid {
         color: $color-red !important;
       }
-    }    
-  }  
+    }
+  }
   &.field-line {
     color: $color-grey;
     background-color: transparent;
@@ -140,10 +140,10 @@ body {
     padding: 0 15px;
   }
   .field-text {
-    &:valid, &::placeholder {
+    &:valid,
+    &::placeholder {
       color: $color-grey !important;
     }
-
   }
   .form-field-raise {
     position: relative;
@@ -172,10 +172,10 @@ body {
           height: inherit;
           text-align: left;
           padding: 0;
-          color: $color-grey;          
+          color: $color-grey;
           &::placeholder {
             color: #999999;
-          }          
+          }
         }
         .field-select-cont {
           height: 200px;
@@ -203,9 +203,9 @@ body {
       .field-button-box {
         position: absolute;
         right: 24px;
-        top: 20px;    
+        top: 20px;
       }
-    }    
+    }
   }
 }
 
@@ -230,7 +230,7 @@ body {
     }
   }
   .field-button-box {
-    background-image: url('https://image.smartscore.kr/wrich/icon/arrowup-f.png');
+    background-image: url("https://image.smartscore.kr/wrich/icon/arrowup-f.png");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 15px;
@@ -249,7 +249,7 @@ body {
     overflow-y: auto;
     z-index: 10;
     border-radius: 10px;
-    font-weight: 500;    
+    font-weight: 500;
     transition: all 0.4s ease-in-out;
     .cont-item {
       padding-left: 24px;
@@ -274,7 +274,6 @@ body {
       img {
         width: 15px;
         transform: rotate(180deg);
-        
       }
     }
     &.select-top {
@@ -454,7 +453,7 @@ input[type="checkbox"] {
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-bottom: 90px;  
+  margin-bottom: 90px;
   .scroll-paging {
     position: fixed;
     left: 0;
@@ -517,25 +516,33 @@ input[type="checkbox"] {
           bottom: 274px;
         }
         &.white {
-          .home-slide-pager, .title {
+          .home-slide-pager,
+          .title {
             color: $color-white;
-          }      
+          }
         }
         &.black {
-          .home-slide-pager, .title {
+          .home-slide-pager,
+          .title {
             color: $color-black;
-          }  
+          }
           .stroke-text {
             -webkit-text-stroke-color: #000000;
             -webkit-text-stroke-width: 0.02em;
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
             background-repeat: no-repeat;
-            transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
-            background-image: linear-gradient(180deg, #000000 0%, #000000 50%, transparent 50.1%);
+            transition: background-size 0.5s
+              cubic-bezier(0.67, 0.01, 0.15, 0.98);
+            background-image: linear-gradient(
+              180deg,
+              #000000 0%,
+              #000000 50%,
+              transparent 50.1%
+            );
             background-position: 100% 0%;
             background-size: 100% 0%;
-          } 
+          }
         }
       }
       .slick-down {
@@ -547,26 +554,26 @@ input[type="checkbox"] {
         img {
           width: 20px;
         }
-      }    
-    }        
+      }
+    }
   }
 
   &.home {
-    .visual-item {      
+    .visual-item {
       &.v1 {
         background-image: url("https://image.smartscore.kr/wrich/mainbanner-01.jpg");
       }
       &.v2 {
         background-image: url("https://image.smartscore.kr/wrich/mainbanner-02.jpg");
       }
-    }    
+    }
   }
 
   &.about {
     .visual-item {
       &.v1 {
         background-image: url("https://image.smartscore.kr/wrich/about-img-00.jpg");
-      }      
+      }
     }
   }
 
@@ -582,7 +589,7 @@ input[type="checkbox"] {
     .visual-item {
       &.v1 {
         background-image: url("https://image.smartscore.kr/wrich/insurance/insurance-img-00.jpg");
-      }    
+      }
     }
   }
 
@@ -627,28 +634,32 @@ input[type="checkbox"] {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-repeat: no-repeat;
-    transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
-    background-image: linear-gradient(180deg, #fff 0%, #fff 50%, transparent 50.1%);
+    transition: background-size 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+    background-image: linear-gradient(
+      180deg,
+      #fff 0%,
+      #fff 50%,
+      transparent 50.1%
+    );
     background-position: 100% 0%;
     background-size: 100% 0%;
-  }  
+  }
 }
 
-
-.slide-banner-wrap {    
+.slide-banner-wrap {
   overflow: hidden;
   position: relative;
   width: 100%;
   .slide-banner {
     display: flex;
     position: relative;
-    .banner-item { 
+    .banner-item {
       height: 960px;
       background: #eee;
       border-radius: 40px;
       background-repeat: no-repeat !important;
       background-position: center bottom !important;
-      background-size: 908px 626px !important;      
+      background-size: 908px 626px !important;
       p {
         color: $color-black;
         text-align: center;
@@ -657,22 +668,24 @@ input[type="checkbox"] {
           margin-top: 122px;
           margin-bottom: 55px;
         }
-      }  
+      }
       .platform {
         .inner {
           flex-direction: column;
           align-items: center;
           justify-content: center;
         }
-      }  
-    }    
+      }
+    }
     &.wrich {
       .banner-item {
         &.banner1 {
-          background: url('https://image.smartscore.kr/wrich/business/business-img-01.png') #eee;
+          background: url("https://image.smartscore.kr/wrich/business/business-img-01.png")
+            #eee;
         }
         &.banner2 {
-          background: url('https://image.smartscore.kr/wrich/business/business-img-02.png') #eee;
+          background: url("https://image.smartscore.kr/wrich/business/business-img-02.png")
+            #eee;
         }
       }
     }
@@ -691,7 +704,6 @@ input[type="checkbox"] {
   }
 }
 
-
 .middle-banner {
   width: 100%;
   background-repeat: no-repeat;
@@ -703,16 +715,16 @@ input[type="checkbox"] {
     flex-direction: column;
     p {
       color: $color-white;
-    }  
+    }
     .title {
       margin-top: 253px;
     }
-  }  
+  }
   &.platform {
-    background-image: url('https://image.smartscore.kr/wrich/about/about-banner.png');
+    background-image: url("https://image.smartscore.kr/wrich/about/about-banner.png");
   }
   &.insurance {
-    background: url('https://image.smartscore.kr/wrich/insurance/insurance-banner.jpg');
+    background: url("https://image.smartscore.kr/wrich/insurance/insurance-banner.jpg");
   }
 }
 
@@ -769,24 +781,58 @@ input[type="checkbox"] {
 }
 
 // style
-.ps-r {position: relative;}
-.bdb-n {border-bottom: none !important;}
-.ta-l {text-align: left;}
-.ta-c {text-align: center;}
-.fw-b {font-weight: bold;}
-.dp-f {display: flex;}
-.dp-if {display: inline-flex;}
-.dp-b {display: block;}
-.dp-ib {display: inline-block;}
-.ml-at {margin-left: auto;}
-.align-center {align-items: center;}
-.align-end {align-items: flex-end;}
+.ps-r {
+  position: relative;
+}
+.bdb-n {
+  border-bottom: none !important;
+}
+.ta-l {
+  text-align: left;
+}
+.ta-c {
+  text-align: center;
+}
+.fw-b {
+  font-weight: bold;
+}
+.dp-f {
+  display: flex;
+}
+.dp-if {
+  display: inline-flex;
+}
+.dp-b {
+  display: block;
+}
+.dp-ib {
+  display: inline-block;
+}
+.ml-at {
+  margin-left: auto;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
 
-.fc-blue {color: #386de8;}
-.fc-green {color: #3cc344;}
-.fc-light-green {color: #90c73d;}
-.fc-coral {color: #fb5852;}
-.fc-dark-grey {color: #333333;}
+.fc-blue {
+  color: #386de8;
+}
+.fc-green {
+  color: #3cc344;
+}
+.fc-light-green {
+  color: #90c73d;
+}
+.fc-coral {
+  color: #fb5852;
+}
+.fc-dark-grey {
+  color: #333333;
+}
 
 .tf-rt-180 {
   -webkit-transform: rotate(180deg);
@@ -871,8 +917,6 @@ $itemLength: 300;
   }
 }
 
-
-
 .pt-00 {
   padding-top: 0 !important;
 }
@@ -931,8 +975,6 @@ $itemLength: 300;
     }
   }
 }
-
-
 
 .lh-00px {
   font-size: 0 !important;
@@ -993,9 +1035,8 @@ $itemLength: 300;
         margin-top: 70px;
       }
     }
-  }  
+  }
 }
-
 
 .triple-box {
   display: flex;
@@ -1011,8 +1052,10 @@ $itemLength: 300;
     border-radius: 40px;
     padding: 60px;
     flex: 1;
+    flex-shrink: 0;
     img {
       width: 100%;
+      height: 100%;
     }
     &:nth-child(even) {
       margin: 0 65px;
@@ -1025,12 +1068,14 @@ $itemLength: 300;
       height: 330px;
       padding: 0;
       flex: inherit;
-      p {text-align: center;}
+      p {
+        text-align: center;
+      }
       &.consultant {
         border: 1px solid $color-black;
         p {
           color: $color-black;
-        }        
+        }
       }
       &.manager {
         background: $color-black;
@@ -1053,18 +1098,18 @@ $itemLength: 300;
 }
 
 // 아코디언
-#wrapper {   
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   .container {
-    width: 100%;   
-    position: relative;               
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .container {
+    width: 100%;
+    position: relative;
     .accordionTitle {
       display: flex;
       align-items: center;
-      padding: 50px 60px; 
+      padding: 50px 60px;
       position: relative;
       margin: 0;
       font-size: 35px;
@@ -1074,12 +1119,12 @@ $itemLength: 300;
       .question {
         width: 35px;
         margin-right: 20px;
-      }      
-    }        
+      }
+    }
     .accIcon {
       margin-left: auto;
       .open {
-        width: 35px;       
+        width: 35px;
       }
       &.anime {
         transform: rotate(180deg);
@@ -1096,24 +1141,24 @@ $itemLength: 300;
         padding: 0px 60px;
         position: relative;
         line-height: 36px;
-        font-size: 24px;      
-        transition: all 0.6s cubic-bezier(.42,.2,.08,1);
+        font-size: 24px;
+        transition: all 0.6s cubic-bezier(0.42, 0.2, 0.08, 1);
         overflow: hidden;
         &.show {
           opacity: 1;
           height: auto;
           padding: 0px 60px 50px;
           position: relative;
-          z-index: 0;        
+          z-index: 0;
         }
       }
-    }        
+    }
   }
 }
 
 // modal
 .modal-wrap {
-  visibility: hidden;  
+  visibility: hidden;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1131,7 +1176,7 @@ $itemLength: 300;
     overflow: hidden;
     width: 640px;
     // height: 930px;
-    background: $color-white;    
+    background: $color-white;
     .modal-head {
       display: flex;
       align-items: center;
@@ -1139,7 +1184,7 @@ $itemLength: 300;
       h2 {
         margin: auto;
         transform: translateX(75%);
-      }      
+      }
       .close-button {
         width: 30px;
         height: 30px;
@@ -1158,7 +1203,10 @@ $itemLength: 300;
   &.show {
     visibility: visible;
   }
-  .btn, .at {font-size: 24px;}
+  .btn,
+  .at {
+    font-size: 24px;
+  }
 }
 textarea {
   width: calc(100% - 48px);

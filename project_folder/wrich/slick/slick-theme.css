@@ -24,12 +24,12 @@
     no-repeat center center;
 } */
 
-.slick-prev {  
+.slick-prev {
   right: 50px;
   z-index: 5;
-  background: url("https://image.smartscore.kr/wrich/icon/flicking-top.png") no-repeat
-    center center;
-    margin-top: -36px;
+  background: url("https://image.smartscore.kr/wrich/icon/flicking-top.png")
+    no-repeat center center;
+  margin-top: -36px;
 }
 
 .slick-next {
@@ -37,7 +37,32 @@
   z-index: 5;
   background: url("https://image.smartscore.kr/wrich/icon/flicking-btm.png")
     no-repeat center center;
-    margin-top: 36px;
+  margin-top: 36px;
+}
+
+.wrich .slick-prev {
+  position: absolute;
+  top: 50% !important;
+  left: 50px !important;
+  -webkit-transform: translateX(-50%) !important;
+  transform: translateY(-50%) !important;
+  z-index: 5;
+  background-image: url("https://image.smartscore.kr/wrich/icon/flicking-left.png") !important;
+  width: 60px;
+  height: 60px;
+}
+
+.wrich .slick-next {
+  position: absolute;
+  top: 50% !important;
+  right: 50px !important;
+  -webkit-transform: translateX(-50%) !important;
+  transform: translateY(-50%) !important;
+  z-index: 5;
+  background-image: url("https://image.smartscore.kr/wrich/icon/flicking-light.png") !important;
+  margin-top: 0;
+  width: 60px;
+  height: 60px;
 }
 
 .bnr {
@@ -54,9 +79,7 @@
 .slick-dots {
   position: absolute;
   bottom: -25px;
-
   display: block;
-
   width: 100%;
   padding: 0;
   margin: 0;

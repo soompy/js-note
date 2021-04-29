@@ -31,7 +31,7 @@
                         <li><a href="recruit.html">Recruit</a></li>
                     </ul>
                 </nav>
-                <button class="btn radius10-btn">입사지원</button>
+                <button class="btn radius10-btn" onclick="popup()">입사지원</button>
             </div>
         </header>
 
@@ -49,29 +49,7 @@
                     </div>
                     <a href="#" class="scroll-paging"><img src="//image.smartscore.kr/wrich/icon/main-arrowdown.png" alt=""></a>
                 </article>
-            </div>
-            <div class="parent black">
-                <article class="inner-wrap">
-                    <div class="home-text-box">
-                        <!-- <div class="home-slide-pager">
-                            <span class="active">1</span>
-                            <span>&#x002F;</span>
-                            <span>2</span>
-                        </div> -->
-        
-                        <div class="svg-text-box" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460">
-                                <text transform="translate(56.22 214.89)" stroke="#fff" stroke-width="0">
-                                    <tspan x="0" y="0">고객의 삶에</tspan>
-                                    <tspan x="0" y="70">가치를 더하는</tspan>
-                                    <tspan x="0" y="140">위드리치</tspan>
-                                </text>
-                            </svg>
-                        </div>
-                    </div>
-                    <a href="#" class="slick-down"><img src="https://image.smartscore.kr/wrich/icon/main-arrowdown.png" alt=""></a>
-                </article>
-            </div>
+            </div>            
         </section>
 
 
@@ -83,9 +61,7 @@
                 </div>
             </section>             
             <section class="common-area">
-                <div class="slide-banner-wrap">
-                    <a href="#" class="flicking-button left"></a>
-                    <a href="#" class="flicking-button right"></a>
+                <div class="slide-banner-wrap">                    
                     <div class="slide-banner wrich">
                         <div class="banner-item banner1">
                             <div class="platform">
@@ -158,6 +134,60 @@
                     </div>
                 </div>
             </section>
+        </div>
+
+        <div class="modal-wrap" id="popup">
+            <div class="modal-box">
+                <div class="modal-head">
+                    <h2 class="title sub-mid-title ta-c">입사지원</h2>
+                    <button class="close-button" onclick="closed()"></button>
+                </div>
+                <form action="" id="recruit-form" class="recruit-box">
+                    <div class="form-field-line unfilled mb-20">
+                        <input type="text" class="field-text" id="field-text" placeholder="이름" value="">
+                    </div>
+                    <!-- [DEV] 에러인 경우 form-field-line에 unfilled클래스 대신 error클래스가 들어갑니다 -->
+                    <div class="form-field-line unfilled mb-20">
+                        <input type="text" class="field-text" id="field-ntext" placeholder="연락처(-제외입력)" value="">
+                    </div>
+                    <div class="form-field-line error mb-20">
+                        <input type="text" class="field-text" id="field-text" placeholder="연락처(-제외입력)" value="01012323434">
+                    </div>
+                    <!-- [DEV] 에러메시지가 뜨지 않을때는 error-message 영역이 사라지도록 해주세요 -->
+                    <p class="error-message">연락처를 입력해주세요</p>
+                    <div class="mail-form mb-20">
+                        <div class="form-field-line unfilled">
+                            <input type="text" class="field-text" id="field-text" placeholder="이메일" value="">
+                        </div>
+                        <div class="at">@</div>
+                        <div class="form-field-raise select-box active">
+                            <input type="text" class="field-text" readonly="" placeholder="선택" value="직접입력">
+                            <div class="field-button-box">
+                                <!-- [DEV] tf-rt-180 클래스를 토글시켜주세요-->
+                                <img src="//image.smartscore.kr/wrich/icon/ic-dropdown.png" style="width: 18px;" alt="">
+                                <!-- [DEV] tf-rt-180 클래스를 토글시켜주세요-->
+                            </div>
+                            <ul class="field-select-cont v-custom-scrollbar-y">
+                                <li class="cont-item">naver.com</li>
+                                <li class="cont-item active">naver.com</li>
+                                <li class="cont-item">naver.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="손보/생보 경력"></textarea>
+        
+                    <div class="agreement-box">
+                        <div class="dp-f align-items-center justify-center">
+                            <span class="checkbox"><input type="checkbox">개인정보 수집 이용 및 동의(필수)</span>
+                        </div>
+                        <div class="terms mt-14">
+                            위드리치는 「개인정보 보호법」등 관련 법령에 따라 입사전형 및 채용 후 인사관리 등의 목적으로 입사지원자의 개인정보를 수집하고 있습니다.
+                            귀하의 개인정보 수집 및 이용과 관련하여 아래의 안내 내용을 자세히 읽어 보시고, 모든 내용을 숙지하신 후에
+                        </div>
+                    </div>
+                </form>
+                <button class="btn full-btn">지원하기</button>
+            </div>
         </div>
 
 
