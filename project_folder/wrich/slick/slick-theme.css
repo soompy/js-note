@@ -24,20 +24,20 @@
     no-repeat center center;
 } */
 
-.slick-prev {
-  top: 469px;
+.slick-prev {  
   right: 50px;
   z-index: 5;
   background: url("https://image.smartscore.kr/wrich/icon/flicking-top.png") no-repeat
     center center;
+    margin-top: -36px;
 }
 
 .slick-next {
-  top: 552px;
   right: 50px;
   z-index: 5;
   background: url("https://image.smartscore.kr/wrich/icon/flicking-btm.png")
     no-repeat center center;
+    margin-top: 36px;
 }
 
 .bnr {

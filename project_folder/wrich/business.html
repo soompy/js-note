@@ -36,9 +36,9 @@
         </header>
 
         <section class="visual business">
-            <div class="parent white">
+            <div class="visual-item v1">
                 <article class="inner-wrap">
-                    <div class="home-text-box ver2">
+                    <div class="home-text-box ver2 white">
                         <!-- <div class="home-slide-pager">
                             <span class="active">1</span>
                             <span>&#x002F;</span>
@@ -69,7 +69,7 @@
                             </svg>
                         </div>
                     </div>
-                    <a href="#" class="slick-down"><img src="//image.smartscore.kr/wrich/icon/main-arrowdown.png" alt=""></a>
+                    <a href="#" class="slick-down"><img src="https://image.smartscore.kr/wrich/icon/main-arrowdown.png" alt=""></a>
                 </article>
             </div>
         </section>
@@ -86,32 +86,21 @@
                 <div class="slide-banner-wrap">
                     <a href="#" class="flicking-button left"></a>
                     <a href="#" class="flicking-button right"></a>
-                    <div class="slide-banner">
-                        <div class="banner-item">
+                    <div class="slide-banner wrich">
+                        <div class="banner-item banner1">
                             <div class="platform">
                                 <div class="inner">
-                                    <p class="title main-title ta-l mb-55">세상에 없던 <br>
-                                        골프 플랫폼을 만든 <br>
-                                        스마트스코어</p>
-                                    <p class="text-box-1 ta-l lh-45px">이제, 630만 골퍼들의 건강하고 <br>
-                                        행복한 라이프를 위해 골프를 기반으로 <br>
-                                        쉽고 합리적인 맞춤형 보험서비스 <br>
-                                        위드리치와 시작합니다.</p>
-                                    <!-- 좌우롤링 -->
+                                    <p class="title large-title ta-l mb-55">차별화 된 소득보장</p>
+                                    <p class="text-box-1 ta-l lh-45px">보험 GA업계에서 상위 수수료 지급</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="banner-item">
+                        <div class="banner-item banner2">
                             <div class="platform">
                                 <div class="inner">
-                                    <p class="title main-title ta-l mb-55">세상에 없던 <br>
-                                        골프 플랫폼을 만든 <br>
-                                        스마트스코어</p>
-                                    <p class="text-box-1 ta-l lh-45px">이제, 630만 골퍼들의 건강하고 <br>
-                                        행복한 라이프를 위해 골프를 기반으로 <br>
-                                        쉽고 합리적인 맞춤형 보험서비스 <br>
-                                        위드리치와 시작합니다.</p>
-                                    <!-- 좌우롤링 -->
+                                    <p class="title large-title ta-l mb-55">차별화 된 소득보장</p>
+                                    <p class="text-box-1 ta-l lh-45px">3단계 인센티브 제도와 <br>
+                                    경력자 리크루팅 인센티브 제도를 제공하고 있습니다.</p>
                                 </div>
                             </div>
                         </div>
@@ -209,17 +198,27 @@
         <script src="./assets/js/ui.js"></script>
         <script type="text/javascript">
             $(document).on('ready', function () {
-                // $(".business").slick({
-                //     vertical: true,
-                //     slidesToShow: 1,
-                //     slidesToScroll: 1,
-                //     autoplay: false,
-                //     autoplaySpeed: 4000,
-                //     arrows: true,
-                //     verticalSwiping: true,
-                //     speed: 600,
-                // });
+                $(".business").slick({
+                    vertical: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    autoplaySpeed: 4000,
+                    arrows: true,
+                    verticalSwiping: true,
+                    speed: 600,
+                });
 
+                 $(".wrich").slick({
+                    vertical: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    autoplaySpeed: 4000,
+                    arrows: true,
+                    verticalSwiping: true,
+                    speed: 600,
+                });
                 
             })
         </script>

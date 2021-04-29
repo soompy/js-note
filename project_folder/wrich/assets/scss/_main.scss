@@ -71,11 +71,11 @@
 
 .main-section1 {
     height: 600px;
-    background: url('//image.smartscore.kr/wrich/main-insurance.jpg');
+    background: url('https://image.smartscore.kr/wrich/main-insurance.jpg');
 }
 .main-section2 {
     height: 600px;
-    background: url('//image.smartscore.kr/wrich/main-insurance.jpg');
+    background: url('https://image.smartscore.kr/wrich/main-recruit.jpg');
 }
 
 
@@ -96,7 +96,7 @@
             top: 6px;            
             width: 26px;
             height: 14px;
-            background-image: url('//image.smartscore.kr/wrich/icon/next-btn.png');
+            background-image: url('https://image.smartscore.kr/wrich/icon/next-btn.png');
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
@@ -106,6 +106,27 @@
                 display: block;
             }
         }
+    }    
+}
+
+.download-button {
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    border-radius: 10px;
+    text-indent: -9999px;
+    cursor: pointer;
+    &.appStore {
+        width: 210px;
+        padding: 20px 0; 
+        background: url('https://image.smartscore.kr/wrich/icon/ic-appstore.png') #000000;
+        background-size: 135px;        
+    }
+    &.playStore {
+        width: 210px;
+        padding: 20px 0;
+        background: url('https://image.smartscore.kr/wrich/icon/ic-googlestore.png') #000000;
+        background-size: 144px;
+        margin-left: 10px;
     }
 }
 
