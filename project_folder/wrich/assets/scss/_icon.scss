@@ -1,0 +1,27 @@
+[class^="ic_"]{
+  display: inline-block;
+  width: 32px; height: 32px;
+  transition: all 0.3s ease-in-out;
+}
+
+@each $name, $glyph in $colors {
+  .ic_menu.#{$name}{
+    @include svg-color($ic_menu,$glyph);
+  }
+  .ic_search.#{$name}{
+    @include svg-color($ic_search,$glyph);
+  }
+  .ic_arrow_right.#{$name}{
+    @include svg-color($ic_arrow_right,$glyph);
+  }
+  .ic_arrow_left.#{$name}{
+    @include svg-color($ic_arrow_left,$glyph);
+  }
+  .ic_arrow_down.#{$name}{
+    @include svg-color($ic_arrow_down,$glyph);
+  }
+  .ic_arrow_up.#{$name}{
+    @include svg-color($ic_arrow_up,$glyph);
+  }
+
+}

@@ -1,0 +1,96 @@
+@charset 'UTF-8';
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  cursor: pointer;
+  background-size: 95% !important;
+}
+/* .slick-prev:hover {
+  background: url("https://image.smartscore.kr/wrich/icon/licking-top.png")
+    no-repeat center center;
+}
+
+.slick-next:hover {
+  background: url("https://image.smartscore.kr/wrich/icon/flicking-btm.png")
+    no-repeat center center;
+} */
+
+.slick-prev {
+  top: 469px;
+  right: 50px;
+  z-index: 5;
+  background: url("https://image.smartscore.kr/wrich/icon/flicking-top.png") no-repeat
+    center center;
+}
+
+.slick-next {
+  top: 552px;
+  right: 50px;
+  z-index: 5;
+  background: url("https://image.smartscore.kr/wrich/icon/flicking-btm.png")
+    no-repeat center center;
+}
+
+.bnr {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+
+  display: block;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  padding: 0;
+
+  cursor: pointer;
+}
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 6px;
+  height: 6px;
+  /* padding: 5px; */
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background: #707070;
+  border-radius: 50%;
+}
+.slick-dots li button:hover {
+  background: #ffffff;
+}
+.slick-dots li.slick-active button {
+  background: #ffffff;
+}
