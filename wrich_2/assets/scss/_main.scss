@@ -1,0 +1,140 @@
+.common-area {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  background-repeat: no-repeat !important;
+  background-size: auto 600px !important;
+  margin: 180px auto;
+  .inner {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    .blank {
+      width: 733px;
+      flex-shrink: 0;
+    }
+    &.column {
+      flex-direction: column;
+    }
+    &.quarter {
+      display: block;
+    }
+  }
+  .content-text-box {
+    flex-shrink: 0;
+    padding: 70px 0;
+    .sub-mid-title {
+      line-height: 45px;
+      margin-bottom: 50px;
+    }
+    .text-box-2 {
+      line-height: 36px;
+      word-break: keep-all;
+    }
+    .round-button {
+      margin-top: 50px;
+    }
+  }
+
+  .content-text-box {
+    flex-shrink: 0;
+  }
+
+  &.left {
+    background-position: left 0;
+    .content-text-box {
+      width: calc(100% - 733px);
+      padding-left: 100px;
+    }
+  }
+
+  &.right {
+    background-position: right 0;
+    .content-text-box {
+      width: 467px;
+    }
+  }
+
+  &.service {
+    margin: 0 auto;
+    .inner {
+      padding: 80px 0;
+      border-bottom: 1px solid $color-very-light-grey;
+    }
+    .link-box {
+      margin-left: auto;
+    }
+  }
+}
+
+.main-section1 {
+  height: 600px;
+  background: url("https://image.smartscore.kr/wrich/main-insurance.jpg");
+}
+.main-section2 {
+  height: 600px;
+  background: url("https://image.smartscore.kr/wrich/main-recruit.jpg");
+}
+
+.link-box {
+  a {
+    position: relative;
+    display: block;
+    padding-bottom: 40px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    &:after {
+      display: none;
+      clear: both;
+      content: "";
+      position: absolute;
+      left: -38px;
+      top: 6px;
+      width: 26px;
+      height: 14px;
+      background-image: url("https://image.smartscore.kr/wrich/icon/next-btn.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+    &:hover {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.download-button {
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  border-radius: 10px;
+  text-indent: -9999px;
+  cursor: pointer;
+  &.appStore {
+    width: 210px;
+    padding: 20px 0;
+    background: url("https://image.smartscore.kr/wrich/icon/ic-appstore.png")
+      #000000;
+    background-size: 135px;
+  }
+  &.playStore {
+    width: 210px;
+    padding: 20px 0;
+    background: url("https://image.smartscore.kr/wrich/icon/ic-googlestore.png")
+      #000000;
+    background-size: 144px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .main-section1,
+  .main-section2 {
+    background-size: auto 400px !important;
+  }
+  .content-text-box {
+    padding: 0 !important;
+  }
+}
