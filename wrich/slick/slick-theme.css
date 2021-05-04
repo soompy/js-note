@@ -43,11 +43,11 @@
 .wrich .slick-prev {
   position: absolute;
   top: 50% !important;
-  left: 50px !important;
-  -webkit-transform: translateX(-50%) !important;
+  left: 50px !important;  
   transform: translateY(-50%) !important;
   z-index: 5;
   background-image: url("https://image.smartscore.kr/wrich/icon/flicking-left.png") !important;
+  margin-top: 0;
   width: 60px;
   height: 60px;
 }
@@ -56,7 +56,6 @@
   position: absolute;
   top: 50% !important;
   right: 50px !important;
-  -webkit-transform: translateX(-50%) !important;
   transform: translateY(-50%) !important;
   z-index: 5;
   background-image: url("https://image.smartscore.kr/wrich/icon/flicking-light.png") !important;

@@ -312,11 +312,11 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-image: url("//image.smartscore.kr/wrich/icon/nextbtn.png");
+  background-image: url("https://image.smartscore.kr/wrich/icon/nextbtn.png");
   cursor: pointer;
   transition: background 0.5s ease-in-out;
   &:hover {
-    background-image: url("//image.smartscore.kr/wrich/icon/nextbtn-on.png");
+    background-image: url("https://image.smartscore.kr/wrich/icon/nextbtn-on.png");
   }
 }
 
@@ -327,17 +327,17 @@ body {
   width: 60px;
   height: 60px;
   &.left {
-    background-image: url("//image.smartscore.kr/wrich/icon/flicking-left.png");
+    background-image: url("https://image.smartscore.kr/wrich/icon/flicking-left.png");
   }
   &.right {
-    background-image: url("//image.smartscore.kr/wrich/icon/flicking-light.png");
+    background-image: url("https://image.smartscore.kr/wrich/icon/flicking-light.png");
   }
 }
 
 .close-button {
   width: 60px;
   height: 60px;
-  background-image: url("//image.smartscore.kr/wrich/icon/ic-close.png");
+  background-image: url("https://image.smartscore.kr/wrich/icon/ic-close.png");
   cursor: pointer;
 }
 
@@ -356,12 +356,12 @@ input[type="checkbox"] {
   font-size: 0;
   margin-right: 13px;
   vertical-align: middle;
-  background-image: url("//image.smartscore.kr/wrich/icon/ic-select.png");
+  background-image: url("https://image.smartscore.kr/wrich/icon/ic-select.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   &:checked {
-    background-image: url("//image.smartscore.kr/wrich/icon/ic-select-on.png");
+    background-image: url("https://image.smartscore.kr/wrich/icon/ic-select-on.png");
   }
 }
 

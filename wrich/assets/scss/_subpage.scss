@@ -18,10 +18,15 @@
   }
 }
 
-.history-flicking {
-  .flicking-wrap {
+.history-flicking {  
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  .flicking-wrap { 
+    position: relative;   
     display: inline-flex;
     overflow-x: auto;
+    left: 230px;
     .flicking-item {
       width: 260px;
       padding-top: 60px;
@@ -42,8 +47,20 @@
           color: #555555;
         }
       }
-    }
+    }   
   }
+  // &:before {
+  //   display: block;
+  //   clear: both;
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 18.75vw;
+  //   height: 100%;
+  //   background: $color-white;
+  //   z-index: 30;
+  // }
 }
 
 .information-tooltip {
@@ -99,7 +116,7 @@
       background-image: url("https://image.smartscore.kr/wrich/icon/ic-info-on.png");
     }
   }
-  &.show {
+  &.show {    
     .information-box {
       opacity: 1;
       display: block;
@@ -108,8 +125,16 @@
 }
 
 .map {
-   .root_daum_roughmap {
-    margin: auto;
+  position: relative;
+  .root_daum_roughmap {    
+    margin: auto;    
+  }
+  .pin {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    z-index: 5;
+    width: 170px;
   }
 }
 
@@ -135,10 +160,13 @@
 }
 
 // insurance
-.center {
-  padding: 60px 70px;
+.center {  
   border-radius: 40px;
   background: #f0f6f9;
+  .center {
+    display: flex;
+    padding: 60px 70px;
+  }
   > p, > div {
     flex: 1;
   }
@@ -156,4 +184,10 @@
     width: 100%;
     padding: 70px 60px 0;
   }
+}
+.apply {
+  width: 177px;
+  height: 70px;
+  padding: 0;
+  font-size: 24px;
 }
