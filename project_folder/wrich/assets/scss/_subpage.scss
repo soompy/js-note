@@ -1,5 +1,5 @@
 .inner {
-  
+
 }
 
 .text-box {
@@ -11,39 +11,60 @@
   align-items: flex-start;
   width: 100%;
   .flicking-button {
+    width: auto;
     margin-left: auto;
-    a {
-      margin-left: 30px;
+    button {
+      width: 60px;
+      height: 60px;
+      margin-left: 26px;
+      background-color: transparent;
+      cursor: pointer;      
+      &.prev {        
+        background-image: url("https://image.withrich.co.kr/wrich/icon/flicking-left.png") !important;        
+      }
+      &.next {        
+        background-image: url("https://image.withrich.co.kr/wrich/icon/flicking-light.png") !important;
+      }
     }
   }
 }
 
 .history-flicking {
   .flicking-wrap {
-    display: inline-flex;
-    overflow-x: auto;
-    .flicking-item {
-      width: 260px;
+    overflow: hidden;
+    width: 100vw;
+    .flicking-item, .slick-slide {
+      // width: 380px !important;
       padding-top: 60px;
       border-top: 4px solid #e6e6e6;
-      padding-right: 120px;
+      flex-direction: column;
+      align-items: flex-start;
       .title {
         color: #e6e6e6;
       }
       .text-box-2 {
         color: #aaaaaa;
+        padding-right: 120px;
+        text-align: left;
       }
-      &.active {
-        border-top: 4px solid $color-grey;
+    }
+    .slick-current {
+      border-top: 4px solid $color-grey;
         .title {
           color: $color-black;
         }
         .text-box-2 {
           color: #555555;
         }
-      }
+    }
+    .inner-wrap {
+      width: 1200px;
+      margin: auto;
+      overflow: hidden;
     }
   }
+  // .slick-slide {width: 380px !important;}
+  &::-webkit-scrollbar {display: none !important;}
 }
 
 .information-tooltip {
@@ -51,17 +72,17 @@
   transition: all 0.5s ease-in;
   .information-box {
     display: none;
-    opacity: 0;     
+    opacity: 0;
     position: absolute;
     top: 90px;
     right: 0;
     z-index: 10;
     width: 513px;
     background: $color-white;
-    padding: 40px;    
+    padding: 40px;
     box-shadow: 0 0 30px #ccc !important;
     border-radius: 14px;
-    font-size: 20px;    
+    font-size: 20px;
     .text-box-2 {
       color: #333333;
       font-weight: bold;
@@ -94,22 +115,30 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-image: url("https://image.smartscore.kr/wrich/icon/ic-info.png");
+    background-image: url("https://image.withrich.co.kr/wrich/icon/ic-info.png");
     &:hover, &:focus {
-      background-image: url("https://image.smartscore.kr/wrich/icon/ic-info-on.png");
+      background-image: url("https://image.withrich.co.kr/wrich/icon/ic-info-on.png");
     }
   }
   &.show {
     .information-box {
       opacity: 1;
       display: block;
-    }    
+    }
   }
 }
 
 .map {
-   .root_daum_roughmap {
+  position: relative;
+  .root_daum_roughmap {
     margin: auto;
+  }
+  .pin {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    z-index: 5;
+    width: 170px;
   }
 }
 
@@ -119,9 +148,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 100%;  
+  width: 100%;
   img {
-    display: block;    
+    display: block;
     width: 190px;
     margin-right: 62px;
     margin-bottom: 105px;
@@ -136,9 +165,12 @@
 
 // insurance
 .center {
-  padding: 60px 70px;
   border-radius: 40px;
   background: #f0f6f9;
+  .center {
+    display: flex;
+    padding: 60px 70px;
+  }
   > p, > div {
     flex: 1;
   }
@@ -149,11 +181,17 @@
   position: relative;
   width: 1200px;
   margin: auto;
-  background: $color-white;  
+  background: $color-white;
   border-radius: 40px;
   margin-top: -190px;
   .inner {
     width: 100%;
     padding: 70px 60px 0;
   }
+}
+.apply {
+  width: 177px;
+  height: 70px;
+  padding: 0;
+  font-size: 24px;
 }

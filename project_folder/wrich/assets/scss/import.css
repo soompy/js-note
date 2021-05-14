@@ -10,6 +10,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 html {
   line-height: 1.15;
   /* 1 */
@@ -89,6 +90,10 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+a:focus {
+  outline: none;
 }
 
 /**
@@ -202,6 +207,27 @@ input {
   outline-style: none;
   -webkit-appearance: none;
   border: none;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label {
+  background-image: url("//image.withrich.co.kr/wrich/icon/ic-select.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 24px;
+  padding-left: 37px;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+  background-image: url("//image.withrich.co.kr/wrich/icon/ic-select-on.png");
+}
+
+input[type=checkbox]:disabled + label {
+  background-image: url("//image.withrich.co.kr/wrich/icon/ic-select.png");
 }
 
 /**
@@ -463,10 +489,21 @@ body {
   margin: auto;
 }
 
+@font-face {
+  font-family: 'poppins-bold';
+  src: url("//image.withrich.co.kr/fonts/poppins/Poppins-Bold.ttf");
+  src: url("//image.withrich.co.kr/fonts/poppins/Poppins-Bold.otf");
+  font-style: normal;
+}
+
+.eng-bold {
+  font-family: 'poppins-bold' !important;
+}
+
 /* 타이틀 */
 .title {
   font-weight: bold;
-  color: #333333;
+  color: #000000;
 }
 
 .title.large-title {
@@ -481,13 +518,23 @@ body {
 }
 
 .title.sub-mid-title {
-  font-size: 30px;
+  font-size: 45px;
   letter-spacing: -0.9px;
+}
+
+.title.sub-semi-mid-title {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .title.sub-title {
   font-size: 24px;
   letter-spacing: -0.72px;
+}
+
+.title.sub-visual-title {
+  font-size: 30px;
+  line-height: 45px;
 }
 
 .text-box-1 {
@@ -499,7 +546,7 @@ body {
 .text-box-2 {
   font-size: 24px;
   letter-spacing: -0.72px;
-  color: #5a5a5a;
+  color: #555555;
 }
 
 .text-field {
@@ -515,24 +562,25 @@ body {
   color: #555555;
 }
 
+.eng {
+  font-family: 'Poppins';
+  letter-spacing: 0 !important;
+}
+
 .eng.main-title {
   font-size: 70px;
-  letter-spacing: -2.1px;
 }
 
 .eng.sub-mid-title {
   font-size: 45px;
-  letter-spacing: -1.35px;
 }
 
 .eng.sub-title {
   font-size: 35px;
-  letter-spacing: -1.05px;
 }
 
 .eng.text {
   font-size: 24px;
-  letter-spacing: -0.72px;
   color: #666666;
 }
 
@@ -540,18 +588,18 @@ body {
 .form-field-line {
   position: relative;
   height: 70px;
-  padding: 0 24px;
   font-size: 0;
   border-radius: 10px;
 }
 
 .form-field-line input.field-text {
-  width: 100%;
-  height: inherit;
   font-size: 24px;
   border: none;
-  padding: 0;
-  color: #666666 !important;
+  padding: 0 24px;
+  border-radius: 10px;
+  width: calc(100% - 48px);
+  height: calc(100% - 2px);
+  color: #555555 !important;
 }
 
 .form-field-line input.field-text::-webkit-input-placeholder {
@@ -572,6 +620,10 @@ body {
 
 .form-field-line input.field-text::invalid {
   color: #999999 !important;
+}
+
+.form-field-line input.field-text:focus {
+  border: 1px solid #000;
 }
 
 .form-field-line.unfilled {
@@ -635,8 +687,7 @@ body {
 .mail-form .form-field-line {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  max-width: 182px;
-  padding: 0 24px;
+  max-width: 230px;
 }
 
 .mail-form .at {
@@ -661,7 +712,7 @@ body {
 
 .mail-form .form-field-raise {
   position: relative;
-  max-width: 232px;
+  max-width: 226px;
   padding: 0 24px;
   border: #dddddd;
   font-size: 24px;
@@ -721,7 +772,7 @@ body {
   background-color: #fff;
   overflow-y: auto;
   border: 1px solid #dddddd;
-  z-index: 10;
+  z-index: 1;
 }
 
 .mail-form .form-field-raise.select-box.active .field-select-cont .cont-item {
@@ -763,10 +814,11 @@ body {
 }
 
 .form-field-raise .field-button-box {
-  background-image: url("https://image.smartscore.kr/wrich/icon/arrowup-f.png");
+  background-image: url("//image.withrich.co.kr/wrich/icon/arrowup-f.png");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 190px center;
   background-size: 15px;
+  width: 230px;
 }
 
 .select-box .field-select-cont {
@@ -850,14 +902,12 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-image: url("//image.smartscore.kr/wrich/icon/nextbtn.png");
+  background-image: url("//image.withrich.co.kr/wrich/icon/nextbtn.png");
   cursor: pointer;
-  -webkit-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
 }
 
 .round-button:hover {
-  background-image: url("//image.smartscore.kr/wrich/icon/nextbtn-on.png");
+  background-image: url("//image.withrich.co.kr/wrich/icon/nextbtn-on.png");
 }
 
 .flicking-button {
@@ -873,17 +923,18 @@ body {
 }
 
 .flicking-button.left {
-  background-image: url("//image.smartscore.kr/wrich/icon/flicking-left.png");
+  background-image: url("//image.withrich.co.kr/wrich/icon/flicking-left.png");
 }
 
 .flicking-button.right {
-  background-image: url("//image.smartscore.kr/wrich/icon/flicking-light.png");
+  background-image: url("//image.withrich.co.kr/wrich/icon/flicking-light.png");
 }
 
 .close-button {
   width: 60px;
   height: 60px;
-  background-image: url("//image.smartscore.kr/wrich/icon/ic-close.png");
+  background-image: url("//image.withrich.co.kr/wrich/icon/ic-close.png");
+  background-color: #fff;
   cursor: pointer;
 }
 
@@ -898,23 +949,6 @@ body {
   font-size: 24px;
   color: #000;
   font-weight: bold;
-}
-
-input[type="checkbox"] {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  font-size: 0;
-  margin-right: 13px;
-  vertical-align: middle;
-  background-image: url("//image.smartscore.kr/wrich/icon/ic-select.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-input[type="checkbox"]:checked {
-  background-image: url("//image.smartscore.kr/wrich/icon/ic-select-on.png");
 }
 
 /* 탭 */
@@ -1022,15 +1056,34 @@ input[type="checkbox"]:checked {
 }
 
 #header .inner .nav .gnb li a {
-  color: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 22px;
 }
 
-#header .inner .nav .gnb li:hover a {
-  color: #ff4f42;
+#header .inner .nav .gnb li a:hover {
+  color: #ff4f42 !important;
+}
+
+#header .inner .nav .gnb li.active a {
+  color: #ff4f42 !important;
 }
 
 #header .inner .radius10-btn {
   margin-left: auto;
+  width: 117px;
+  font-size: 20px;
+  padding: 0;
+  width: 117px;
+  height: 60px;
+}
+
+#header.whiteMenu .gnb li a {
+  color: #fff !important;
+}
+
+#header.whiteMenu .gnb li:hover a {
+  color: #ff4f42;
 }
 
 .visual {
@@ -1042,9 +1095,9 @@ input[type="checkbox"]:checked {
 }
 
 .visual .scroll-paging {
-  position: fixed;
+  position: absolute;
   left: 0;
-  bottom: 100px;
+  bottom: 50px;
   width: 20px;
   height: 45px;
   z-index: 100;
@@ -1077,6 +1130,10 @@ input[type="checkbox"]:checked {
 }
 
 .visual .visual-item .inner-wrap .home-text-box .home-slide-pager {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1092,7 +1149,7 @@ input[type="checkbox"]:checked {
   margin-right: 9px;
 }
 
-.visual .visual-item .inner-wrap .home-text-box .home-slide-pager span.active {
+.visual .visual-item .inner-wrap .home-text-box .home-slide-pager span.activePage {
   font-weight: bold;
 }
 
@@ -1125,7 +1182,7 @@ input[type="checkbox"]:checked {
 }
 
 .visual .visual-item .inner-wrap .home-text-box.ver2 {
-  bottom: 274px;
+  bottom: 146px;
 }
 
 .visual .visual-item .inner-wrap .home-text-box.white .home-slide-pager,
@@ -1133,9 +1190,19 @@ input[type="checkbox"]:checked {
   color: #fff;
 }
 
+.visual .visual-item .inner-wrap .home-text-box.white .home-slide-pager.eng,
+.visual .visual-item .inner-wrap .home-text-box.white .title.eng {
+  font-family: 'poppins-bold';
+}
+
 .visual .visual-item .inner-wrap .home-text-box.black .home-slide-pager,
 .visual .visual-item .inner-wrap .home-text-box.black .title {
   color: #000;
+}
+
+.visual .visual-item .inner-wrap .home-text-box.black .home-slide-pager.eng,
+.visual .visual-item .inner-wrap .home-text-box.black .title.eng {
+  font-family: 'poppins-bold';
 }
 
 .visual .visual-item .inner-wrap .home-text-box.black .stroke-text {
@@ -1164,28 +1231,38 @@ input[type="checkbox"]:checked {
   width: 20px;
 }
 
-.visual.home .visual-item.v1 {
-  background-image: url("https://image.smartscore.kr/wrich/mainbanner-01.jpg");
+.visual .slick-active .home-text-box {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: opacity 2s, -webkit-transform 2s;
+  transition: opacity 2s, -webkit-transform 2s;
+  transition: opacity 2s, transform 2s;
+  transition: opacity 2s, transform 2s, -webkit-transform 2s;
 }
 
-.visual.home .visual-item.v2 {
-  background-image: url("https://image.smartscore.kr/wrich/mainbanner-02.jpg");
+.visual .reset-animation .visual-txt .home-text-box {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  opacity: 0;
+  -webkit-transition: all 0s;
+  transition: all 0s;
 }
 
 .visual.about .visual-item.v1 {
-  background-image: url("https://image.smartscore.kr/wrich/about-img-00.jpg");
+  background-image: url("//image.withrich.co.kr/wrich/about-img-00.jpg");
 }
 
 .visual.business .visual-item.v1 {
-  background-image: url("https://image.smartscore.kr/wrich/business-img-00.jpg");
+  background-image: url("//image.withrich.co.kr/wrich/business-img-00.jpg");
 }
 
 .visual.insurance .visual-item.v1 {
-  background-image: url("https://image.smartscore.kr/wrich/insurance/insurance-img-00.jpg");
+  background-image: url("//image.withrich.co.kr/wrich/insurance/insurance-img-00.jpg");
 }
 
 .visual.recruit .visual-item.v1 {
-  background-image: url("https://image.smartscore.kr/wrich/recruit-img.jpg");
+  background-image: url("//image.withrich.co.kr/wrich/recruit-img.jpg");
 }
 
 .visual .arrow-box {
@@ -1243,12 +1320,13 @@ input[type="checkbox"]:checked {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  border-radius: 40px;
 }
 
 .slide-banner-wrap .slide-banner .banner-item {
   height: 960px;
   background: #eee;
-  border-radius: 40px;
+  border-radius: 40px impor !important;
   background-repeat: no-repeat !important;
   background-position: center bottom !important;
   background-size: 908px 626px !important;
@@ -1279,11 +1357,14 @@ input[type="checkbox"]:checked {
 }
 
 .slide-banner-wrap .slide-banner.wrich .banner-item.banner1 {
-  background: url("https://image.smartscore.kr/wrich/business/business-img-01.png") #eee;
+  background: url("//image.withrich.co.kr/wrich/business/business-img-01.png");
+  border-radius: 40px;
 }
 
 .slide-banner-wrap .slide-banner.wrich .banner-item.banner2 {
-  background: url("https://image.smartscore.kr/wrich/business/business-img-02.png") #eee;
+  background: url("//image.withrich.co.kr/wrich/business/business-img-02.png");
+  background-size: 978px 576px !important;
+  border-radius: 40px;
 }
 
 .slide-banner-wrap .flicking-button {
@@ -1302,6 +1383,11 @@ input[type="checkbox"]:checked {
   right: 50px;
 }
 
+.slide-banner-wrap.wrich-business {
+  background-color: #eee !important;
+  border-radius: 20px;
+}
+
 .middle-banner {
   width: 100%;
   background-repeat: no-repeat;
@@ -1312,6 +1398,8 @@ input[type="checkbox"]:checked {
 }
 
 .middle-banner .inner {
+  width: 1200px;
+  margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1323,15 +1411,22 @@ input[type="checkbox"]:checked {
 }
 
 .middle-banner .inner .title {
-  margin-top: 253px;
+  padding-top: 253px;
 }
 
 .middle-banner.platform {
-  background-image: url("https://image.smartscore.kr/wrich/about/about-banner.png");
+  background-image: url("//image.withrich.co.kr/wrich/about/about-banner.png");
 }
 
 .middle-banner.insurance {
-  background: url("https://image.smartscore.kr/wrich/insurance/insurance-banner.jpg");
+  background: url("//image.withrich.co.kr/wrich/insurance/insurance-banner.jpg");
+}
+
+.middle-banner .radius10-btn {
+  font-size: 20px;
+  width: 180px;
+  height: 60px;
+  padding: 0;
 }
 
 .content {
@@ -1352,10 +1447,8 @@ input[type="checkbox"]:checked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1920px;
-  min-width: 1200px;
   height: 255px;
-  padding: 60px 0 55px;
+  padding: 60px 50px 55px;
   margin: auto;
 }
 
@@ -1376,6 +1469,7 @@ input[type="checkbox"]:checked {
 
 #footer .inner .left-box p.text-box-min {
   margin-top: auto;
+  font-family: 'Poppins';
 }
 
 #footer .inner .right-box {
@@ -1392,6 +1486,7 @@ input[type="checkbox"]:checked {
 #footer .inner .right-box .footer-logo {
   width: 200px;
   margin-top: auto;
+  margin-left: auto;
 }
 
 #footer .inner .right-box .footer-logo img {
@@ -1426,6 +1521,14 @@ input[type="checkbox"]:checked {
   font-weight: bold;
 }
 
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-n {
+  font-weight: normal;
+}
+
 .dp-f {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1446,6 +1549,12 @@ input[type="checkbox"]:checked {
   display: inline-block;
 }
 
+.flex-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .ml-at {
   margin-left: auto;
 }
@@ -1460,6 +1569,14 @@ input[type="checkbox"]:checked {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.fc-black {
+  color: #000000;
+}
+
+.fc-white {
+  color: #ffffff;
 }
 
 .fc-blue {
@@ -13567,10 +13684,10 @@ input[type="checkbox"]:checked {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("https://image.smartscore.kr/wrich/about/value-img.png");
+  background-image: url("//image.withrich.co.kr/wrich/about/value-img.png");
   background-repeat: no-repeat;
-  background-position: 60% 44%;
-  background-size: 110px;
+  background-position: 67% 39%;
+  background-size: 153px;
 }
 
 .half-box > div.value span {
@@ -13579,6 +13696,7 @@ input[type="checkbox"]:checked {
 
 .half-box > div img {
   width: 100%;
+  height: 100%;
 }
 
 .half-box > div:nth-child(2n + 1) {
@@ -13600,6 +13718,18 @@ input[type="checkbox"]:checked {
   width: 208px;
   margin-left: auto;
   margin-top: 70px;
+}
+
+.about-box {
+  position: relative;
+}
+
+.about-box .title {
+  position: absolute;
+  left: 50%;
+  bottom: 45px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .triple-box {
@@ -13760,6 +13890,7 @@ input[type="checkbox"]:checked {
   -webkit-transition: all 0.6s cubic-bezier(0.42, 0.2, 0.08, 1);
   transition: all 0.6s cubic-bezier(0.42, 0.2, 0.08, 1);
   overflow: hidden;
+  color: #555555;
 }
 
 #wrapper .container .item .text.show {
@@ -13789,13 +13920,15 @@ input[type="checkbox"]:checked {
   z-index: 15;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
 }
 
 .modal-wrap .modal-box {
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
-  overflow: hidden;
   width: 640px;
+  max-height: 1094px;
   background: #fff;
 }
 
@@ -13811,14 +13944,15 @@ input[type="checkbox"]:checked {
 
 .modal-wrap .modal-box .modal-head h2 {
   margin: auto;
-  -webkit-transform: translateX(75%);
-          transform: translateX(75%);
+  font-size: 35px;
 }
 
 .modal-wrap .modal-box .modal-head .close-button {
+  position: absolute;
+  right: 40px;
+  top: 46px;
   width: 30px;
   height: 30px;
-  margin-left: auto;
 }
 
 .modal-wrap .modal-box .recruit-box {
@@ -13833,11 +13967,35 @@ input[type="checkbox"]:checked {
 
 .modal-wrap.show {
   visibility: visible;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.modal-wrap.show::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera*/
 }
 
 .modal-wrap .btn,
 .modal-wrap .at {
   font-size: 24px;
+}
+
+.modal-wrap .field-button-box img {
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+.modal-wrap .dim {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 textarea {
@@ -13848,7 +14006,7 @@ textarea {
   border-radius: 10px;
   resize: none;
   padding: 24px;
-  margin-bottom: 40px;
+  color: #555555;
 }
 
 textarea::-webkit-input-placeholder {
@@ -13878,6 +14036,200 @@ textarea::placeholder {
   padding: 24px;
 }
 
+.main-visual {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-visual .main-slider {
+  position: relative;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-visual > .main-slider .slick-list, .main-visual > .main-slider .slick-track {
+  height: 100%;
+}
+
+.main-visual > .main-slider .slick-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-visual .slider-visual .home-slide-pager {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 52px;
+}
+
+.main-visual .slider-visual .home-slide-pager span {
+  font-weight: 300;
+  font-size: 35px;
+  margin-right: 9px;
+}
+
+.main-visual .slider-visual .home-slide-pager span.activePage {
+  font-weight: bold;
+}
+
+.main-visual .slider-visual > .img-box > .img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: -webkit-transform 0s 4s;
+  transition: -webkit-transform 0s 4s;
+  transition: transform 0s 4s;
+  transition: transform 0s 4s, -webkit-transform 0s 4s;
+}
+
+.main-visual .main-slider .slick-active .img-box > .img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 9s;
+  transition: -webkit-transform 9s;
+  transition: transform 9s;
+  transition: transform 9s, -webkit-transform 9s;
+}
+
+.main-visual .visual-txt {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-visual .scroll-paging {
+  width: 20px;
+  height: 45px;
+}
+
+/* 슬라이더 내부 텍스트 */
+.inner-txt-con {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.inner-txt-con .inner-txt-1 {
+  display: inline-block;
+  color: #fff;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.inner-txt-con .inner-txt-1.home-slide-pager {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 52px;
+}
+
+.inner-txt-con .inner-txt-1.home-slide-pager span {
+  font-weight: 300;
+  font-size: 35px;
+  margin-right: 9px;
+}
+
+.inner-txt-con .inner-txt-1.home-slide-pager span.active {
+  font-weight: bold;
+}
+
+.inner-txt-con .inner-txt-2 {
+  font-size: 90px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -2.7px;
+  line-height: 115px;
+  margin-bottom: 72px;
+}
+
+.inner-txt-con .inner-txt-2 .stroke-text {
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  -webkit-transition: background-size 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  transition: background-size 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(50%, #ffffff), color-stop(50.1%, transparent));
+  background-image: linear-gradient(180deg, #ffffff 0%, #ffffff 50%, transparent 50.1%);
+  background-position: 100% 0%;
+  background-size: 100% 0%;
+}
+
+.slider-visual.black .inner-txt {
+  color: #000000 !important;
+}
+
+.slider-visual.black .inner-txt .stroke-text {
+  -webkit-text-stroke-color: #000000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(50%, #000000), color-stop(50.1%, transparent));
+  background-image: linear-gradient(180deg, #000000 0%, #000000 50%, transparent 50.1%);
+}
+
+/* 메인 슬라이더 내부 텍스트 애니메이션 */
+.main-visual .main-slider .slider-visual > .visual-txt > .inner-txt-con > .inner-txt {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition: opacity 0s 3s, -webkit-transform 0s 3s;
+  transition: opacity 0s 3s, -webkit-transform 0s 3s;
+  transition: opacity 0s 3s, transform 0s 3s;
+  transition: opacity 0s 3s, transform 0s 3s, -webkit-transform 0s 3s;
+}
+
+.main-visual .main-slider .slick-active .visual-txt > .inner-txt-con > .inner-txt {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: opacity 2s, -webkit-transform 2s;
+  transition: opacity 2s, -webkit-transform 2s;
+  transition: opacity 2s, transform 2s;
+  transition: opacity 2s, transform 2s, -webkit-transform 2s;
+}
+
+.inner-txt-1 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.inner-txt-2 {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.inner-txt-3 {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+.main-visual .main-slider .reset-animation .visual-txt > .inner-txt-con > .inner-txt {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+}
+
 .text-box {
   width: 100%;
 }
@@ -13893,45 +14245,73 @@ textarea::placeholder {
 }
 
 .flicking-box .flicking-button {
+  width: auto;
   margin-left: auto;
 }
 
-.flicking-box .flicking-button a {
-  margin-left: 30px;
+.flicking-box .flicking-button button {
+  width: 60px;
+  height: 60px;
+  margin-left: 26px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flicking-box .flicking-button button.prev {
+  background-image: url("https://image.withrich.co.kr/wrich/icon/flicking-left.png") !important;
+}
+
+.flicking-box .flicking-button button.next {
+  background-image: url("https://image.withrich.co.kr/wrich/icon/flicking-light.png") !important;
 }
 
 .history-flicking .flicking-wrap {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  overflow-x: auto;
+  overflow: hidden;
+  width: 100vw;
 }
 
-.history-flicking .flicking-wrap .flicking-item {
-  width: 260px;
+.history-flicking .flicking-wrap .flicking-item, .history-flicking .flicking-wrap .slick-slide {
   padding-top: 60px;
   border-top: 4px solid #e6e6e6;
-  padding-right: 120px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.history-flicking .flicking-wrap .flicking-item .title {
+.history-flicking .flicking-wrap .flicking-item .title, .history-flicking .flicking-wrap .slick-slide .title {
   color: #e6e6e6;
 }
 
-.history-flicking .flicking-wrap .flicking-item .text-box-2 {
+.history-flicking .flicking-wrap .flicking-item .text-box-2, .history-flicking .flicking-wrap .slick-slide .text-box-2 {
   color: #aaaaaa;
+  padding-right: 120px;
+  text-align: left;
 }
 
-.history-flicking .flicking-wrap .flicking-item.active {
+.history-flicking .flicking-wrap .slick-current {
   border-top: 4px solid #555555;
 }
 
-.history-flicking .flicking-wrap .flicking-item.active .title {
+.history-flicking .flicking-wrap .slick-current .title {
   color: #000;
 }
 
-.history-flicking .flicking-wrap .flicking-item.active .text-box-2 {
+.history-flicking .flicking-wrap .slick-current .text-box-2 {
   color: #555555;
+}
+
+.history-flicking .flicking-wrap .inner-wrap {
+  width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.history-flicking::-webkit-scrollbar {
+  display: none !important;
 }
 
 .information-tooltip {
@@ -13997,11 +14377,11 @@ textarea::placeholder {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-image: url("https://image.smartscore.kr/wrich/icon/ic-info.png");
+  background-image: url("https://image.withrich.co.kr/wrich/icon/ic-info.png");
 }
 
 .information-tooltip .information:hover, .information-tooltip .information:focus {
-  background-image: url("https://image.smartscore.kr/wrich/icon/ic-info-on.png");
+  background-image: url("https://image.withrich.co.kr/wrich/icon/ic-info-on.png");
 }
 
 .information-tooltip.show .information-box {
@@ -14009,8 +14389,20 @@ textarea::placeholder {
   display: block;
 }
 
+.map {
+  position: relative;
+}
+
 .map .root_daum_roughmap {
   margin: auto;
+}
+
+.map .pin {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 5;
+  width: 170px;
 }
 
 .five-divisions {
@@ -14044,9 +14436,15 @@ textarea::placeholder {
 }
 
 .center {
-  padding: 60px 70px;
   border-radius: 40px;
   background: #f0f6f9;
+}
+
+.center .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 70px;
 }
 
 .center > p, .center > div {
@@ -14069,6 +14467,13 @@ textarea::placeholder {
   padding: 70px 60px 0;
 }
 
+.apply {
+  width: 177px;
+  height: 70px;
+  padding: 0;
+  font-size: 24px;
+}
+
 /* Page */
 .common-area {
   position: relative;
@@ -14088,7 +14493,7 @@ textarea::placeholder {
 }
 
 .common-area .inner .blank {
-  width: 733px;
+  width: 65.4%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -14107,43 +14512,6 @@ textarea::placeholder {
 .common-area .content-text-box {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 70px 0;
-}
-
-.common-area .content-text-box .sub-mid-title {
-  line-height: 45px;
-  margin-bottom: 50px;
-}
-
-.common-area .content-text-box .text-box-2 {
-  line-height: 36px;
-  word-break: keep-all;
-}
-
-.common-area .content-text-box .round-button {
-  margin-top: 50px;
-}
-
-.common-area .content-text-box {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.common-area.left {
-  background-position: left 0;
-}
-
-.common-area.left .content-text-box {
-  width: calc(100% - 733px);
-  padding-left: 100px;
-}
-
-.common-area.right {
-  background-position: right 0;
-}
-
-.common-area.right .content-text-box {
-  width: 467px;
 }
 
 .common-area.service {
@@ -14159,14 +14527,96 @@ textarea::placeholder {
   margin-left: auto;
 }
 
+.common-full-area {
+  width: calc(100% - 100px) !important;
+  margin: auto !important;
+}
+
+.common-full-main {
+  width: 100% !important;
+}
+
+.full-bg {
+  margin-top: 180px !important;
+  margin-bottom: 100px !important;
+}
+
 .main-section1 {
   height: 600px;
-  background: url("https://image.smartscore.kr/wrich/main-insurance.jpg");
+  background: url("//image.withrich.co.kr/wrich/main-insurance.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-section1.blank {
+  width: 65.4%;
 }
 
 .main-section2 {
   height: 600px;
-  background: url("https://image.smartscore.kr/wrich/main-recruit.jpg");
+  background: url("//image.withrich.co.kr/wrich/main-recruit.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: auto;
+}
+
+.main-section2.blank {
+  width: 65.4%;
+}
+
+.content-text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 70px 0;
+  padding-left: 100px;
+  width: 34.5%;
+}
+
+.content-text-box .sub-mid-title {
+  line-height: 45px;
+  margin-bottom: 50px;
+}
+
+.content-text-box .text-box-2 {
+  line-height: 36px;
+  word-break: keep-all;
+}
+
+.content-text-box .round-button {
+  margin-top: 50px;
+}
+
+.content-text-box .inner-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content-text-box.right {
+  padding-right: 100px;
+  padding-left: 0;
+}
+
+.content-text-box.right .inner-text {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .link-box a {
@@ -14188,7 +14638,7 @@ textarea::placeholder {
   top: 6px;
   width: 26px;
   height: 14px;
-  background-image: url("https://image.smartscore.kr/wrich/icon/next-btn.png");
+  background-image: url("//image.withrich.co.kr/wrich/icon/next-btn.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -14209,25 +14659,15 @@ textarea::placeholder {
 .download-button.appStore {
   width: 210px;
   padding: 20px 0;
-  background: url("https://image.smartscore.kr/wrich/icon/ic-appstore.png") #000000;
+  background: url("//image.withrich.co.kr/wrich/icon/ic-appstore.png") #000000;
   background-size: 135px;
 }
 
 .download-button.playStore {
   width: 210px;
   padding: 20px 0;
-  background: url("https://image.smartscore.kr/wrich/icon/ic-googlestore.png") #000000;
+  background: url("//image.withrich.co.kr/wrich/icon/ic-googlestore.png") #000000;
   background-size: 144px;
   margin-left: 10px;
-}
-
-@media screen and (max-width: 1920px) {
-  .main-section1,
-  .main-section2 {
-    background-size: auto 400px !important;
-  }
-  .content-text-box {
-    padding: 0 !important;
-  }
 }
 /*# sourceMappingURL=import.css.map */

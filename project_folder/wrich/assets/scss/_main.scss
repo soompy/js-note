@@ -10,7 +10,7 @@
     width: 1200px;
     margin: auto;
     .blank {
-      width: 733px;
+      width: 65.4%;
       flex-shrink: 0;
     }
     &.column {
@@ -20,41 +20,10 @@
       display: block;
     }
   }
-  .content-text-box {
-    flex-shrink: 0;
-    padding: 70px 0;
-    .sub-mid-title {
-      line-height: 45px;
-      margin-bottom: 50px;
-    }
-    .text-box-2 {
-      line-height: 36px;
-      word-break: keep-all;
-    }
-    .round-button {
-      margin-top: 50px;
-    }
-  }
 
   .content-text-box {
     flex-shrink: 0;
   }
-
-  &.left {
-    background-position: left 0;
-    .content-text-box {
-      width: calc(100% - 733px);
-      padding-left: 100px;
-    }
-  }
-
-  &.right {
-    background-position: right 0;
-    .content-text-box {
-      width: 467px;
-    }
-  }
-
   &.service {
     margin: 0 auto;
     .inner {
@@ -67,15 +36,71 @@
   }
 }
 
-.main-section1 {
-  height: 600px;
-  background: url("https://image.smartscore.kr/wrich/main-insurance.jpg");
-}
-.main-section2 {
-  height: 600px;
-  background: url("https://image.smartscore.kr/wrich/main-recruit.jpg");
+.common-full-area {
+    width: calc(100% - 100px) !important;
+    margin: auto !important;
 }
 
+.common-full-main {
+    width: 100% !important;
+}
+
+.full-bg {
+  margin-top: 180px !important;
+  margin-bottom: 100px !important;
+}
+.main-section1 {
+  height: 600px;
+  background: url("//image.withrich.co.kr/wrich/main-insurance.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.blank {
+    width: 65.4%;
+  }
+}
+.main-section2 {  
+  height: 600px;
+  background: url("//image.withrich.co.kr/wrich/main-recruit.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: auto;
+  &.blank {
+    width: 65.4%;
+  }
+}
+.content-text-box {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 70px 0;
+  padding-left: 100px;
+  width: 34.5%;
+  .sub-mid-title {
+    line-height: 45px;
+    margin-bottom: 50px;
+  }
+  .text-box-2 {
+    line-height: 36px;
+    word-break: keep-all;
+  }
+  .round-button {
+    margin-top: 50px;
+  }
+  .inner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &.right {
+    padding-right: 100px;
+    padding-left: 0;
+    .inner-text {
+      align-items: flex-end;
+    }
+  }
+}
 .link-box {
   a {
     position: relative;
@@ -93,7 +118,7 @@
       top: 6px;
       width: 26px;
       height: 14px;
-      background-image: url("https://image.smartscore.kr/wrich/icon/next-btn.png");
+      background-image: url("//image.withrich.co.kr/wrich/icon/next-btn.png");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -115,26 +140,17 @@
   &.appStore {
     width: 210px;
     padding: 20px 0;
-    background: url("https://image.smartscore.kr/wrich/icon/ic-appstore.png")
+    background: url("//image.withrich.co.kr/wrich/icon/ic-appstore.png")
       #000000;
     background-size: 135px;
   }
   &.playStore {
     width: 210px;
     padding: 20px 0;
-    background: url("https://image.smartscore.kr/wrich/icon/ic-googlestore.png")
+    background: url("//image.withrich.co.kr/wrich/icon/ic-googlestore.png")
       #000000;
     background-size: 144px;
     margin-left: 10px;
   }
 }
 
-@media screen and (max-width: 1920px) {
-  .main-section1,
-  .main-section2 {
-    background-size: auto 400px !important;
-  }
-  .content-text-box {
-    padding: 0 !important;
-  }
-}
