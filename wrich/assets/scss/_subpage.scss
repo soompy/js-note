@@ -1,0 +1,193 @@
+.inner {
+  
+}
+
+.text-box {
+  width: 100%;
+}
+
+.flicking-box {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  .flicking-button {
+    margin-left: auto;
+    a {
+      margin-left: 30px;
+    }
+  }
+}
+
+.history-flicking {  
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  .flicking-wrap { 
+    position: relative;   
+    display: inline-flex;
+    overflow-x: auto;
+    left: 230px;
+    .flicking-item {
+      width: 260px;
+      padding-top: 60px;
+      border-top: 4px solid #e6e6e6;
+      padding-right: 120px;
+      .title {
+        color: #e6e6e6;
+      }
+      .text-box-2 {
+        color: #aaaaaa;
+      }
+      &.active {
+        border-top: 4px solid $color-grey;
+        .title {
+          color: $color-black;
+        }
+        .text-box-2 {
+          color: #555555;
+        }
+      }
+    }   
+  }
+  // &:before {
+  //   display: block;
+  //   clear: both;
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 18.75vw;
+  //   height: 100%;
+  //   background: $color-white;
+  //   z-index: 30;
+  // }
+}
+
+.information-tooltip {
+  position: relative;
+  transition: all 0.5s ease-in;
+  .information-box {
+    display: none;
+    opacity: 0;     
+    position: absolute;
+    top: 90px;
+    right: 0;
+    z-index: 10;
+    width: 513px;
+    background: $color-white;
+    padding: 40px;    
+    box-shadow: 0 0 30px #ccc !important;
+    border-radius: 14px;
+    font-size: 20px;    
+    .text-box-2 {
+      color: #333333;
+      font-weight: bold;
+    }
+
+    .line {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      color: $color-white;
+      border-radius: 50%;
+      margin-right: 10px;
+      &.green {
+        background: #3ab449;
+      }
+      &.brown {
+        background: #c9a754;
+      }
+    }
+    .arrow {
+      color: $color-midium-grey;
+      margin: 0 6px;
+    }
+  }
+  .information {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url("https://image.smartscore.kr/wrich/icon/ic-info.png");
+    &:hover, &:focus {
+      background-image: url("https://image.smartscore.kr/wrich/icon/ic-info-on.png");
+    }
+  }
+  &.show {    
+    .information-box {
+      opacity: 1;
+      display: block;
+    }    
+  }
+}
+
+.map {
+  position: relative;
+  .root_daum_roughmap {    
+    margin: auto;    
+  }
+  .pin {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    z-index: 5;
+    width: 170px;
+  }
+}
+
+// business
+.five-divisions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;  
+  img {
+    display: block;    
+    width: 190px;
+    margin-right: 62px;
+    margin-bottom: 105px;
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+    &:nth-child(n+6) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// insurance
+.center {  
+  border-radius: 40px;
+  background: #f0f6f9;
+  .center {
+    display: flex;
+    padding: 60px 70px;
+  }
+  > p, > div {
+    flex: 1;
+  }
+}
+
+// recruit
+.wrap-box {
+  position: relative;
+  width: 1200px;
+  margin: auto;
+  background: $color-white;  
+  border-radius: 40px;
+  margin-top: -190px;
+  .inner {
+    width: 100%;
+    padding: 70px 60px 0;
+  }
+}
+.apply {
+  width: 177px;
+  height: 70px;
+  padding: 0;
+  font-size: 24px;
+}

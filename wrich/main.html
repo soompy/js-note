@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114.png" type="image/png"> -->
+        <title>위드리치</title>
+        <meta name="description" content="위드리치 홈페이지입니다.">
+        <meta name="keywords" content="위드리치, 보험, 투자">
+        <meta name="author" content="스마트스코어">
+        <link rel="stylesheet" href="./assets/scss/import.css">
+        <link rel="stylesheet" href="./assets/scss/scrollTrigger.css">
+        <link rel="stylesheet" href="./assets/scss/triggerStyle.css">
+        <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+        <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    </head>
+
+
+    <body>
+
+        <!--
+             ** 메인 첫번째 화면만 해당
+            [DEV] 헤더 메인 첫 번째 바너가 노출될 때에만 헤더에 whiteMenu 클래스가 추가되도록해주세요,
+         -->
+        <header id="header" class="">
+            <div class="inner">
+                <h1 class="logo"><a href="main.html"><img src="https://image.smartscore.kr/wrich/withrich-logo.png" alt="위드리치"></a></h1>
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li class="eng"><a href="about.html">About</a></li>
+                        <li class="eng"><a href="business.html">Business</a></li>
+                        <li class="eng"><a href="insurance.html">Insurance</a></li>
+                        <li class="eng"><a href="recruit.html">Recruit</a></li>
+                    </ul>
+                </nav>
+                <button class="btn radius10-btn" onclick="popup()">입사지원</button>
+            </div>
+        </header>
+
+
+        <div class="main-visual">
+            <div class="main-slider">
+                <div class="slider-visual slider-visual-1">
+                    <div class="visual-pc img-box only-pc">
+                        <div class="img" style="background-image:url('https://image.smartscore.kr/wrich/mainbanner-01.jpg');"></div>
+                    </div>
+                    <div class="visual-txt">                        
+                        <div class="inner-txt-con">      
+                            <strong class="inner-txt inner-txt-1 home-slide-pager">
+                                <span class="activePage">1</span>
+                                <span>&#x002F;</span>
+                                <span>2</span>
+                            </strong>
+                            <p class="inner-txt inner-txt-2 fc-white">
+                                고객 맞춤형 서비스 <br>인슈어테크 플랫폼 <br> <span class="stroke-text">위드리치</span>
+                            </p>
+                            <div class="inner-txt inner-txt-3">
+                                <img class="scroll-paging" src="https://image.smartscore.kr/wrich/icon/main-arrowdown.png" alt="">
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="slider-visual slider-visual-2 black">
+                    <div class="visual-pc img-box only-pc">
+                        <div class="img" style="background-image:url('https://image.smartscore.kr/wrich/mainbanner-02.jpg');"></div>
+                    </div>
+                    <div class="visual-txt">
+                        <div class="inner-txt-con">           
+                            <strong class="inner-txt inner-txt-1 home-slide-pager">
+                                <span class="activePage">2</span>
+                                <span>&#x002F;</span>
+                                <span>2</span>
+                            </strong>
+                            <p class="inner-txt inner-txt-2">
+                                고객 맞춤형 서비스 <br>인슈어테크 플랫폼 <br> <span class="stroke-text">위드리치</span>
+                            </p>
+                            <div class="inner-txt inner-txt-3">
+                                <img class="scroll-paging" src="https://image.smartscore.kr/wrich/icon/main-arrowdown-bk.png" alt="">
+                            </div>
+                        </div>
+                    </div>                    
+                </div>                
+            </div>           
+        </div>
+
+
+        <div class="content">
+            <section class="dp-f common-full-area full-bg" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+                <div class="blank main-section1"></div>
+                <div class="content-text-box left">
+                    <p class="title sub-mid-title lh-65px">골프라이프를 즐기는 <br>나에게 딱 맞춘 보험</p>
+                    <p class="text-box-2">
+                        다양한 보험과 동시견적비교, 전문가가 <br>
+                        도와주는 재무컨설팅과 질병위험을 <br>
+                        미리 알려주는 유전자검사까지 <br>
+                        위드리치에서 간편하게 이용해 보세요.
+                    </p>
+                    <button class="round-button" onclick="location.href='insurance.html'"></button>
+                </div>
+            </section>
+
+            <section class="dp-f common-full-area full-bg" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">                
+                <div class="content-text-box right">
+                    <p class="title sub-mid-title lh-65px">골프라이프를 즐기는 <br>나에게 딱 맞춘 보험</p>
+                    <p class="text-box-2">
+                        다양한 보험과 동시견적비교, 전문가가 <br>
+                        도와주는 재무컨설팅과 질병위험을 <br>
+                        미리 알려주는 유전자검사까지 <br>
+                        위드리치에서 간편하게 이용해 보세요.
+                    </p>
+                    <button class="round-button" onclick="location.href='insurance.html'"></button>
+                </div>
+                <div class="blank main-section2"></div>
+            </section>         
+
+            <!-- [DEV] 해당링크 내 아코디언이 펼쳐져 보이도록 해주세요 
+            h2에 accordionTitleActive클래스 추가-->
+            <section class="common-area service" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+                <div class="inner">
+                    <p class="title sub-mid-title">자주묻는 질문</p>
+                    <div class="link-box">
+                        <a href="recruit.html#acc_item1" data-toggle="collapse" data-parent="#acc_item1" data-target="#target1" class="title sub-title">위드리치는 어떤 회사인가요?</a>
+                        <a href="recruit.html#acc_item2" data-toggle="collapse" data-parent="#acc_item2" data-target="#target2"  class="title sub-title">어떤 영업 DB를 제공하고 있나요?</a>
+                        <a href="recruit.html#acc_item4" data-toggle="collapse" data-parent="#acc_item4" data-target="#target4"  class="title sub-title">소득은 어느정도 수준인가요?</a>
+                    </div>
+                </div>
+            </section>
+            <section class="common-area service" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+                <div class="inner">
+                    <p class="title sub-mid-title">고객센터</p>
+                    <div class="link-box">
+                        <p class="title sub-title mb-18">대표전화 1877 – 2877</p>
+                        <p class="text-box-min lh-28px">근무시간은 평일 오전 9시 ~ 오후 6시입니다.</p>
+                        <p class="text-box-min lh-28px">※ 주말, 공휴일은 상담신청만 가능합니다.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="common-area service" data-scroll="toggle(.fromBottomIn, .fromBottomOut)">
+                <div class="inner bdb-n">
+                    <p class="title sub-mid-title">앱 다운로드</p>
+                    <div class="link-box">
+                        <button class="download-button appStore" onclick="window.open('https://apps.apple.com/kr/app/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%EC%BD%94%EC%96%B4/id969887573')" type="button">앱스토어<img src="" alt=""></button>
+                        <button class="download-button playStore" onclick="window.open('https://play.google.com/store/apps/details?id=com.smartscore.rawady.smartscore')" type="button">구글플레이스토어<img src="" alt=""></button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="modal-wrap" id="popup">
+            <div class="modal-box">
+                <div class="modal-head">
+                    <h2 class="title sub-mid-title ta-c">입사지원</h2>
+                    <button class="close-button" onclick="closed()"></button>
+                </div>
+                <form action="" id="recruit-form" class="recruit-box">
+                    <div class="form-field-line unfilled mb-20">
+                        <input type="text" class="field-text" id="field-text" placeholder="이름" value="">
+                    </div>
+                    <!-- [DEV] 에러인 경우 form-field-line에 unfilled클래스 대신 error클래스가 들어갑니다 -->
+                    <div class="form-field-line unfilled mb-20">
+                        <input type="text" class="field-text" id="field-ntext" placeholder="연락처(-제외입력)" value="">
+                    </div>
+                    <div class="form-field-line error mb-20">
+                        <input type="text" class="field-text" id="field-text" placeholder="연락처(-제외입력)" value="01012323434">
+                    </div>
+                    <!-- [DEV] 에러메시지가 뜨지 않을때는 error-message 영역이 사라지도록 해주세요 -->
+                    <p class="error-message">연락처를 입력해주세요</p>
+                    <div class="mail-form mb-20">
+                        <div class="form-field-line unfilled">
+                            <input type="text" class="field-text" id="field-text" placeholder="이메일" value="">
+                        </div>
+                        <div class="at">@</div>
+                        <div class="form-field-raise select-box active">
+                            <input type="text" class="field-text" readonly="" placeholder="선택" value="직접입력">
+                            <div class="field-button-box">
+                                <!-- [DEV] tf-rt-180 클래스를 토글시켜주세요-->
+                                <img src="https://image.smartscore.kr/wrich/icon/ic-dropdown.png" style="width: 18px;" alt="">
+                                <!-- [DEV] tf-rt-180 클래스를 토글시켜주세요-->
+                            </div>
+                            <ul class="field-select-cont">
+                                <li class="cont-item">naver.com</li>
+                                <li class="cont-item active">naver.com</li>
+                                <li class="cont-item">naver.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="손보/생보 경력"></textarea>
+
+                    <div class="agreement-box">
+                        <div class="dp-f align-items-center justify-center">
+                            <span class="checkbox"><input type="checkbox">개인정보 수집 이용 및 동의(필수)</span>
+                        </div>
+                        <div class="terms mt-14">
+                            위드리치는 「개인정보 보호법」등 관련 법령에 따라 입사전형 및 채용 후 인사관리 등의 목적으로 입사지원자의 개인정보를 수집하고 있습니다.
+                            귀하의 개인정보 수집 및 이용과 관련하여 아래의 안내 내용을 자세히 읽어 보시고, 모든 내용을 숙지하신 후에
+                        </div>
+                    </div>
+                </form>
+                <button class="btn full-btn">지원하기</button>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="inner">
+                <div class="left-box">
+                    <p class="text-box-2">㈜위드리치 서울시 강남구 테헤란로 98길8, 9층</p>
+                    <p class="text-box-2">대표 정성훈 <span class="bar"></span> 사업자등록번호 761-81-01758 <span class="bar"></span> 보험대리점등록번호 제2019120062호</p>
+                    <p class="text-box-2">고객센터 1877-2877 <span class="bar"></span> 이메일 smart@withrich.co.kr</p>
+                    <p class="text-box-min">Copyright @ 2021 Withrich. All rights reserved.</p>
+                </div>
+                <div class="right-box">
+                    <div class="form-field-raise select-box wd-230" onmouseover="this.className='form-field-raise select-box wd-230 active';" onmouseout="this.className='form-field-raise select-box wd-230';">
+                        <div class="field-button-box">
+                            <input type="text" class="field-text eng fw-500 wd-230" readonly placeholder="Family site" />
+                            <!-- <img src="//image.smartscore.kr/wrich/icon/arrowup-f.png" style="width: 15px;" alt=""> -->
+                        </div>
+                        <div class="field-select-cont fw-500">
+                            <span class="cont-item eng"><a href="https://smartscore.kr/" target="_blank">Smartscore</a></span>
+                            <span class="cont-item eng">Family site</span>
+                            <span class="arrowbox"><img src="https://image.smartscore.kr/wrich/icon/arrowup-f.png" alt=""></span>
+                        </div>
+                    </div>
+                    <h1 class="footer-logo">
+                        <img src="https://image.smartscore.kr/wrich/icon/withrich-logo-f.png" alt="withrich logo">
+                    </h1>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./assets/js/ScrollTrigger.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./assets/js/ui.js"></script>
+        <script src="./assets/js/slider.js"></script>
+        <script type="text/javascript">
+            $(document).on('ready', function () {
+                $(".home").slick({
+                    vertical: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    autoplaySpeed: 4000,
+                    arrows: true,
+                    verticalSwiping: true,
+                    speed: 600,
+                    cssEase: 'linear',
+                });
+                $('.main-slider').slick({
+                    fade: true,
+                    slidesToShow: 1,
+                    speed: 600,
+                    lazyLoad: 'progressive',
+                    autoplay:true,
+                    autoplaySpeed: 3400,
+                });
+            })
+        </script>
+        <script>
+            window.counter = function() {
+                // this refers to the html element with the data-scroll-showCallback tag
+                var span = this.querySelector('span');
+                var current = parseInt(span.textContent);
+
+                span.textContent = current + 1;
+            };
+
+            document.addEventListener('DOMContentLoaded', function(){
+                var trigger = new ScrollTrigger({
+                    addHeight: true
+                });
+            });
+        </script>
+    </body>
+
+
+</html>

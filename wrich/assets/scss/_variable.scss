@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+// important
+$imt : unquote('!important');
+
+// item length
+$itemLength : 100;
+
+/********** color variable **********/
+$color-primary: #ff4f42 !default;
+$color-red: #ee3d30 !default;
+$color-white: #fff !default;
+$color-very-light-grey: #dddddd  !default;
+$color-light-grey: #f8f8f8  !default;
+$color-midium-grey: #999999 !default;
+$color-grey: #555555 !default;
+$color-dark-grey: #333333 !default;
+$color-black: #000 !default;
+
+$color-gradient1:linear-gradient(to bottom, #f8f8f8, #d3d3d3) !default;
+$color-gradient2:linear-gradient(to bottom, #fdabb4, #fa7f7f) !default;
+$color-gradient3:linear-gradient(to bottom, #dbffd5, #92d687) !default;$colors: () !default;
+
+$colors: map-merge(
+    (      
+      "primary": $color-primary,
+      "red": $color-red,   
+      "white": $color-white,
+      "very-light-grey": $color-very-light-grey,
+      "light-grey": $color-light-grey,
+      "midium-grey": $color-midium-grey,
+      "grey": $color-grey,
+      "dark-grey": $color-dark-grey,
+      "black": $color-black
+    ),
+    $colors
+);
