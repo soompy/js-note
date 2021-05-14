@@ -67,6 +67,7 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  &:focus {outline: none;}
 }
 
 /**
@@ -148,6 +149,23 @@ textarea {
  */
 button { /* 1 */overflow: visible;background-repeat: no-repeat;background-position: center center;background-size: cover;}
 input{outline-style:none;-webkit-appearance:none;border: none;} 
+input[type=checkbox] {
+    display:none;
+}
+input[type=checkbox] + label {    
+    background-image: url("//image.withrich.co.kr/wrich/icon/ic-select.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px;
+    padding-left: 37px;
+    cursor: pointer;
+}
+input[type=checkbox]:checked + label {
+    background-image: url("//image.withrich.co.kr/wrich/icon/ic-select-on.png");    
+}
+input[type=checkbox]:disabled + label {
+    background-image: url("//image.withrich.co.kr/wrich/icon/ic-select.png");
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.

@@ -1,0 +1,77 @@
+<div class="modal-wrap" id="popup">
+    <div class="dim" onclick="closed()"></div>    
+    <div class="modal-box">
+        <div class="modal-head">
+            <h2 class="title sub-mid-title ta-c">입사지원</h2>
+            <button class="close-button" onclick="closed()"></button>
+        </div>
+        <form action="" id="recruit-form" class="recruit-box">
+            <div class="form-field-line unfilled mb-20">
+                <input type="text" class="field-text" id="user_name" placeholder="이름" value="" maxlength="7"
+                    onkeyup="textInput(this)">
+            </div>
+            <p class="error-message"></p>
+            <!-- [DEV] 에러인 경우 form-field-line에 unfilled클래스 대신 error클래스가 들어갑니다 -->
+            <div class="form-field-line unfilled mb-20">
+                <input type="text" class="field-text" id="user_phone" placeholder="연락처(-제외입력)" value="" maxlength="11"
+                    onkeyup="textInput(this)">
+            </div>
+            <!--            <div class="form-field-line error mb-20">-->
+            <!--                <input type="text" class="field-text" id="field-text" placeholder="연락처(-제외입력)" value="">-->
+            <!--            </div>-->
+            <!-- [DEV] 에러메시지가 뜨지 않을때는 error-message 영역이 사라지도록 해주세요 -->
+            <p class="error-message"></p>
+            <div class="mail-form mb-20">
+                <div class="form-field-line unfilled">
+                    <input type="text" class="field-text" id="user_email1" placeholder="이메일" value=""
+                        onkeyup="textInput($(this).parent())">
+                </div>
+                <div class="at">@</div>
+                <div class="form-field-raise select-box active">
+                    <input type="text" class="field-text" id="user_email2" readonly="" placeholder="선택" value=""
+                        onclick="select_list_show()">
+                    <div class="field-button-box" onclick="select_list_show()">
+                        <!-- [DEV] tf-rt-180 클래스를 토글시켜주세요-->
+                        <img src="//image.withrich.co.kr/wrich/icon/ic-dropdown.png" style="width: 18px;" alt=""
+                            class="arrow_img">
+                        <!-- [DEV] tf-rt-180 클래스를 토글시켜주세요-->
+                    </div>
+                    <ul class="field-select-cont" id="user_email2_select_list" style="display:none;">
+                        <li class="cont-item" onclick="select_list(this);">직접입력</li>
+                        <li class="cont-item" onclick="select_list(this);">naver.com</li>
+                        <li class="cont-item" onclick="select_list(this);">hanmail.net</li>
+                        <li class="cont-item" onclick="select_list(this);">hotmail.com</li>
+                        <li class="cont-item" onclick="select_list(this);">nate.com</li>
+                        <li class="cont-item" onclick="select_list(this);">yahoo.co.kr</li>
+                        <li class="cont-item" onclick="select_list(this);">empas.com</li>
+                        <li class="cont-item" onclick="select_list(this);">dreamwiz.com</li>
+                        <li class="cont-item" onclick="select_list(this);">freechal.com</li>
+                        <li class="cont-item" onclick="select_list(this);">lycos.co.kr</li>
+                        <li class="cont-item" onclick="select_list(this);">korea.com</li>
+                        <li class="cont-item" onclick="select_list(this);">gmail.com</li>
+                        <li class="cont-item" onclick="select_list(this);">hanmir.com</li>
+                        <li class="cont-item" onclick="select_list(this);">paran.com</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="error-message"></p>
+            <div class="mb-40">
+                <textarea name="" id="msg" cols="30" rows="10" placeholder="손보/생보 경력" onkeyup="textInput(this)"></textarea>
+                <p class="error-message mt-10"></p>
+            </div>            
+            <div class="agreement-box">
+                <div class="dp-f align-items-center justify-center">
+                    <span class="checkbox">                        
+                        <input type="checkbox" id="agree" onclick="textInput($(this).parent())"><label for="agree">개인정보 수집 이용 및 동의(필수)</label>
+                    </span>
+                </div>
+                <p class="error-message mt-14"></p>
+                <div class="terms mt-14">
+                    위드리치는 「개인정보 보호법」등 관련 법령에 따라 입사전형 및 채용 후 인사관리 등의 목적으로 입사지원자의 개인정보를 수집하고 있습니다.
+                    귀하의 개인정보 수집 및 이용과 관련하여 아래의 안내 내용을 자세히 읽어 보시고, 모든 내용을 숙지하신 후에
+                </div>
+            </div>
+        </form>
+        <button class="btn full-btn" onclick="recruit_submit()">지원하기</button>
+    </div>
+</div>
