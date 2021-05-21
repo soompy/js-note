@@ -1,0 +1,19 @@
+/**
+ * Basic layout, for animation examples, check demo.css
+ */
+
+
+/**
+ * Simple keyframes animation for the chevron on the first slide
+ */
+@keyframes chevronAnimation {
+	0% {
+		transform: translate(0,0) scale(1.0,1.0);
+	}
+	50% {
+		transform: translate(0,5px) scale(0.8,0.8);
+	}
+	100% {
+		transform: translate(0,0) scale(1.0,1.0);
+	}
+}
