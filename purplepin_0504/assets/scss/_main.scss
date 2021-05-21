@@ -269,6 +269,7 @@ body {
         .slide_wrap {
           margin-top: 30px;
           padding-bottom: 20px;
+          height: 547px;
           .bnr {
             height: 547px;
           }
@@ -413,6 +414,9 @@ body {
         .m-big-text {
           display: none;
         }
+      }
+      .slick-list {
+        width: 842px;
       }
       .partnership {
         margin-top: 100px;
@@ -614,7 +618,7 @@ body {
           .tabcontent {
             height: 347px;
             .shop {
-              height: 100%;
+              height: 547px;
               .slide_wrap {
                 .bnr {
                   height: 347px;
@@ -681,7 +685,9 @@ body {
 
     &.studio {
       min-height: 960px;
-      .bg-line {display: none;}
+      .bg-line {
+        display: none;
+      }
       .inner {
         top: 36%;
       }

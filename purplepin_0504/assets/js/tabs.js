@@ -13,3 +13,16 @@ function openStore(evt, shopName) {
 }
 
 document.getElementById("defaultOpen").click();
+
+
+
+
+function pageUp() {
+  var h = window.innerHeight;
+  window.scrollBy(0, -h);
+}
+
+function pageDown() {
+  var h = window.innerHeight;
+  window.scrollBy(0, h);
+}

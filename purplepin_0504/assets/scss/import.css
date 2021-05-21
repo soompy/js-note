@@ -725,6 +725,7 @@ figure {
   position: relative;
   border-radius: 50%;
   background-size: 95% !important;
+  cursor: pointer;
 }
 
 .round-button.big {
@@ -1925,6 +1926,7 @@ body {
 .section.united .tabcontent .shop .slide_wrap {
   margin-top: 30px;
   padding-bottom: 20px;
+  height: 547px;
 }
 
 .section.united .tabcontent .shop .slide_wrap .bnr {
@@ -2101,6 +2103,10 @@ body {
 
 .section.partners .inner .text-box .m-big-text {
   display: none;
+}
+
+.section.partners .inner .slick-list {
+  width: 842px;
 }
 
 .section.partners .inner .partnership {
@@ -2318,7 +2324,7 @@ body {
     height: 347px;
   }
   .section.united .inner .tab-content-box .tabcontent .shop {
-    height: 100%;
+    height: 547px;
   }
   .section.united .inner .tab-content-box .tabcontent .shop .slide_wrap .bnr {
     height: 347px;

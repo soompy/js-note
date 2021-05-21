@@ -644,9 +644,9 @@
             </div>
         </footer>
 
-        <div class="arrow-box animate__animated animate__fadeIn first-page">
-            <button class="round-button small up"></button>
-            <button class="round-button small down"></button>
+        <div id="pageArr" class="arrow-box animate__animated animate__fadeIn">            
+            <button class="round-button small up" onclick="pageUp()"></button>
+            <button class="round-button small down" onclick="pageDown()"></button>
         </div>
 
     </div>
@@ -705,7 +705,23 @@
             });
         });
     </script>
-
+    <script>
+         $(document).ready(function () {            
+            $(".up").hide();           
+            //  var scrollHeight = $(document).height() - $(window).height();
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() >= 100) {
+                        $(".up").fadeIn();                        
+                    } else if ($(this).scrollTop() >= 4000) {
+                        $(".down").fadeOut();
+                    } else {
+                        $('.up').fadeIn();
+                    }
+                });
+            });
+        });
+    </script>
     <script src="./assets/js/ScrollTrigger.js"></script>
     <script>
         window.counter = function () {
