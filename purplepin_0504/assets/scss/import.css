@@ -1629,6 +1629,12 @@ body {
   position: absolute;
   right: 200px;
   bottom: 160px;
+  -webkit-animation-name: fadeInUpAni;
+          animation-name: fadeInUpAni;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .section.brandStory {
@@ -1693,22 +1699,33 @@ body {
   display: none;
 }
 
-.section.brandStory .text-wrap .shopImg {
-  position: relative;
-  width: 700px;
-  height: 800px;
-  margin-top: -220px;
-  margin-left: -20%;
-  -webkit-animation: floating 0.8s infinite alternate;
-          animation: floating 0.8s infinite alternate;
+.section.brandStory .pc-wrap {
+  position: absolute;
+  top: 0;
+  width: 1200px;
 }
 
-.section.brandStory .text-wrap .shopImg .brand-image {
+.section.brandStory .shopImg-wrap {
+  position: relative;
+  top: 120px;
+  height: 800px;
+  margin-left: -20%;
+  -webkit-animation: floating 0.8s infinite alternate;
+  animation: floating 0.8s infinite alternate;
+  width: 100%;
+}
+
+.section.brandStory .shopImg-wrap .shopImg {
+  position: absolute;
+  right: 0;
+}
+
+.section.brandStory .shopImg-wrap .shopImg .brand-image {
   position: relative;
   width: 580px;
 }
 
-.section.brandStory .text-wrap .shopImg .obj3 {
+.section.brandStory .shopImg-wrap .shopImg .obj3 {
   position: absolute;
   left: 400px;
   top: 484px;
@@ -1926,7 +1943,7 @@ body {
 .section.united .tabcontent .shop .slide_wrap {
   margin-top: 30px;
   padding-bottom: 20px;
-  height: 547px;
+  height: 567px;
 }
 
 .section.united .tabcontent .shop .slide_wrap .bnr {
@@ -2186,6 +2203,32 @@ body {
   margin-top: 123px;
 }
 
+@-webkit-keyframes fadeInUpAni {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpAni {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .controllers {
     display: none !important;
@@ -2261,19 +2304,22 @@ body {
     word-break: keep-all;
     margin-top: 25px;
   }
-  .section.brandStory .inner .m_text-wrap .shopImg {
+  .section.brandStory .shopImg {
     position: relative;
     width: 100%;
     margin-top: 14%;
     height: auto;
     margin-left: 5%;
   }
-  .section.brandStory .inner .m_text-wrap .shopImg .obj3 {
+  .section.brandStory .shopImg .obj3 {
     position: absolute;
     width: 180px;
     height: 180px;
     left: -30%;
     top: 60%;
+  }
+  .section.brandStory .shopImg .brand-image {
+    width: 580px;
   }
   .section.studio {
     background-image: url("https://image.smartscore.kr/purplepin/img_mobile_03.jpg");

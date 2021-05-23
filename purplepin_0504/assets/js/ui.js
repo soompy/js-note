@@ -23,6 +23,10 @@ function pageUp() {
 }
 
 function pageDown() {
+  // 페이지 높이 배열을 만들어 주고 그 배열 만큼 클릭시
+  // 올라가도록하기
+  // var arrH = [937, 1229, 1200, 1310, 1200];
+  var arrH = [1200, 1310, 1200, 1229, 937];
   var h = window.innerHeight;
   window.scrollBy(0, h);
 }

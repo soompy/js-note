@@ -27,6 +27,9 @@ body {
       position: absolute;
       right: 200px;
       bottom: 160px;
+      animation-name: fadeInUpAni;
+      animation-duration: 3s;
+      animation-delay: 1s;
     }
   }
 
@@ -76,13 +79,23 @@ body {
           display: none;
         }
       }
+    }
+    .pc-wrap {
+      position: absolute;
+      top: 0;
+      width: 1200px;
+    }
+    .shopImg-wrap {
+      position: relative;
+      top: 120px;
+      height: 800px;
+      margin-left: -20%;
+      -webkit-animation: floating 0.8s infinite alternate;
+      animation: floating 0.8s infinite alternate;
+      width: 100%;
       .shopImg {
-        position: relative;
-        width: 700px;
-        height: 800px;
-        margin-top: -220px;
-        margin-left: -20%;
-        animation: floating 0.8s infinite alternate;
+        position: absolute;
+        right: 0;
         .brand-image {
           position: relative;
           width: 580px;
@@ -269,7 +282,7 @@ body {
         .slide_wrap {
           margin-top: 30px;
           padding-bottom: 20px;
-          height: 547px;
+          height: 567px;
           .bnr {
             height: 547px;
           }
@@ -481,6 +494,36 @@ body {
   margin-top: 123px;
 }
 
+@-webkit-keyframes fadeInUpAni {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpAni {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .controllers {
     display: none !important;
@@ -556,20 +599,23 @@ body {
               margin-top: 25px;
             }
           }
-          .shopImg {
-            position: relative;
-            width: 100%;
-            margin-top: 14%;
-            height: auto;
-            margin-left: 5%;
-            .obj3 {
-              position: absolute;
-              width: 180px;
-              height: 180px;
-              left: -30%;
-              top: 60%;
-            }
-          }
+        }
+      }
+      .shopImg {
+        position: relative;
+        width: 100%;
+        margin-top: 14%;
+        height: auto;
+        margin-left: 5%;
+        .obj3 {
+          position: absolute;
+          width: 180px;
+          height: 180px;
+          left: -30%;
+          top: 60%;
+        }
+        .brand-image {
+          width: 580px;
         }
       }
     }
