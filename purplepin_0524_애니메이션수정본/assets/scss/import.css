@@ -872,7 +872,7 @@ figure {
   overflow: hidden;
 }
 
-.tab button {
+.tab .tablinks {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -884,7 +884,7 @@ figure {
   color: #7f7f7f;
 }
 
-.tab button:after {
+.tab .tablinks:after {
   display: block;
   clear: both;
   content: "";
@@ -897,15 +897,15 @@ figure {
   background-image: linear-gradient(to right, #9f06e4 0%, #3900fc 100%);
 }
 
-.tab button:hover {
+.tab .tablinks:hover {
   color: #fff;
 }
 
-.tab button:focus, .tab button.active {
+.tab .tablinks:focus, .tab .tablinks.active {
   color: #fff;
 }
 
-.tab button:focus:after, .tab button.active:after {
+.tab .tablinks:focus:after, .tab .tablinks.active:after {
   height: 12px;
 }
 
@@ -2041,13 +2041,13 @@ body {
   height: 100%;
 }
 
-.section.united .tabcontent .shop .slide_wrap {
+.section.united .tabcontent .shop .bnr {
   margin-top: 30px;
   padding-bottom: 20px;
   height: 567px;
 }
 
-.section.united .tabcontent .shop .slide_wrap .bnr {
+.section.united .tabcontent .shop .slick-list {
   height: 547px;
 }
 
@@ -2055,135 +2055,135 @@ body {
   top: 517px;
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_01 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_01 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_01.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_02 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_02 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_02.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_03 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_03 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_03.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_04 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_04 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_04.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_05 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_05 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_05.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_07 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_07 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_07.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_08 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_08 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_08.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_09 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_09 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_09.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_10 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_10 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_10.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_11 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_11 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_11.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_14 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_14 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_14.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_15 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_15 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_16.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_16 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_16 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_16.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_17 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_17 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_17.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_18 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_18 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_18.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_19 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_19 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_19.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_20 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_20 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_20.jpg");
 }
 
-.section.united .tabcontent .shop.songpaStore .slide_wrap .bnr.bnr_21 {
+.section.united .tabcontent .shop.tabbnr1 .bnr.bnr_21 {
   background-image: url("https://image.smartscore.kr/purplepin/songpa_21.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_01 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_01 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_01.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_02 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_02 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_02.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_03 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_03 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_03.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_04 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_04 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_04.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_05 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_05 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_05.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_06 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_06 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_06.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_09 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_09 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_09.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_11 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_11 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_11.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_12 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_12 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_12.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_13 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_13 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_13.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_14 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_14 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_14.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_15 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_15 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_15.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_16 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_16 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_16.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_17 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_17 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_17.jpg");
 }
 
-.section.united .tabcontent .shop.geumgokStore .slide_wrap .bnr.bnr_18 {
+.section.united .tabcontent .shop.tabbnr2 .bnr.bnr_18 {
   background-image: url("https://image.smartscore.kr/purplepin/bundang_18.jpg");
 }
 

@@ -330,7 +330,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  button {
+  .tablinks {
     position: relative;
     flex: 1;
     padding: 23px 0;
@@ -602,7 +602,6 @@
   }
 }
 
-
 @keyframes bar1 {
   0% {
     width: 0;
@@ -639,7 +638,7 @@
   }
 
   100% {
-    width: 400px;    
+    width: 400px;
   }
 }
 

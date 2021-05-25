@@ -246,13 +246,13 @@
 
                 <div class="tab-content-box" id="tabs" data-scroll="toggle(.fromBottomIn , .fromBottomOut)">
                     <div class="tab">
-                        <button class="tablinks" onclick="openStore(event, 'songpa')" id="defaultOpen">송파점</button>
-                        <button class="tablinks" onclick="openStore(event, 'geumgok')">금곡점</button>
+                        <button class="tablinks active">송파점</button>
+                        <button class="tablinks">금곡점</button>
                     </div>
 
-                    <div id="songpa" class="tabcontent">
-                        <div class="shop songpaStore">
-                            <section class="tabbnr1 slider slide_wrap">
+                    <div class="shop-tabs">
+                        <div class="tabcontent active">
+                            <div class="shop tabbnr1 slider slide_wrap">
                                 <div class="bnr bnr_01"></div>
                                 <div class="bnr bnr_02"></div>
                                 <div class="bnr bnr_03"></div>
@@ -271,20 +271,18 @@
                                 <div class="bnr bnr_19"></div>
                                 <div class="bnr bnr_20"></div>
                                 <div class="bnr bnr_21"></div>
-                            </section>
-                        </div>
-                        <div class="addr-box">
-                            <div class="fc-white fs-20">
-                                <p>서울시 송파구 동남로 149</p>
-                                <p>T. 02. 407. 7281</p>
                             </div>
-                            <button class="square-button small ml-at" onclick="songpa()">약도</button>
+                            <div class="addr-box">
+                                <div class="fc-white fs-20">
+                                    <p>서울시 송파구 동남로 149</p>
+                                    <p>T. 02. 407. 7281</p>
+                                </div>
+                                <button class="square-button small ml-at" onclick="songpa()">약도</button>
+                            </div>
                         </div>
-                    </div>
-
-                    <div id="geumgok" class="tabcontent">
-                        <div class="shop geumgokStore">
-                            <section class="tabbnr2 slider slide_wrap">
+                        
+                        <div class="tabcontent">
+                            <div class="shop tabbnr2 slider slide_wrap">
                                 <div class="bnr bnr_01"></div>
                                 <div class="bnr bnr_02"></div>
                                 <div class="bnr bnr_03"></div>
@@ -300,16 +298,16 @@
                                 <div class="bnr bnr_16"></div>
                                 <div class="bnr bnr_17"></div>
                                 <div class="bnr bnr_18"></div>
-                            </section>
-                        </div>
-                        <div class="addr-box">
-                            <div class="fc-white fs-20">
-                                <p>경기도 성남시 분당구 대왕판교로 154</p>
-                                <p>T. 031-717-7281</p>
                             </div>
-                            <button class="square-button small ml-at" onclick="geumgok()">약도</button>
+                            <div class="addr-box">
+                                <div class="fc-white fs-20">
+                                    <p>경기도 성남시 분당구 대왕판교로 154</p>
+                                    <p>T. 031-717-7281</p>
+                                </div>
+                                <button class="square-button small ml-at" onclick="geumgok()">약도</button>
+                            </div>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
             <div class="modal-wrap" id="songpaPopup">
@@ -861,6 +859,24 @@
         modalItem.on("click", function () {
             $(".facility-slideBnr").addClass('show');
         })
+    </script>
+    <script>
+        $('.tablinks').click(function () {
+            var $this = $(this);
+            var index = $this.index();
+
+            $this.addClass('active');
+            $this.siblings('.tablinks.active').removeClass('active');
+
+            var $outer = $this.closest('.tab-content-box');
+            var $current = $outer.find(' > .shop-tabs > .tabcontent.active');
+            var $post = $outer.find(' > .shop-tabs > .tabcontent').eq(index);
+
+            $current.removeClass('active');
+            $post.addClass('active');
+
+            $('.shop').slick('setPosition');
+        });       
     </script>
     <script src="./assets/js/ScrollTrigger.js"></script>
     <script>
