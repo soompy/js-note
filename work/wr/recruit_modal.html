@@ -1,0 +1,80 @@
+<div class="modal-wrap" id="popup">
+    <div class="dim" onclick="closed()" tabindex="0"></div>
+    <div class="modal-box">
+        <div class="modal-head">
+            <h2 class="title sub-mid-title ta-c">입사지원</h2>
+            <button class="close-button popupBtn" onclick="closed()"></button>
+        </div>
+        <form action="" id="recruit-form" class="recruit-box">
+            <div class="form-field-line unfilled mb-20">
+                <input type="text" class="field-text" id="user_name" placeholder="이름" value="" maxlength="7"
+                    onkeyup="textInput(this)">
+            </div>
+            <p class="error-message" style="display:none;"></p>
+            <!-- [DEV] 에러인 경우 form-field-line에 unfilled클래스 대신 error클래스가 들어갑니다 -->
+            <div class="form-field-line unfilled mb-20">
+                <input type="text" class="field-text" id="user_phone" placeholder="연락처(-제외입력)" value="" maxlength="11"
+                    onkeyup="textInput(this)">
+            </div>
+            <!--            <div class="form-field-line error mb-20">-->
+            <!--                <input type="text" class="field-text" id="field-text" placeholder="연락처(-제외입력)" value="">-->
+            <!--            </div>-->
+            <!-- [DEV] 에러메시지가 뜨지 않을때는 error-message 영역이 사라지도록 해주세요 -->
+            <p class="error-message" style="display:none;"></p>
+            <div class="mail-form mb-20">
+                <div class="form-field-line unfilled">
+                    <input type="text" class="field-text" id="user_email1" placeholder="이메일" value=""
+                        onkeyup="textInput($(this).parent(), 1)">
+                </div>
+                <div class="at">@</div>
+                <div class="ps-r form-field-raise select-box active" tabindex="0">
+                    <input type="text" class="field-text" id="user_email2" readonly="" placeholder="직접입력" value=""
+                        onclick="select_list_show()">
+                    <div class="field-button-box" onclick="select_list_show()">
+                        <!-- [DEV] tf-rt-180 클래스를 토글시켜주세요-->
+                        <img src="//image.withrich.co.kr/wrich/icon/ic-dropdown.png" style="width: 18px;" alt=""
+                            class="arrow_img">
+                        <!-- [DEV] tf-rt-180 클래스를 토글시켜주세요-->
+                    </div>
+                    <ul class="field-select-cont" id="user_email2_select_list" style="display:none;">
+                        <li class="cont-item" onclick="select_list(this);">직접입력</li>
+                        <li class="cont-item" onclick="select_list(this);">gmail.com</li>
+                        <li class="cont-item" onclick="select_list(this);">naver.com</li>
+                        <li class="cont-item" onclick="select_list(this);">daum.net</li>
+                        <li class="cont-item" onclick="select_list(this);">nate.com</li>
+                        <li class="cont-item" onclick="select_list(this);">hanmail.net</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="error-message" style="display:none;"></p>
+            <div class="mb-40">
+                <textarea name="" id="msg" cols="30" rows="10" placeholder="손보/생보 경력" onkeyup="textInput(this, 1)" tabindex="0"></textarea>
+                <p class="error-message mt-10" style="display:none;"></p>
+            </div>
+            <div class="agreement-box">
+                <div class="dp-f align-items-center justify-center">
+                    <span class="checkbox" tabindex="0">
+                        <input type="checkbox" id="agree" onclick="textInput($(this).parent())"><label for="agree">개인정보 수집 이용 및 동의(필수)</label>
+                    </span>
+                </div>
+                <p class="error-message mt-14" style="display:none;"></p>
+                <div class="terms mt-14">
+                    위드리치는 「개인정보 보호법」등 관련 법령에 따라 입사전형 및 채용 후<br/>
+                    인사관리 등의 목적으로 입사지원자의 개인정보를 수집하고 있습니다.<br/>
+                    귀하의 개인정보 수집 및 이용과 관련하여 아래의 안내 내용을 자세히 읽어 보시고,<br/>
+                    모든 내용을 숙지하신 후에 개인정보의 수집 및 이용에 관한 동의 여부를 결정하여 주시기 바랍니다.<br/>
+                    개인정보 수집/이용에 대한 동의<br/>
+                    1.수집하는 개인정보 항목-개인정보 항목 : 성명, 휴대폰번호, 이메일, 경력<br/>
+                    2.수집/이용하려는 목적-컨설턴트 채용 및 각종 업무수행 지원 및 평가 등 인사관리<br/>
+                    3.개인정보의 보유 및 이용기간가.채용된 입사지원자의 개인정보<br/>
+                    -보유 기간 : 이용목적 달성 시 까지<br/>
+                    -보유 사유 : 재직 중 인사관리 등, 퇴직 후 복리후생, 경력증명서 발급 등<br/>
+                    나.채용되지 아니한 입사지원자의 개인정보<br/>
+                    -보유 기간 : 채용절차 종료 후 1년<br/>
+                    -보유 사유 : 향후 채용 가능 자원의 관리
+                </div>
+            </div>
+        </form>
+        <button class="btn full-btn popupBtn" onclick="recruit_submit()" tabindex="0">지원하기</button>
+    </div>
+</div>

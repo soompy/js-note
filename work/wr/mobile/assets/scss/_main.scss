@@ -1,0 +1,90 @@
+.m-full-bg {
+  margin: 70px auto !important;
+}
+.m-blank {
+  margin-right: 30px;
+  .round-button {
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+  }
+}
+.main-section1 {
+  position: relative;
+  height: 300px;
+  background: url("//image.withrich.co.kr/wrich/main-insurance.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+}
+.main-section2 {  
+  position: relative;
+  height: 300px;
+  background: url("//image.withrich.co.kr/wrich/main-recruit.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: auto;  
+  &.m-blank {
+    margin-left: 30px;
+    .round-button {    
+      right: 60px;
+    }
+  }
+}
+.m-inner-text {
+  padding: 0 20px;
+}
+.link-box {
+  a {
+    position: relative;
+    display: block;
+    padding-bottom: 40px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    &:after {
+      display: none;
+      clear: both;
+      content: "";
+      position: absolute;
+      left: -38px;
+      top: 6px;
+      width: 26px;
+      height: 14px;
+      background-image: url("//image.withrich.co.kr/wrich/icon/next-btn.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+    &:hover {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.download-button {
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  border-radius: 10px;
+  text-indent: -9999px;
+  cursor: pointer;
+  width: 100%;
+  padding: 15px 0;
+  &.appStore {
+    background: url("//image.withrich.co.kr/wrich/mobile/ic-appstore.png")
+      $color-white;
+      border: 1px solid $color-black;
+    margin-bottom: 10px;
+    background-size: 100px;
+  }
+  &.playStore {    
+    background: url("//image.withrich.co.kr/wrich/mobile/ic-googlestore.png")
+      $color-white;
+      border: 1px solid $color-black;   
+      background-size: 110px; 
+  }
+}
+

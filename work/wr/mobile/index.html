@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>위드리치</title>
+        <meta name="description" content="위드리치 홈페이지입니다.">
+        <meta name="keywords" content="위드리치, 보험, 투자">
+        <meta name="author" content="스마트스코어">
+        <link rel="stylesheet" href="./assets/scss/import.css">
+        <link rel="stylesheet" href="./assets/scss/scrollTrigger.css">
+        <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    </head>
+
+    <body>
+        <header id="m-header">
+            <h1 class="logo"><a href="index.html"><img src="//image.withrich.co.kr/wrich/withrich-logo.png" alt="위드리치"></a></h1>
+            <button class="menu-btn" onclick="showNav()"><img src="//image.withrich.co.kr/wrich/mobile/ic-menu.png"
+                                                              alt=""></button>
+            <div class="m-nav" id="navigationMenu">
+                <div class="close-btn" onclick="closed()" tabindex="0">
+                    <img src="//image.withrich.co.kr/wrich/mobile/ic-close.png" alt="닫기">
+                </div>
+                <ul class="gnb">
+                    <li class="menu eng eng-bold"><a href="about.html">About</a></li>
+                    <li class="menu eng eng-bold"><a href="business.html">Business</a></li>
+                    <li class="menu eng eng-bold"><a href="insurance.html">Insurance</a></li>
+                    <li class="menu eng eng-bold"><a href="recruit.html">Recruit</a></li>
+                </ul>
+                <a href="apply.html" class="primary-link">입사지원</a>
+            </div>
+        </header>
+
+        <div class="m-main-visual">
+            <div class="main-slider">
+                <div class="slider-visual slider-visual-1">
+                    <div class="visual-pc img-box only-pc">
+                        <div class="img" style="background-image:url('//image.withrich.co.kr/wrich/mobile/mainvisual01.jpg');"></div>
+                    </div>
+                    <div class="visual-txt">
+                        <div class="m-inner-txt-con">
+                            <strong class="inner-txt inner-txt-1 home-slide-pager">
+                                <span class="activePage">1</span>
+                                <span>&#x002F;</span>
+                                <span>2</span>
+                            </strong>
+                            <p class="inner-txt inner-txt-2 fc-white">
+                                고객 맞춤형 서비스 <br>인슈어테크 플랫폼 <br> <span class="stroke-text">위드리치</span>
+                            </p>
+                            <div class="inner-txt inner-txt-3">
+                                <img class="scroll-paging" src="//image.withrich.co.kr/wrich/icon/main-arrowdown.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-visual slider-visual-2 black">
+                    <div class="visual-pc img-box only-pc">
+                        <div class="img" style="background-image:url('//image.withrich.co.kr/wrich/mobile/mainbanner-02.jpg');"></div>
+                    </div>
+                    <div class="visual-txt">
+                        <div class="m-inner-txt-con">
+                            <strong class="inner-txt inner-txt-1 home-slide-pager">
+                                <span class="activePage">2</span>
+                                <span>&#x002F;</span>
+                                <span>2</span>
+                            </strong>
+                            <p class="inner-txt inner-txt-2">
+                                고객의 삶에 <br>가치를 더하는 <br> <span class="stroke-text">위드리치</span>
+                            </p>
+                            <div class="inner-txt inner-txt-3">
+                                <img class="scroll-paging" src="//image.withrich.co.kr/wrich/icon/main-arrowdown-bk.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="m-content">
+            <section class="m-full-bg wow fadeInUp">
+                <div class="m-inner-text">
+                    <p class="m-title sub-mid-title lh-46px">골프라이프를 즐기는 <br>나에게 딱 맞춘 보험</p>
+                    <p class="text-box-1 fc-grey mt-16 mb-30">
+                        다양한 보험과 동시견적비교, 전문가가 <br>
+                        도와주는 재무컨설팅과 질병위험을 <br>
+                        미리 알려주는 유전자검사까지 <br>
+                        위드리치에서 간편하게 이용해 보세요.
+                    </p>
+                </div>
+                <div class="m-blank main-section1">
+                    <button class="round-button" onclick="location.href='/mobile/insurance.html'"></button>
+                </div>
+            </section>
+
+            <section class="m-full-bg wow fadeInUp">
+                <div class="m-inner-text">
+                    <p class="m-title sub-mid-title lh-46px">영업리더로 성장기회를 <br>만들어보세요!</p>
+                    <p class="text-box-1 fc-grey mt-16 mb-30">
+                        위드리치는 항상 <br>
+                        여러분의 도전을 기다립니다.
+                    </p>
+                </div>
+                <div class="m-blank main-section2">
+                    <button class="round-button" onclick="location.href='/mobile/recruit.html'"></button>
+                </div>
+            </section>
+
+            <!-- [DEV] 해당링크 내 아코디언이 펼쳐져 보이도록 해주세요
+            h2에 accordionTitleActive클래스 추가-->
+            <section class="common-area service">
+                <div class="dp-f align-center wow fadeInUp">
+                    <p class="m-title sub-mid-title mb-16">자주묻는 질문</p>
+                    <button class="ml-at"><img src="//image.withrich.co.kr/wrich/mobile/ic-plus.png" alt=""></button>
+                </div>
+                <section id="wrapper">
+                    <div class="container">
+                        <ul class="accordion">
+                            <li class="item wow fadeInUp" id="acc_item1">
+                                <h2 class="accordionTitle"><img src="//image.withrich.co.kr/wrich/ic-question.png" alt="question"
+                                        class="question"> 위드리치는 어떤 회사인가요? <span class="accIcon"><img
+                                            src="//image.withrich.co.kr/wrich/mobile/ic-arrow-down.png" alt="화살표" class="open"></span>
+                                </h2>
+                                <div class="text" id="target1">㈜ 위드리치는 스마트스코어의 보험 전문 자회사이며 인슈어테크 플랫폼 기업입니다.
+                                    세상에 없던 플랫폼을 기반으로 새로운 보험기준을 제시하며 같이 나누며 함께 성장하는 고객의 가치를 실현하는 혁신을 이루기 위해 노력하고 있습니다
+                                    “보험” 첫느낌 가입절차도 까다롭고 어렵다고 느끼셨나요? 새로운 모델을 제사하고 불편함을 줄인 합리적 보험서비스를 만들고자 합니다
+                                    사회적 가치를 실현하는 고객 중심의 생활맞춤형 보험생활서비스를 위드리치에서 느껴보세요</div>
+                            </li>
+                            <li class="item wow fadeInUp" id="acc_item2">
+                                <h2 class="accordionTitle"><img src="//image.withrich.co.kr/wrich/ic-question.png" alt="question"
+                                        class="question"> 어떤 영업 DB를 제공하고 있나요? <span class="accIcon"><img
+                                            src="//image.withrich.co.kr/wrich/mobile/ic-arrow-down.png" alt="화살표" class="open"></span>
+                                </h2>
+                                <div class="text" id="target2">기존 다수의 공급업체로 부터 받은 DB가 아니라,
+                                    한번도 사용하지 않은 골프플랫폼 회사의 DB를 Gathering 한 양질의 우수 DB를 제공합니다.</div>
+                            </li>
+                            <li class="item wow fadeInUp" id="acc_item4">
+                                <h2 class="accordionTitle"><img src="//image.withrich.co.kr/wrich/ic-question.png" alt="question"
+                                        class="question"> 소득은 어느정도 수준인가요? <span class="accIcon"><img
+                                            src="//image.withrich.co.kr/wrich/mobile/ic-arrow-down.png" alt="화살표" class="open"></span>
+                                </h2>
+                                <div class="text" id="target4">기본 소득은 일반 GA 보험수수료 수준을 지급하며
+                                    매월 기본 + 우수시상, 분기별 성과수수료, 리쿠르팅 시상, 팀운영비 등 다양한 지원책을 마련하였습니다.
+                                    직접 지원해 보시고 비교해 보세요</div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="common-area service wow fadeInUp">
+                <div class="inner">
+                    <p class="m-title sub-mid-title mb-08">고객센터 1877 – 2877</p>
+                    <p class="text-box-1 fc-grey lh-28px">평일 오전 9시 ~ 오후 6시 <br>※ 주말, 공휴일은 상담신청만</p>
+                </div>
+            </section>
+            <section class="common-area service wow fadeInUp">
+                <button class="download-button appStore" onclick="window.open('https://apps.apple.com/kr/app/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%EC%BD%94%EC%96%B4/id969887573')" type="button">앱스토어<img src="" alt=""></button>
+                <button class="download-button playStore" onclick="window.open('https://play.google.com/store/apps/details?id=com.smartscore.rawady.smartscore')" type="button">구글플레이스토어<img src="" alt=""></button>
+            </section>
+        </div>
+
+        <!--모달팝업-->
+<!--        <div data-include-path="recruit_modal.html"></div>-->
+        <!--모달팝업-->
+
+        <footer id="footer">
+            <div class="inner">
+                <div class="right-box">
+                    <div class="form-field-raise select-box flex-direction-c family">
+                        <div class="field-button-box">
+                            <input type="text" class="field-text eng fw-500" readonly placeholder="Family site" />
+                        </div>
+                        <div class="field-select-cont fw-500 family-box">
+                            <span class="cont-item eng"><a href="https://smartscore.kr/" target="_blank">Smartscore</a></span>
+                            <span class="cont-item eng">Family site</span>
+                            <span class="arrowbox"><img src="//image.withrich.co.kr/wrich/mobile/ic-arrow-up_w.png"
+                                                        alt=""></span>
+                        </div>
+                    </div>
+                    <h1 class="footer-logo mt-40">
+                        <img src="//image.withrich.co.kr/wrich/icon/withrich-logo-f.png" alt="withrich logo">
+                    </h1>
+                </div>
+                <div class="left-box">
+                    <p class="text-box-1 fc-grey fs-16">서울시 강남구 테헤란로 98길8, 9층</p>
+                    <p class="text-box-1 fc-grey">대표 정성훈 <span class="bar"></span> 사업자등록번호 761-81-01758 <br> 보험대리점등록번호
+                        제2019120062호</p>
+                    <p class="text-box-1 fc-grey tel">고객센터 <a href="tel:1877-2877" class="tel" style="color: #ffffff;">1877-2877</a></p>
+                    <p class="text-box-1 fc-grey">이메일 <a href="mailto: smart@withrich.co.kr" class="eng fc-white">smart@withrich.co.kr</a></p>
+                    <p class="text-box-min eng">Copyright @ 2021 Withrich. <br> All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./assets/js/ScrollTrigger.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./assets/js/ui.js"></script>
+        <script src="./assets/js/include.js"></script>
+        <script src="./assets/js/common.js"></script>
+        <script src="./assets/js/slider.js"></script>
+        <script type="text/javascript">
+            $(document).on('ready', function () {
+                $(".home").slick({
+                    vertical: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    autoplaySpeed: 4000,
+                    arrows: true,
+                    verticalSwiping: true,
+                    speed: 600,
+                    cssEase: 'linear',
+                });
+                $('.main-slider').slick({
+                    fade: true,
+                    slidesToShow: 1,
+                    speed: 600,
+                    lazyLoad: 'progressive',
+                    autoplay:true,
+                    autoplaySpeed: 3400,
+                    arrows: false,
+                });
+            })
+        </script>
+        <script>
+            wow = new WOW(
+                {
+                    animateClass: 'animated',
+                    offset: 100,
+                    callback: function (box) {
+                        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                    }
+                }
+            );
+            wow.init();
+        </script>
+    </body>
+</html>

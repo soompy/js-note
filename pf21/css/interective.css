@@ -1,0 +1,17 @@
+.album-card.is-zoom-out .album-player,
+.all-view-albums .is-zoom-out .album-player {
+    opacity: 0;
+    transform: scale(2);
+}
+
+.album-card.is-zoom-out:hover .album-cover,
+.all-view-albums .is-zoom-out .album-cover {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.album-card.is-zoom-out:hover .album-player,
+.all-view-albums .is-zoom-out .album-player {
+    opacity: 1;
+    transform: scale(0.85);
+}

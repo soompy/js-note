@@ -1,0 +1,16 @@
+
+@each $color, $value in $colors {
+ .fc-#{$color}{
+   color: #{$value};
+ }
+ .bg-#{$color}{
+   background-color: #{$value};
+ }
+}
+
+/* font color */
+
+
+/* background-color */
+.bg-n{background: none $imt;}
+.bg-transparent{background-color: transparent;}
