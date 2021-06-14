@@ -1,0 +1,14 @@
+.bike, .car {
+  position: relative;
+  padding-top: 35px;
+  -webkit-animation: driving 0.7s infinite linear alternate;
+          animation: driving 0.7s infinite linear alternate;
+}
+
+.street, .sky {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+/*# sourceMappingURL=interactive.css.map */
