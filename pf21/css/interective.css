@@ -15,3 +15,42 @@
     opacity: 1;
     transform: scale(0.85);
 }
+
+
+
+
+
+
+
+/* 카드 뒤집기 */
+.card, .wrap {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    border-radius: 12px;
+    perspective: 350px;
+}
+.bike, .car {
+    position: relative;
+    padding-top: 35px;
+    animation: driving 0.7s infinite linear alternate;
+}
+
+.street, .sky {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.street {
+    height: 42px;
+    background: #3b3b3b;
+    border-radius: 0 0 12px 12px;
+}
+
+.sky {
+    height: 150px;
+    background: #ededed;
+    border-radius: 12px;
+}
